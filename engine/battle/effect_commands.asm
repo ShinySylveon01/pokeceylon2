@@ -6029,6 +6029,8 @@ EndRechargeOpp:
 
 INCLUDE "engine/battle/move_effects/rage.asm"
 
+INCLUDE "engine/battle/move_effects/closecombat.asm"
+
 BattleCommand_DoubleFlyingDamage:
 ; doubleflyingdamage
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP

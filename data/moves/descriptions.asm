@@ -19,7 +19,7 @@ MoveDescriptions::
 	dw WingAttackDescription
 	dw WhirlwindDescription
 	dw FlyDescription
-	dw BindDescription
+	dw CloseCombatDescription
 	dw SlamDescription
 	dw VineWhipDescription
 	dw StompDescription
@@ -149,7 +149,7 @@ MoveDescriptions::
 	dw SporeDescription
 	dw FlashDescription
 	dw PsywaveDescription
-	dw SplashDescription
+	dw IcicleSpearDescription
 	dw AcidArmorDescription
 	dw CrabhammerDescription
 	dw ExplosionDescription
@@ -165,7 +165,7 @@ MoveDescriptions::
 	dw SlashDescription
 	dw SubstituteDescription
 	dw StruggleDescription
-	dw SketchDescription
+	dw SignalBeamDescription
 	dw TripleKickDescription
 	dw ThiefDescription
 	dw SpiderWebDescription
@@ -216,7 +216,7 @@ MoveDescriptions::
 	dw SleepTalkDescription
 	dw HealBellDescription
 	dw ReturnDescription
-	dw PresentDescription
+	dw CovetDescription
 	dw FrustrationDescription
 	dw SafeguardDescription
 	dw PainSplitDescription
@@ -251,15 +251,13 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw MoveFCDescription
-	dw MoveFDDescription
-	dw MoveFEDescription
+	dw YawnDescription
+	dw MagicalLeafDescription
+	dw HurricaneDescription
 	dw MoveFFDescription
 	dw Move00Description
 
-MoveFCDescription:
-MoveFDDescription:
-MoveFEDescription:
+
 MoveFFDescription:
 Move00Description:
 	db "?@"
@@ -340,9 +338,9 @@ FlyDescription:
 	db   "1st turn: Fly"
 	next "2nd turn: Attack@"
 
-BindDescription:
-	db   "Binds the target"
-	next "for 2-5 turns.@"
+CloseCombatDescription:
+	db   "An attack that may"
+	next "lower SPCL.DEF.@"
 
 SlamDescription:
 	db   "Slams the foe with"
@@ -860,9 +858,9 @@ PsywaveDescription:
 	db   "An attack with"
 	next "variable power.@"
 
-SplashDescription:
-	db   "Has no effect"
-	next "whatsoever.@"
+IcicleSpearDescription:
+	db   "Attacks with a"
+	next "barrage of ice.@"
 
 AcidArmorDescription:
 	db   "Sharply raises the"
@@ -924,9 +922,9 @@ StruggleDescription:
 	db   "Used only if all"
 	next "PP are exhausted.@"
 
-SketchDescription:
-	db   "Copies the foe's"
-	next "move permanently.@"
+SignalBeamDescription:
+	db   "An attack that may"
+	next "confuse the foe.@"
 
 TripleKickDescription:
 	db   "Hits three times"
@@ -1128,9 +1126,9 @@ ReturnDescription:
 	db   "An attack that is"
 	next "based on loyalty.@"
 
-PresentDescription:
-	db   "A bomb that may"
-	next "restore HP.@"
+CovetDescription:
+	db   "Cutely begs to"
+	next "take the item.@"
 
 FrustrationDescription:
 	db   "An attack based on"
@@ -1267,3 +1265,15 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+YawnDescription:
+	db   "May cause the foe"
+	next "to fall asleep.@"
+	
+MagicalLeafDescription:
+	db   "Attacks with an"
+	next "unevadable leaf.@"
+	
+HurricaneDescription:
+	db   "Attacks with a"
+	next "massive blow.@"
