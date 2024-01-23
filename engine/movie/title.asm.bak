@@ -154,7 +154,6 @@ IF DEF(_GOLD)
 	hlbgcoord 0, 0, vBGMap2
 	lb bc, 7, SCREEN_WIDTH
 	ld a, 1
-	call DrawTitleGraphic
 ENDC
 
 IF DEF(_SILVER)

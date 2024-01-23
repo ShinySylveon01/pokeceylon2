@@ -1928,7 +1928,7 @@ AerodactylEvosAttacks:
 	db 1, BITE
 	db 1, WING_ATTACK
 	db 1, SUBSTITUTE
-	db 1, TOXIC
+	db 1, SUPERSONIC
 	db 18, ANCIENTPOWER
 	db 20, EARTHQUAKE
 	db 22, HURRICANE
