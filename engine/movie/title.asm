@@ -8,6 +8,11 @@ TitleScreen:
 	call DisableLCD
 	call ClearSprites
 
+	ld hl, wLYOverrides
+	ld bc, wLYOverridesEnd - wLYOverrides
+	xor a
+	call ByteFill
+
 ; Turn BG Map update off
 	xor a
 	ldh [hBGMapMode], a
@@ -34,30 +39,19 @@ TitleScreen:
 	ld a, BANK(TitleScreenGFX2)
 	call FarDecompress
 
-; Decompress Ho-Oh/Lugia sprite
+; Decompress middle part
+	ld hl, TitleScreenGFX3
+	ld de, vTiles0 tile $BC
+	ld a, BANK(TitleScreenGFX3)
+	call FarDecompress
+; Decompress middle part
 	ld hl, TitleScreenGFX4
-	ld de, vTiles0
+	ld de, vTiles2 tile $60
 	ld a, BANK(TitleScreenGFX4)
 	call FarDecompress
 
-; Ho-Oh/Lugia title trail.
-; This should only copy 4 tiles; there are 4 extra whitespace tiles in Gold
-; before Ho-Oh gfx, but Silver reads the first 64 bytes of the compressed
-; Lugia gfx and writes them to VRAM (but never displays them on screen).
-	ld hl, TitleScreenGFX3
-	ld de, vTiles1 tile $78
-	ld bc, 8 tiles
-	ld a, BANK(TitleScreenGFX3)
-	call FarCopyBytes
-
 	call FillTitleScreenPals
 	call LoadTitleScreenTilemap
-	ld hl, wSpriteAnimDict
-	xor a
-	ld [hli], a
-	ld [hl], a
-	ld hl, rLCDC
-	set rLCDC_SPRITE_SIZE, [hl]
 	call EnableLCD
 
 ; Reset timing variables
@@ -68,24 +62,6 @@ TitleScreen:
 	ld [hli], a ; wTitleScreenTimer
 	ld [hl], a  ; wTitleScreenTimer + 1
 
-	depixel 12, 11
-	ld a, SPRITE_ANIM_INDEX_GS_INTRO_HO_OH_LUGIA
-	call InitSpriteAnimStruct
-	ld hl, wSpriteAnim1
-	ld de, wSpriteAnim10
-	ld bc, NUM_SPRITE_ANIM_STRUCTS
-	call CopyBytes
-	ld hl, wSpriteAnim1
-	ld [hl], 0
-
-	ld hl, wLYOverrides
-	ld bc, wLYOverridesEnd - wLYOverrides
-	xor a
-	call ByteFill
-
-; Let LCD Stat know we're messing around with SCX
-	ld a, LOW(rSCX)
-	ldh [hLCDCPointer], a
 	ld b, SCGB_GS_TITLE_SCREEN
 	call GetSGBLayout
 	call LoadTitleScreenPals
@@ -100,45 +76,18 @@ LoadTitleScreenPals:
 	ldh a, [hSGB]
 	and a
 	jr nz, .sgb
-	ld a, %11011000
+	ld a, %11100100
 	ldh [rBGP], a
-IF DEF(_GOLD)
-	ld a, %11111111
-	ldh [rOBP0], a
-	ld a, %11111000
-	ldh [rOBP1], a
-ELIF DEF(_SILVER)
-	ld a, %11110000
-	ldh [rOBP0], a
-	ld a, %11110000
-	ldh [rOBP1], a
-ENDC
 	ret
 
 .sgb
 	ld a, %11100100
 	ldh [rBGP], a
-IF DEF(_GOLD)
-	ld a, %11111111
-	ldh [rOBP0], a
-	ld a, %11100100
-	ldh [rOBP1], a
-ELIF DEF(_SILVER)
-	ld a, %11110000
-	ldh [rOBP0], a
-	ld a, %11100000
-	ldh [rOBP1], a
-ENDC
 	ret
 
 .cgb
 	ld a, %11100100
-	call DmgToCgbBGPals
-IF DEF(_SILVER)
-	ld a, %11100000
-ENDC
-	call DmgToCgbObjPal0
-	ret
+	jp DmgToCgbBGPals
 
 FillTitleScreenPals:
 	ldh a, [hCGB]
@@ -158,10 +107,14 @@ FillTitleScreenPals:
 	lb bc, 1, 10
 	ld a, 3
 	call DrawTitleGraphic
-	hlbgcoord 0, 12, vBGMap2
-	ld bc, 5 * BG_MAP_WIDTH
+	hlbgcoord 0, 10, vBGMap2
+	lb bc, 7, 8
 	ld a, 4
-	call ByteFill
+	call DrawTitleGraphic
+	hlbgcoord 12, 10, vBGMap2
+	lb bc, 7, 8
+	ld a, 5
+	call DrawTitleGraphic
 	ld a, 0
 	ldh [rVBK], a
 	ret
@@ -196,11 +149,4 @@ LoadTitleScreenTilemap:
 	jr .loop
 
 .done
-	ldh a, [hCGB]
-	and a
-	ret nz
-	hlbgcoord 0, 11
-	ld bc, BG_MAP_WIDTH
-	ld a, "@"
-	call ByteFill
 	ret

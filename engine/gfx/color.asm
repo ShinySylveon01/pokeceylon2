@@ -1228,11 +1228,7 @@ UnusedBattleObjectPals:
 INCLUDE "gfx/battle_anims/unused_battle_anims.pal"
 
 GSTitleBGPals:
-IF DEF(_GOLD)
-INCLUDE "gfx/title/title_bg_gold.pal"
-ELIF DEF(_SILVER)
 INCLUDE "gfx/title/title_bg_silver.pal"
-ENDC
 
 GSTitleOBPals:
 INCLUDE "gfx/title/title_fg.pal"

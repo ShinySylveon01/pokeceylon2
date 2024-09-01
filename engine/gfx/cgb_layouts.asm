@@ -555,7 +555,7 @@ _CGB_Evolution:
 _CGB_GSTitleScreen:
 	ld hl, GSTitleBGPals
 	ld de, wBGPals1
-	ld bc, 5 palettes
+	ld bc, 6 palettes
 	call CopyBytes
 	ld hl, GSTitleOBPals
 	ld de, wOBPals1

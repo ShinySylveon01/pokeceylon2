@@ -883,7 +883,6 @@ StartTitleScreen:
 INCLUDE "engine/movie/title.asm"
 
 RunTitleScreen:
-	call Function63fe
 	ld a, [wJumptableIndex]
 	bit 7, a
 	jr nz, .done_title
@@ -900,19 +899,6 @@ RunTitleScreen:
 
 .done_title
 	scf
-	ret
-
-Function63fe:
-IF DEF(_GOLD)
-	ldh a, [hVBlankCounter]
-	and $7
-	ret nz
-ENDC
-	ld hl, wLYOverrides + $5f
-	ld a, [hl]
-	dec a
-	ld bc, 2 * SCREEN_WIDTH
-	call ByteFill
 	ret
 
 TitleScreenScene:
@@ -943,11 +929,7 @@ TitleScreenTimer:
 
 ; Start a timer
 	ld hl, wTitleScreenTimer
-IF DEF(_GOLD)
 	ld de, 84 * 60 + 16
-ELIF DEF(_SILVER)
-	ld de, 73 * 60 + 36
-ENDC
 	ld [hl], e
 	inc hl
 	ld [hl], d
@@ -1059,35 +1041,6 @@ Function64b1:
 	ld a, [wTitleScreenTimer]
 	and %00000011
 	ret nz
-IF DEF(_GOLD)
-	ld bc, wSpriteAnim10
-	ld hl, SPRITEANIMSTRUCT_FRAME
-	add hl, bc
-	ld l, [hl]
-	ld h, 0
-	add hl, hl
-	add hl, hl
-	ld de, .Data_64e0
-	add hl, de
-	; If bit 2 of [wTitleScreenTimer] is set, get the second dw; else, get the first dw
-	ld a, [wTitleScreenTimer]
-	and %00000100
-	srl a
-	srl a
-	ld e, a
-	ld d, 0
-	add hl, de
-	add hl, de
-	ld a, [hli]
-	and a
-	ret z
-	ld e, a
-	ld d, [hl]
-ELIF DEF(_SILVER)
-	depixel 15, 11, 4, 0
-ENDC
-	ld a, SPRITE_ANIM_INDEX_GS_TITLE_TRAIL
-	call InitSpriteAnimStruct
 	ret
 
 IF DEF(_GOLD)
