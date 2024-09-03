@@ -343,15 +343,15 @@ Route41_MapEvents:
 	db 0, 0 ; filler
 
 	db 4 ; warp events
-	warp_event  6, 49, WHIRL_ISLAND_NW, 1
-	warp_event 38, 49, WHIRL_ISLAND_NE, 1
-	warp_event 16, 49, WHIRL_ISLAND_SW, 1
-	warp_event 28, 49, WHIRL_ISLAND_SE, 1
+	warp_event 12, 17, WHIRL_ISLAND_NW, 1
+	warp_event 36, 19, WHIRL_ISLAND_NE, 1
+	warp_event 12, 37, WHIRL_ISLAND_SW, 1
+	warp_event 36, 45, WHIRL_ISLAND_SE, 1
 
 	db 0 ; coord events
 
 	db 1 ; bg events
-	bg_event 10, 50, BGEVENT_ITEM, Route41HiddenMaxEther
+	bg_event  9, 35, BGEVENT_ITEM, Route41HiddenMaxEther
 
 	db 10 ; object events
 	object_event 34,  6, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSwimmermCharlie, -1
