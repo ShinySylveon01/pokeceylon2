@@ -400,12 +400,12 @@ Route45_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  2,  5, DARK_CAVE_BLACKTHORN_ENTRANCE, 1
+	warp_event  6,  5, DARK_CAVE_BLACKTHORN_ENTRANCE, 1
 
 	db 0 ; coord events
 
 	db 2 ; bg events
-	bg_event 10,  4, BGEVENT_READ, Route45Sign
+	bg_event 10,  6, BGEVENT_READ, Route45Sign
 	bg_event 13, 80, BGEVENT_ITEM, Route45HiddenPpUp
 
 	db 12 ; object events
