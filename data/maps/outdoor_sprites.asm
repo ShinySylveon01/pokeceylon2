@@ -243,6 +243,7 @@ EcruteakGroupSprites:
 ViridianForestGroupSprites:
 	db SPRITE_BUG_CATCHER
 	db SPRITE_LASS
+	db SPRITE_BEAUTY
 
 AzaleaGroupSprites:
 	db SPRITE_GRAMPS

@@ -2,7 +2,8 @@
 	const VIRIDIANFOREST_BUG_CATCHER1
 	const VIRIDIANFOREST_BUG_CATCHER2
 	const VIRIDIANFOREST_BUG_CATCHER3
-	const VIRIDIANFOREST_LASS1
+	const VIRIDIANFOREST_LASS
+	const VIRIDIANFOREST_BEAUTY
 
 ViridianForest_MapScripts:
 	db 0 ; scene scripts
@@ -43,12 +44,23 @@ TrainerBugCatcherNoah:
 	end
 	
 TrainerLassCarlie:
-	trainer LASS, CARLIE, EVENT_BEAT_LASS_CARLIE, LassCarlieSeenText, LassCarlieBeatenText, 0, .Script
+	trainer LASS, CARLIE, EVENT_BEAT_LASS_CARLIE, LassCarlieSeenText, LassCarlieBeatenText, 0, .AfterScript
 	
-.Script:
+.AfterScript:
 	endifjustbattled
 	opentext
 	writetext LassCarlieAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerBeautyAmber:
+	trainer BEAUTY, AMBER, EVENT_BEAT_BEAUTY_AMBER, BeautyAmberSeenText, BeautyAmberBeatenText, 0, .AfterScript
+	
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext BeautyAmberAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -131,6 +143,26 @@ LassCarlieAfterBattleText:
 	cont "train harder!"
 	done
 
+BeautyAmberSeenText:
+	text "Welcome to"
+	line "VIRIDIAN FOREST!"
+
+	para "I hope you"
+	line "enjoy your stay!"
+	done
+
+BeautyAmberBeatenText:
+	text "Argh!"
+	done
+
+BeautyAmberAfterBattleText:
+	text "Watch out for"
+	line "BUG #MON!"
+
+	para "They will poison"
+	line "you!"
+	done
+
 ViridianForest_MapEvents:
 	db 0, 0 ; filler
 
@@ -145,8 +177,9 @@ ViridianForest_MapEvents:
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 19, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherRandy, -1
 	object_event 11,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherVince, -1
 	object_event  6, 20, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherNoah, -1
 	object_event 28, 33, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassCarlie, -1
+	object_event 28, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBeautyAmber, -1

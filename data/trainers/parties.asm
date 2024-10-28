@@ -1301,6 +1301,16 @@ BeautyGroup:
 	db 33, DEWGONG,   MIRACLEBERRY
 	db 32, FLAREON,   QUICK_CLAW
 	db -1 ; end
+	
+	; BEAUTY (17)
+	db "AMBER@", TRAINERTYPE_NORMAL
+	db 80, AMPHAROS
+	db 81, QUAGSIRE
+	db 80, ARCANINE
+	db 81, VENUSAUR
+	db 80, ALAKAZAM
+	db 81, RHYDON
+	db -1 ; end
 
 PokemaniacGroup:
 	; POKEMANIAC (1)
