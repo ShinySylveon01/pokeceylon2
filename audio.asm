@@ -137,3 +137,9 @@ SECTION "Cries", ROMX
 INCLUDE "data/pokemon/cries.asm"
 
 INCLUDE "audio/cries.asm"
+
+SECTION "Crystal Only Music", ROMX
+
+INCLUDE "audio/music/mobileadaptermenu.asm"
+INCLUDE "audio/music/mobileadapter.asm"
+INCLUDE "audio/music/mobilecenter.asm"

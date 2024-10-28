@@ -95,3 +95,6 @@ Music:
 	dba Music_LakeOfRageRocketRadio
 	dba Music_Printer
 	dba Music_PostCredits
+	dba Music_MobileAdapterMenu
+	dba Music_MobileAdapter
+	dba Music_MobileCenter

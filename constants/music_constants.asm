@@ -95,6 +95,9 @@
 	const MUSIC_LAKE_OF_RAGE_ROCKET_RADIO    ; 5a
 	const MUSIC_PRINTER                      ; 5b
 	const MUSIC_POST_CREDITS                 ; 5c
+	const MUSIC_MOBILE_ADAPTER_MENU          ; 5d
+	const MUSIC_MOBILE_ADAPTER               ; 5e
+	const MUSIC_MOBILE_CENTER                ; 66
 
 ; GetMapMusic picks music for this value (see home/map.asm)
 MUSIC_MAHOGANY_MART EQU $64
