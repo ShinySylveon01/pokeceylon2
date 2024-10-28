@@ -2,6 +2,7 @@
 	const VIRIDIANFOREST_BUG_CATCHER1
 	const VIRIDIANFOREST_BUG_CATCHER2
 	const VIRIDIANFOREST_BUG_CATCHER3
+	const VIRIDIANFOREST_LASS1
 
 ViridianForest_MapScripts:
 	db 0 ; scene scripts
@@ -37,6 +38,17 @@ TrainerBugCatcherNoah:
 	endifjustbattled
 	opentext
 	writetext BugCatcherNoahAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerLassCarlie:
+	trainer LASS, CARLIE, EVENT_BEAT_LASS_CARLIE, LassCarlieSeenText, LassCarlieBeatenText, 0, .Script
+	
+.Script:
+	endifjustbattled
+	opentext
+	writetext LassCarlieAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -93,6 +105,31 @@ BugCatcherNoahAfterBattleText:
 	text "Good luck on your"
 	line "trip my friend!"
 	done
+	
+LassCarlieSeenText:
+	text "Oh you came for"
+	line "a battle here!"
+
+	para "Let me to"
+	line "introduce myself!"
+	
+	para "My name is"
+	line "CARLIE HART!"
+
+	para "Prepare to lose"
+	line "this battle my"
+	cont "friend!"
+	done
+
+LassCarlieBeatenText:
+	text "Oh no!"
+	done
+
+LassCarlieAfterBattleText:
+	text "You have beaten"
+	line "me but I will"
+	cont "train harder!"
+	done
 
 ViridianForest_MapEvents:
 	db 0, 0 ; filler
@@ -108,7 +145,8 @@ ViridianForest_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event 19, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherRandy, -1
 	object_event 11,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherVince, -1
 	object_event  6, 20, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherNoah, -1
+	object_event 28, 33, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassCarlie, -1
