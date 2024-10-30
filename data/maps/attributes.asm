@@ -509,7 +509,6 @@ ENDM
 	map_attributes CeruleanPokecenter2FBeta, CERULEAN_POKECENTER_2F_BETA, $00, 0
 	map_attributes CeruleanGym, CERULEAN_GYM, $00, 0
 	map_attributes CeruleanMart, CERULEAN_MART, $00, 0
-	map_attributes CeruleanCave, CERULEAN_CAVE, $00, 0
 	map_attributes Route10Pokecenter1F, ROUTE_10_POKECENTER_1F, $00, 0
 	map_attributes Route10Pokecenter2FBeta, ROUTE_10_POKECENTER_2F_BETA, $00, 0
 	map_attributes PowerPlant, POWER_PLANT, $00, 0
@@ -690,3 +689,6 @@ ENDM
 	map_attributes ViridianForest, VIRIDIAN_FOREST, $00, 0
 	map_attributes Route2NorthGate, ROUTE_2_NORTH_GATE, $00, 0
 	map_attributes Route2SouthGate, ROUTE_2_SOUTH_GATE, $00, 0
+	map_attributes CeruleanCave1F, CERULEAN_CAVE_1F, $09, 0
+	map_attributes CeruleanCave2F, CERULEAN_CAVE_2F, $09, 0
+	map_attributes CeruleanCaveB1F, CERULEAN_CAVE_B1F, $09, 0

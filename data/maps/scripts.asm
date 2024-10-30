@@ -507,4 +507,9 @@ INCLUDE "maps/SeafoamIslandsB2F.asm"
 INCLUDE "maps/SeafoamIslandsB3F.asm"
 INCLUDE "maps/SeafoamIslandsB4F.asm"
 INCLUDE "maps/SeafoamIslandsEntrance.asm"
-INCLUDE "maps/CeruleanCave.asm"
+
+SECTION "Map Scripts 34", ROMX
+
+INCLUDE "maps/CeruleanCave1F.asm"
+INCLUDE "maps/CeruleanCave2F.asm"
+INCLUDE "maps/CeruleanCaveB1F.asm"
