@@ -17,39 +17,25 @@
 CeruleanCaveB1F_MapScripts:
 	db 0 ; scene scripts
 
-	db 1 ; callbacks
-	callback MAPCALLBACK_OBJECTS, CeruleanCaveB1FMewtwo
-	
+	db 0 ; callbacks
+
 CeruleanCaveB1FMewtwo:
-	checkevent EVENT_CERULEAN_CAVE_B1F_MEWTWO
-	iftrue .NoAppear
-	sjump .Appear
-
-.Appear:
-	appear CERULEAN_CAVE_B1F_MEWTWO
-	return
-
-.NoAppear:
-	disappear CERULEAN_CAVE_B1F_MEWTWO
-	return
-	
-Mewtwo:
 	faceplayer
 	opentext
 	writetext MewtwoText
 	cry MEWTWO
 	pause 15
 	closetext
-	setevent EVENT_CERULEAN_CAVE_B1F_MEWTWO
-	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon MEWTWO, 85
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	startbattle
 	disappear CERULEAN_CAVE_B1F_MEWTWO
+	setevent EVENT_CERULEAN_CAVE_B1F_MEWTWO
 	reloadmapafterbattle
 	end
 
 MewtwoText:
-	text "…!"
+	text "Myuu!"
 	done
 
 CeruleanCaveB1FHiddenNugget:
