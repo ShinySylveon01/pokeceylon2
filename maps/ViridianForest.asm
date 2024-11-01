@@ -126,7 +126,7 @@ LassCarlieSeenText:
 	line "introduce myself!"
 	
 	para "My name is"
-	line "CARLIE HART!"
+	line "CARLIE!"
 
 	para "Prepare to lose"
 	line "this battle my"
