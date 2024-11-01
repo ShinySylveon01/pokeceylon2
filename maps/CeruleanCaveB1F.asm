@@ -21,7 +21,7 @@ CeruleanCaveB1F_MapScripts:
 	callback MAPCALLBACK_OBJECTS, CeruleanCaveB1FMewtwo
 	
 CeruleanCaveB1FMewtwo:
-	checkevent EVENT_MEWTWO
+	checkevent EVENT_CERULEAN_CAVE_B1F_MEWTWO
 	iftrue .NoAppear
 	sjump .Appear
 
@@ -40,7 +40,7 @@ Mewtwo:
 	cry MEWTWO
 	pause 15
 	closetext
-	setevent EVENT_MEWTWO
+	setevent EVENT_CERULEAN_CAVE_B1F_MEWTWO
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	loadwildmon MEWTWO, 85
 	startbattle

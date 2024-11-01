@@ -55,7 +55,7 @@ TinTowerRoof_MapEvents:
 	db 0, 0 ; filler
 
 	db 1 ; warp events
-	warp_event  8, 13, TIN_TOWER_9F, 4
+	warp_event  9, 13, TIN_TOWER_9F, 4
 
 	db 0 ; coord events
 

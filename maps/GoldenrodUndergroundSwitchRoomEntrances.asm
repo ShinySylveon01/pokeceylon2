@@ -938,7 +938,7 @@ GoldenrodUndergroundSwitchRoomEntrances_MapEvents:
 	warp_event  5, 25, GOLDENROD_UNDERGROUND, 2
 	warp_event  4, 29, GOLDENROD_CITY, 15
 	warp_event  5, 29, GOLDENROD_CITY, 15
-	warp_event 21, 23, GOLDENROD_UNDERGROUND, 1
+	warp_event 21, 25, GOLDENROD_UNDERGROUND, 1
 	warp_event 20, 29, GOLDENROD_CITY, 14
 	warp_event 21, 29, GOLDENROD_CITY, 14
 
