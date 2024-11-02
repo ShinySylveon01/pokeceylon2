@@ -1443,4 +1443,85 @@ KantoGrassWildMons:
 	db 84, ESPEON
 	ENDC
 
+	map_id CERULEAN_CAVE_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 82, CROBAT
+	db 82, PARASECT
+	db 83, PRIMEAPE
+	db 83, TANGELA
+	db 83, MACHAMP
+	db 84, ELECTRODE
+	db 84, DITTO
+	; day
+	db 82, CROBAT
+	db 82, PARASECT
+	db 83, PRIMEAPE
+	db 83, TANGELA
+	db 83, MACHAMP
+	db 84, ELECTRODE
+	db 84, DITTO
+	; nite
+	db 82, CROBAT
+	db 82, PARASECT
+	db 83, PRIMEAPE
+	db 83, TANGELA
+	db 83, MACHAMP
+	db 84, ELECTRODE
+	db 84, DITTO
+	
+	map_id CERULEAN_CAVE_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 82, CROBAT
+	db 82, PARASECT
+	db 83, PRIMEAPE
+	db 83, TANGELA
+	db 83, MACHAMP
+	db 84, ELECTRODE
+	db 84, DITTO
+	; day
+	db 82, CROBAT
+	db 82, PARASECT
+	db 83, PRIMEAPE
+	db 83, TANGELA
+	db 83, MACHAMP
+	db 84, ELECTRODE
+	db 84, DITTO
+	; nite
+	db 82, CROBAT
+	db 82, PARASECT
+	db 83, PRIMEAPE
+	db 83, TANGELA
+	db 83, MACHAMP
+	db 84, ELECTRODE
+	db 84, DITTO
+	
+	map_id CERULEAN_CAVE_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 82, CROBAT
+	db 82, PARASECT
+	db 83, PRIMEAPE
+	db 83, TANGELA
+	db 83, MACHAMP
+	db 84, ELECTRODE
+	db 84, DITTO
+	; day
+	db 82, CROBAT
+	db 82, PARASECT
+	db 83, PRIMEAPE
+	db 83, TANGELA
+	db 83, MACHAMP
+	db 84, ELECTRODE
+	db 84, DITTO
+	; nite
+	db 82, CROBAT
+	db 82, PARASECT
+	db 83, PRIMEAPE
+	db 83, TANGELA
+	db 83, MACHAMP
+	db 84, ELECTRODE
+	db 84, DITTO
+
 	db -1 ; end
