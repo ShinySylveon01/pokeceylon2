@@ -1,11 +1,51 @@
-# Pokémon Gold and Silver [![Build Status][travis-badge]][travis]
+# Pokémon Ceylon Version 
 
-This is a disassembly of Pokémon Gold and Pokémon Silver.
+Ever wanted to play old school Pokemon but with a taste of difficulty and explore Kanto maps that didn't exist in Gold/Silver. The wait is finally over, Pokemon Ceylon Version is finally released
 
-It builds the following ROMs:
+Features: Edited title screen
 
-- Pokemon - Gold Version (UE) [C][!].gbc `sha1: d8b8a3600a465308c9953dfa04f0081c05bdcb94`
-- Pokemon - Silver Version (UE) [C][!].gbc `sha1: 49b163f7e57702bc939d642a18f591de55d92dae`
+All movepools for trainers pokemon and wild pokemon have been improved
+
+The DV's of all trainers and their Pokemon have been increased
+
+All Pokemon, Level and Movepool from Trainers has been improved as well.
+
+Wild Pokemon have been edited as well
+
+The majority of Pokemon's Base Stats have been improved, some have been increased
+
+All the maps in the game have been edited to trainer battles become mandatory as you progress through
+
+In game trades have been changed
+
+Introduction of 7 new moves: Close Combat, Hurricane, Yawn, Magical Leaf, Signal Beam, Covet and Icicle Spear
+
+Introduction of 5 new maps: Global Terminal, Viridian Forest, Seafoam Islands, Cerulean Cave (Mewtwo is there), Seafoam Islands (Articuno is there)
+
+New trainers added in places that lacked them, a few may give some useful tips
+
+Progress:
+Title Screen: 100%
+Learnsets: 100%
+Wild Pokemon: 100%
+Map Layouts: 100%
+Pokemarts: 100%
+Rival/Gym Leaders/E4 Pokemon Data: 100%
+Rival/Gym Leaders/E4 Movepool Data: 100%
+Trainer's Pokemon and Movepool Data: 100%
+
+This hack was made using the disassembly of Pokemon Gold/Silver so I credit everyone that made contributions to it
+
+Credits
+
+Crystal_: ASM help
+
+Zumi: Titlescreen
+
+SourApple/SoupPotato: Map layout and inspiration for Cerulean Cave
+
+The pret team for their tutorial page on the pokecrystal wiki
+
 
 To set up the repository, see [INSTALL.md](INSTALL.md).
 
