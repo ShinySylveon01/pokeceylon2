@@ -257,9 +257,6 @@ MoveDescriptions::
 	dw MoveFFDescription
 	dw Move00Description
 
-
-
-MoveFEDescription:
 MoveFFDescription:
 Move00Description:
 	db "?@"
