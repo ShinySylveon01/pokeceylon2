@@ -149,7 +149,7 @@ MoveDescriptions::
 	dw SporeDescription
 	dw FlashDescription
 	dw PsywaveDescription
-	dw SplashDescription
+	dw IcicleSpearDescription
 	dw AcidArmorDescription
 	dw CrabhammerDescription
 	dw ExplosionDescription
@@ -165,7 +165,7 @@ MoveDescriptions::
 	dw SlashDescription
 	dw SubstituteDescription
 	dw StruggleDescription
-	dw SketchDescription
+	dw SignalBeamDescription
 	dw TripleKickDescription
 	dw ThiefDescription
 	dw SpiderWebDescription
@@ -216,7 +216,7 @@ MoveDescriptions::
 	dw SleepTalkDescription
 	dw HealBellDescription
 	dw ReturnDescription
-	dw PresentDescription
+	dw CovetDescription
 	dw FrustrationDescription
 	dw SafeguardDescription
 	dw PainSplitDescription
@@ -251,14 +251,14 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw MoveFCDescription
-	dw MoveFDDescription
-	dw MoveFEDescription
+	dw YawnDescription
+	dw MagicalLeafDescription
+	dw HurricaneDescription
 	dw MoveFFDescription
 	dw Move00Description
 
-MoveFCDescription:
-MoveFDDescription:
+
+
 MoveFEDescription:
 MoveFFDescription:
 Move00Description:
@@ -860,9 +860,9 @@ PsywaveDescription:
 	db   "An attack with"
 	next "variable power.@"
 
-SplashDescription:
-	db   "Has no effect"
-	next "whatsoever.@"
+IcicleSpearDescription:
+	db   "Jabs the target"
+	next "2-5 times.@"
 
 AcidArmorDescription:
 	db   "Sharply raises the"
@@ -924,9 +924,9 @@ StruggleDescription:
 	db   "Used only if all"
 	next "PP are exhausted.@"
 
-SketchDescription:
-	db   "Copies the foe's"
-	next "move permanently.@"
+SignalBeamDescription:
+	db   "An attack that may"
+	next "confuse the foe.@"
 
 TripleKickDescription:
 	db   "Hits three times"
@@ -1128,9 +1128,9 @@ ReturnDescription:
 	db   "An attack that is"
 	next "based on loyalty.@"
 
-PresentDescription:
-	db   "A bomb that may"
-	next "restore HP.@"
+CovetDescription:
+	db   "An attack that may"
+	next "steal a held item.@"
 
 FrustrationDescription:
 	db   "An attack based on"
@@ -1267,3 +1267,15 @@ WhirlpoolDescription:
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+	
+YawnDescription:
+	db   "May put the foe to"
+	next "sleep.@"
+	
+MagicalLeafDescription:
+	db   "An attack that"
+	next "never misses.@"
+	
+HurricaneDescription:
+	db   "An attack that may"
+	next "confuse the foe.@"
