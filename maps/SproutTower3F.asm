@@ -79,9 +79,11 @@ SageLiScript:
 	verbosegiveitem HM_FLASH
 	setevent EVENT_GOT_HM05_FLASH
 	setevent EVENT_BEAT_SAGE_LI
+	setevent EVENT_VIOLET_CITY_FISHER_BLOCKS_GYM
 	writetext SageLiFlashExplanationText
 	waitbutton
 	closetext
+	disappear VIOLETCITY_FISHER
 	end
 
 .GotFlash:

@@ -7,6 +7,7 @@
 	const VIOLETCITY_FRUIT_TREE
 	const VIOLETCITY_POKE_BALL1
 	const VIOLETCITY_POKE_BALL2
+	const VIOLETCITY_FISHER
 
 VioletCity_MapScripts:
 	db 0 ; scene scripts
@@ -177,6 +178,9 @@ VioletCitySpinningEarl_MovementData:
 	turn_head DOWN
 	step_end
 
+VioletCityFisherScript:
+	jumptextfaceplayer VioletCityFisherText
+
 Text_EarlAsksIfYouBeatFalkner:
 	text "Hello!"
 	line "You are trainer?"
@@ -275,6 +279,15 @@ EarlsPokemonAcademySignText:
 	text "EARL'S #MON"
 	line "ACADEMY"
 	done
+	
+VioletCityFisherText:
+	text "You should face"
+	line "the trainers in"
+	cont "SPROUT TOWER!"
+
+	para "You will not"
+	line "regret it!"
+	done
 
 VioletCity_MapEvents:
 	db 0, 0 ; filler
@@ -301,7 +314,7 @@ VioletCity_MapEvents:
 	bg_event 10, 17, BGEVENT_READ, VioletCityMartSign
 	bg_event 25, 26, BGEVENT_ITEM, VioletCityHiddenHyperPotion
 
-	db 8 ; object events
+	db 9 ; object events
 	object_event 13, 16, SPRITE_FISHER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityEarlScript, EVENT_VIOLET_CITY_EARL
 	object_event 28, 28, SPRITE_LASS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityLassScript, -1
 	object_event 24, 14, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VioletCitySuperNerdScript, -1
@@ -310,3 +323,4 @@ VioletCity_MapEvents:
 	object_event 13, 21, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityFruitTree, -1
 	object_event  6, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VioletCityPPUp, EVENT_VIOLET_CITY_PP_UP
 	object_event 24, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VioletCityRareCandy, EVENT_VIOLET_CITY_RARE_CANDY
+	object_event 18, 18, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VioletCityFisherScript, EVENT_VIOLET_CITY_FISHER_BLOCKS_GYM

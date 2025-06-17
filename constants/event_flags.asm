@@ -989,6 +989,7 @@
 	const EVENT_BEAT_ELITE_4_KAREN
 	const EVENT_BEAT_CHAMPION_LANCE
 ; Unused: next 131 events
+	const EVENT_VIOLET_CITY_FISHER_BLOCKS_GYM
 
 	const_next 1600
 ; Sprite visibility flags
