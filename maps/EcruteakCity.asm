@@ -5,6 +5,7 @@
 	const ECRUTEAKCITY_LASS2
 	const ECRUTEAKCITY_FISHER
 	const ECRUTEAKCITY_YOUNGSTER
+	const ECRUTEAKCITY_GRAMPS3
 
 EcruteakCity_MapScripts:
 	db 0 ; scene scripts
@@ -59,6 +60,9 @@ EcruteakCityFisherScript:
 
 EcruteakCityYoungsterScript:
 	jumptextfaceplayer EcruteakCityYoungsterText
+
+EcruteakCityGramps3Script:
+	jumptextfaceplayer EcruteakCityGramps3Text
 
 EcruteakCitySign:
 	jumptext EcruteakCitySignText
@@ -181,6 +185,18 @@ EcruteakCityYoungsterText:
 	para "LAKE OF RAGE. I'd"
 	line "like to see that."
 	done
+	
+EcruteakCityGramps3Text:
+	text "MORTY, the GYM"
+	line "LEADER, is absent."
+
+	para "You should check"
+	line "out the BURNED"
+	cont "TOWER!"
+	
+	para "I'm sure he'll be"
+	line "back soon!"
+	done
 
 EcruteakCitySignText:
 	text "ECRUTEAK CITY"
@@ -255,10 +271,11 @@ EcruteakCity_MapEvents:
 	bg_event 26, 27, BGEVENT_READ, EcruteakCityMartSign
 	bg_event 21, 11, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 18, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1
 	object_event 20, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps2Script, -1
 	object_event 21, 29, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass1Script, -1
 	object_event  3,  9, SPRITE_LASS, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass2Script, -1
 	object_event  9, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityFisherScript, -1
 	object_event 13, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakCityYoungsterScript, -1
+	object_event  6, 28, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps3Script, EVENT_ECRUTEAK_CITY_GRAMPS_BLOCKS_GYM

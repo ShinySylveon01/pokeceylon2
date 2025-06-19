@@ -62,7 +62,9 @@ ReleaseTheBeasts:
 	special RestartMapMusic
 	setscene SCENE_FINISHED
 	setevent EVENT_RELEASED_THE_BEASTS
+	setevent EVENT_ECRUTEAK_CITY_GRAMPS_BLOCKS_GYM
 	special InitRoamMons
+	disappear ECRUTEAKCITY_GRAMPS3
 	end
 
 UnusedEnteiScript:
