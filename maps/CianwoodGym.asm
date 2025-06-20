@@ -56,6 +56,7 @@ CianwoodGymChuckScript:
 	setevent EVENT_BEAT_BLACKBELT_LAO
 	setevent EVENT_BEAT_BLACKBELT_NOB
 	setevent EVENT_BEAT_BLACKBELT_LUNG
+	setevent EVENT_OLIVINE_CITY_SAILOR_BLOCKS_LIGHTHOUSE
 	writetext ChuckExplainBadgeText
 	promptbutton
 	verbosegiveitem TM_DYNAMICPUNCH
@@ -64,6 +65,7 @@ CianwoodGymChuckScript:
 	writetext ChuckExplainTMText
 	waitbutton
 	closetext
+	disappear OLIVINECITY_SAILOR3
 	end
 
 .AlreadyGotTM:

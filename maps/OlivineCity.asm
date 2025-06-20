@@ -3,6 +3,7 @@
 	const OLIVINECITY_STANDING_YOUNGSTER
 	const OLIVINECITY_SAILOR2
 	const OLIVINECITY_OLIVINE_RIVAL
+	const OLIVINECITY_SAILOR3
 
 OlivineCity_MapScripts:
 	db 2 ; scene scripts
@@ -161,6 +162,9 @@ MovementData_0x1240d4:
 	step UP
 	turn_head DOWN
 	step_end
+	
+OlivineCitySailor3Script:
+	jumptextfaceplayer OlivineCitySailor3Text
 
 OlivineCityRivalText:
 	text "…"
@@ -270,6 +274,16 @@ OlivineLighthouseSignText:
 	line "Also Known as the"
 	cont "GLITTER LIGHTHOUSE"
 	done
+	
+OlivineCitySailor3Text:
+	text "The LIGHTHOUSE is"
+	line "temporarily closed"
+	cont "for now!"
+
+	para "You should check"
+	line "out the CIANWOOD"
+	cont "GYM!"
+	done
 
 OlivineCity_MapEvents:
 	db 0, 0 ; filler
@@ -299,8 +313,9 @@ OlivineCity_MapEvents:
 	bg_event  8, 21, BGEVENT_READ, OlivineCityPokecenterSign
 	bg_event 14, 21, BGEVENT_READ, OlivineCityMartSign
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 26, 27, SPRITE_SAILOR, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor1Script, -1
 	object_event 20, 13, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, OlivineCityStandingYoungsterScript, -1
 	object_event 17, 21, SPRITE_SAILOR, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor2Script, -1
 	object_event 10, 11, SPRITE_OLIVINE_RIVAL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_RIVAL_OLIVINE_CITY
+	object_event 29, 28, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCitySailor3Script, EVENT_OLIVINE_CITY_SAILOR_BLOCKS_LIGHTHOUSE

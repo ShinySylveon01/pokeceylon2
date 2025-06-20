@@ -991,6 +991,7 @@
 ; Unused: next 131 events
 	const EVENT_VIOLET_CITY_FISHER_BLOCKS_GYM
 	const EVENT_ECRUTEAK_CITY_GRAMPS_BLOCKS_GYM
+	const EVENT_OLIVINE_CITY_SAILOR_BLOCKS_LIGHTHOUSE
 
 	const_next 1600
 ; Sprite visibility flags
