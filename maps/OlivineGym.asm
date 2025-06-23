@@ -30,6 +30,7 @@ OlivineGymJasmineScript:
 	setflag ENGINE_MINERALBADGE
 	readvar VAR_BADGES
 	scall OlivineGymActivateRockets
+	setscene SCENE_ECRUTEAK_CITY_NOTHING
 .FightDone:
 	checkevent EVENT_GOT_TM23_IRON_TAIL
 	iftrue .GotIronTail
@@ -38,6 +39,7 @@ OlivineGymJasmineScript:
 	verbosegiveitem TM_IRON_TAIL
 	iffalse .NoRoomForIronTail
 	setevent EVENT_GOT_TM23_IRON_TAIL
+	clearevent EVENT_ECRUTEAK_CITY_LASS_BLOCKS_EAST
 	writetext Jasmine_IronTailSpeech
 	waitbutton
 	closetext
