@@ -9,10 +9,9 @@
 	const ECRUTEAKCITY_LASS3
 
 EcruteakCity_MapScripts:
-	db 3 ; scene scripts
+	db 2 ; scene scripts
 	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_ECRUTEAK_CITY_LASS_STOPS_YOU
-	scene_script .DummyScene2 ; SCENE_ECRUTEAK_CITY_NOTHING
+	scene_script .DummyScene1 ; SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -21,9 +20,6 @@ EcruteakCity_MapScripts:
 	end
 
 .DummyScene1:
-	end
-
-.DummyScene2:
 	end
 
 .FlyPoint:
