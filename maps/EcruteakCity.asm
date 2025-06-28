@@ -57,13 +57,6 @@ EcruteakCityLass3Script2:
 	closetext
 	applymovement ECRUTEAKCITY_LASS3, MovementDataLass2_0x124b62
 	end
-	
-EcruteakCityLass3TextBeatenJasmineScript:
-	setevent EVENT_BEAT_JASMINE
-	writetext EcruteakCityLass3TextBeatenJasmine
-	waitbutton
-	closetext
-	end
 
 EcruteakCityGramps1Script:
 	jumptextfaceplayer EcruteakCityGramps1Text
@@ -323,16 +316,6 @@ EcruteakCityLass3Text:
 	para "Trainers on the"
 	line "east are hard to"
 	cont "battle!"
-	done
-	
-EcruteakCityLass3TextBeatenJasmine:
-	text "You beat the"
-	line "leader of the"
-	cont "OLIVINE GYM!"
-
-	para "You look ready"
-	line "to fight those"
-	cont "trainers!"
 	done
 
 EcruteakCity_MapEvents:
