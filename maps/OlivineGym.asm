@@ -39,6 +39,7 @@ OlivineGymJasmineScript:
 	iffalse .NoRoomForIronTail
 	setevent EVENT_GOT_TM23_IRON_TAIL
 	setmapscene ECRUTEAK_CITY, SCENE_FINISHED
+	disappear ECRUTEAKCITY_LASS3
 	writetext Jasmine_IronTailSpeech
 	waitbutton
 	closetext

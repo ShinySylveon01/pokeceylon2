@@ -28,7 +28,6 @@ EcruteakCity_MapScripts:
 
 EcruteakCityLass3Script1:
 	faceplayer
-	setevent EVENT_ECRUTEAK_CITY_LASS_BLOCKS_EAST
 	showemote EMOTE_SHOCK, ECRUTEAKCITY_LASS3, 15
 	applymovement ECRUTEAKCITY_LASS3, MovementDataLass1_0x124b5e
 	follow PLAYER, ECRUTEAKCITY_LASS3
@@ -44,7 +43,6 @@ EcruteakCityLass3Script1:
 	
 EcruteakCityLass3Script2:
 	faceplayer
-	setevent EVENT_ECRUTEAK_CITY_LASS_BLOCKS_EAST
 	showemote EMOTE_SHOCK, ECRUTEAKCITY_LASS3, 15
 	applymovement ECRUTEAKCITY_LASS3, MovementDataLass2_0x124b5e
 	follow PLAYER, ECRUTEAKCITY_LASS3
