@@ -10,8 +10,8 @@
 
 EcruteakCity_MapScripts:
 	db 2 ; scene scripts
-	scene_script .DummyScene0 ; SCENE_DEFAULT
-	scene_script .DummyScene1 ; SCENE_FINISHED
+	scene_script .DummyScene0, SCENE_DEFAULT
+	scene_script .DummyScene1, SCENE_FINISHED
 
 	db 1 ; callbacks
 	callback MAPCALLBACK_NEWMAP, .FlyPoint
@@ -26,8 +26,9 @@ EcruteakCity_MapScripts:
 	setflag ENGINE_FLYPOINT_ECRUTEAK
 	return
 
-
 EcruteakCityLass3Script1:
+	faceplayer
+	setevent EVENT_ECRUTEAK_CITY_LASS_BLOCKS_EAST
 	showemote EMOTE_SHOCK, ECRUTEAKCITY_LASS3, 15
 	applymovement ECRUTEAKCITY_LASS3, MovementDataLass1_0x124b5e
 	follow PLAYER, ECRUTEAKCITY_LASS3
@@ -43,6 +44,7 @@ EcruteakCityLass3Script1:
 	
 EcruteakCityLass3Script2:
 	faceplayer
+	setevent EVENT_ECRUTEAK_CITY_LASS_BLOCKS_EAST
 	showemote EMOTE_SHOCK, ECRUTEAKCITY_LASS3, 15
 	applymovement ECRUTEAKCITY_LASS3, MovementDataLass2_0x124b5e
 	follow PLAYER, ECRUTEAKCITY_LASS3
@@ -54,6 +56,13 @@ EcruteakCityLass3Script2:
 	waitbutton
 	closetext
 	applymovement ECRUTEAKCITY_LASS3, MovementDataLass2_0x124b62
+	end
+	
+EcruteakCityLass3TextBeatenJasmineScript:
+	setevent EVENT_BEAT_JASMINE
+	writetext EcruteakCityLass3TextBeatenJasmine
+	waitbutton
+	closetext
 	end
 
 EcruteakCityGramps1Script:
@@ -93,15 +102,6 @@ EcruteakCityFisherScript:
 
 .JasmineReturned:
 	writetext EcruteakCityFisherText_JasmineReturned
-	waitbutton
-	closetext
-	end
-	
-EcruteakCityLass3TextBeatenJasmineScript:
-	faceplayer
-	opentext
-	setevent EVENT_BEAT_JASMINE
-	writetext EcruteakCityLass3TextBeatenJasmine
 	waitbutton
 	closetext
 	end
