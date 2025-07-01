@@ -1151,7 +1151,6 @@ _OakText1::
 	line "taken to a place"
 	cont "called JOHTO and"
 	
-
 	para "KANTO 2.0!"
 
 	para "I forgot to"
@@ -1179,54 +1178,51 @@ _OakText3::
 
 _OakText4::
 	text "People and #MON"
-	line "live together by"
+	line "bond together!"
 
-	para "supporting each"
-	line "other."
+	para "They help out"
+	line "by supporting"
+	cont "each other!"
 
-	para "Some people play"
-	line "with #MON, some"
-	cont "battle with them."
+	para "Some like to"
+	line "play with their"
+	cont "#MON while some"
+	
+	para "battle with them!"
 	prompt
 
 _OakText5::
-	text "But we don't know"
-	line "everything about"
-	cont "#MON yet."
+	text "Some #MON are"
+	line "legendaries which"
+	cont "is why more study"
 
-	para "There are still"
-	line "many mysteries to"
-	cont "solve."
+	para "is needed!"
 
-	para "That's why I study"
-	line "#MON every day."
+	para "That's why I am"
+	line "studying everyday!"
 	prompt
 
 _OakText6::
-	text "Now, what did you"
-	line "say your name was?"
+	text "First, can you"
+	line "tell me your name?"
 	prompt
 
 _OakText7::
-	text "<PLAYER>, are you"
-	line "ready?"
+	text "So <PLAYER>, are"
+	line "you ready?"
 
-	para "Your very own"
-	line "#MON story is"
-	cont "about to unfold."
+	para "Be prepared for"
+	line "the struggles that"
+	cont "you may face!"
 
-	para "You'll face fun"
-	line "times and tough"
-	cont "challenges."
+	para "MOM has already"
+	line "finished moving"
+	cont "in!"
 
-	para "A world of dreams"
-	line "and adventures"
+	para "Have fun in"
+	line "JOHTO 2.0!"
 
-	para "with #MON"
-	line "awaits! Let's go!"
-
-	para "I'll be seeing you"
-	line "later!"
+	para "See you later!"
 	done
 
 _ClockTimeMayBeWrongText::
