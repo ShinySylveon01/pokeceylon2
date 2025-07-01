@@ -1143,23 +1143,34 @@ _MainMenuTimeUnknownText::
 	done
 
 _OakText1::
-	text "Hello! Sorry to"
-	line "keep you waiting!"
+	text "Hello! I am very"
+	line "sorry about the"
+	cont "delay!"
 
-	para "Welcome to the"
-	line "world of #MON!"
+	para "You have been"
+	line "taken to a place"
+	cont "called JOHTO and"
+	
 
-	para "My name is OAK."
+	para "KANTO 2.0!"
 
+	para "I forgot to"
+	line "introduce myself!"
+	
+	para "My name is OAK!"
+	
 	para "People call me the"
 	line "#MON PROF."
 	prompt
 
 _OakText2::
-	text "This world is in-"
-	line "habited by crea-"
-	cont "tures that we call"
-	cont "#MON.@"
+	text "This is a #MON!"
+	
+	para "You can find them"
+	line "in some indoor"
+	cont "places and in"
+	
+	para "grassy areas too!"
 	text_end
 
 _OakText3::

@@ -247,11 +247,16 @@ Text_CallMomOnGear:
 	done
 
 Text_ElmDiscoveredNewMon:
-	text "Yo, <PLAYER>!"
+	text "SHINYSYLVEON01"
+	line "was the one to"
+	cont "make this hack!"
 
-	para "I hear PROF.ELM"
-	line "discovered some"
-	cont "new #MON."
+	para "The story of this"
+	line "game is different"
+	cont "compared to the"
+	
+	para "original #MON"
+	line "GOLD and SILVER!"
 	done
 
 NewBarkTownRivalText1:
