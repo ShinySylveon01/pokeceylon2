@@ -5,11 +5,15 @@
 	const ROUTE46_FRUIT_TREE1
 	const ROUTE46_FRUIT_TREE2
 	const ROUTE46_POKE_BALL
+	const ROUTE46_YOUNGSTER1
 
 Route46_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+
+Route46YoungsterScript:
+	jumptextfaceplayer Route46YoungsterText
 
 TrainerCamperTed:
 	trainer CAMPER, TED, EVENT_BEAT_CAMPER_TED, CamperTedSeenText, CamperTedBeatenText, 0, .Script
@@ -191,6 +195,16 @@ Route46SignText:
 	text "ROUTE 46"
 	line "MOUNTAIN RD. AHEAD"
 	done
+	
+Route46YoungsterText:
+	text "I need to tie my"
+	line "shoes right here!"
+
+	para "Loop, swoop and"
+	line "pull!"
+
+	para "Dang it!"
+	done
 
 Route46_MapEvents:
 	db 0, 0 ; filler
@@ -205,10 +219,11 @@ Route46_MapEvents:
 	db 1 ; bg events
 	bg_event  5, 15, BGEVENT_READ, Route46Sign
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 12, 10, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerHikerBailey, -1
 	object_event 10, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerCamperTed, -1
 	object_event 13, 13, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 4, TrainerPicnickerErin1, -1
 	object_event  7,  5, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree1, -1
 	object_event  8,  6, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, Route46FruitTree2, -1
 	object_event  5, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, Route46DireHit, EVENT_ROUTE_46_DIRE_HIT
+	object_event 11, 26, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, Route46YoungsterScript, EVENT_ROUTE_46_YOUNGSTER_BLOCKS_PATH
