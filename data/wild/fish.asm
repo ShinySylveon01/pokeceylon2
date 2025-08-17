@@ -23,17 +23,17 @@ FishGroups:
 
 .Shore_Old:
 	db  70 percent + 1, MAGIKARP,   10
-	db  85 percent + 1, MAGIKARP,   10
+	db  85 percent + 1, REMORAID,   10
 	db 100 percent,     KRABBY,     10
 .Shore_Good:
 	db  35 percent,     MAGIKARP,   20
-	db  70 percent,     KRABBY,     20
+	db  70 percent,     WOOPER,     20
 	db  90 percent + 1, KRABBY,     20
 	db 100 percent,     time_group 0
 .Shore_Super:
 	db  40 percent,     KRABBY,     40
 	db  70 percent,     time_group 1
-	db  90 percent + 1, KRABBY,     40
+	db  90 percent + 1, SLOWPOKE,   40
 	db 100 percent,     KINGLER,    40
 
 .Ocean_Old:
