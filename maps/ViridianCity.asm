@@ -3,6 +3,7 @@
 	const VIRIDIANCITY_GRAMPS2
 	const VIRIDIANCITY_FISHER
 	const VIRIDIANCITY_YOUNGSTER
+	const VIRIDIANCITY_LASS
 
 ViridianCity_MapScripts:
 	db 0 ; scene scripts
@@ -13,6 +14,9 @@ ViridianCity_MapScripts:
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_VIRIDIAN
 	return
+
+ViridianCityLassScript:
+	jumptextfaceplayer ViridianCityLassText
 
 ViridianCityCoffeeGramps:
 	faceplayer
@@ -84,6 +88,15 @@ ViridianCityPokecenterSign:
 
 ViridianCityMartSign:
 	jumpstd MartSignScript
+	
+ViridianCityLassText:
+	text "You should try"
+	line "to beat more"
+	cont "trainers!"
+
+	para "Maybe try beating"
+	line "CHAMPION RED!"
+	done
 
 ViridianCityCoffeeGrampsQuestionText:
 	text "Hey, kid! I just"
@@ -233,8 +246,9 @@ ViridianCity_MapEvents:
 	bg_event 24, 25, BGEVENT_READ, ViridianCityPokecenterSign
 	bg_event 32, 25, BGEVENT_READ, ViridianCityMartSign
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 18,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGramps, -1
 	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityGrampsNearGym, -1
 	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
 	object_event 17, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungsterScript, -1
+	object_event 23, 16, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityLassScript, EVENT_VIRIDIAN_CITY_LASS_BLOCKS_TRAINER_HOUSE

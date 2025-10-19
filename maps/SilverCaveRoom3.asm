@@ -23,9 +23,11 @@ Red:
 	writetext RedLeavesText
 	waitbutton
 	closetext
+	setevent EVENT_VIRIDIAN_CITY_LASS_BLOCKS_TRAINER_HOUSE
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear SILVERCAVEROOM3_RED
+	disappear VIRIDIANCITY_LASS
 	pause 15
 	special FadeInQuickly
 	pause 30
