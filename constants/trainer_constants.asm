@@ -319,6 +319,7 @@ CHRIS EQU __trainer_class__
 	trainerclass SKIER ; 21
 	const ROXANNE
 	const CLARISSA
+	const RIDLEY
 
 	trainerclass TEACHER ; 22
 	const COLETTE

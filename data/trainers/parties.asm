@@ -1627,6 +1627,16 @@ SkierGroup:
 	db "CLARISSA@", TRAINERTYPE_NORMAL
 	db 52, DEWGONG
 	db -1 ; end
+	
+	; SKIER (3)
+	db "RIDLEY@", TRAINERTYPE_NORMAL
+	db 62, DEWGONG
+	db 62, SLOWKING
+	db 62, DELIBIRD
+	db 62, CLOYSTER
+	db 62, VAPOREON
+	db 62, ARTICUNO
+	db -1 ; end
 
 TeacherGroup:
 	; TEACHER (1)

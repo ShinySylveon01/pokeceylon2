@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const ICEPATH1F_POKE_BALL1
 	const ICEPATH1F_POKE_BALL2
+	const ICEPATH1F_BEAUTY1
 
 IcePath1F_MapScripts:
 	db 0 ; scene scripts
@@ -12,6 +13,39 @@ IcePath1FHMWaterfall:
 
 IcePath1FPPUp:
 	itemball PP_UP
+	
+TrainerSkierRidley:
+	trainer SKIER, RIDLEY, EVENT_BEAT_SKIER_RIDLEY, SkierRidleySeenText, SkierRidleyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SkierRidleyAfterBattleText
+	waitbutton
+	closetext
+	end
+
+SkierRidleySeenText:
+	text "Welcome to ICE"
+	line "CAVE!"
+
+	para "My #MON will"
+	line "give you a"
+	cont "frostbite!"
+	done
+
+SkierRidleyBeatenText:
+	text "Darn!"
+	done
+
+SkierRidleyAfterBattleText:
+	text "Watch out for"
+	line "ICE type #MON!"
+
+	para "They will freeze"
+	line "you!"
+	done
+
 
 IcePath1F_MapEvents:
 	db 0, 0 ; filler
@@ -26,6 +60,7 @@ IcePath1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 31,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FHMWaterfall, EVENT_GOT_HM07_WATERFALL
 	object_event 32, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FPPUp, EVENT_ICE_PATH_1F_PP_UP
+	object_event  7, 16, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSkierRidley, -1
