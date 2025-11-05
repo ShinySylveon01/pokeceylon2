@@ -1637,6 +1637,15 @@ SkierGroup:
 	db 62, VAPOREON
 	db 62, ARTICUNO
 	db -1 ; end
+	
+	; SKIER (4)
+	db "OLIVIA@", TRAINERTYPE_NORMAL
+	db 61, PILOSWINE
+	db 61, CLOYSTER
+	db 61, OCTILLERY
+	db 61, LAPRAS
+	db 61, VAPOREON
+	db -1 ; end
 
 TeacherGroup:
 	; TEACHER (1)

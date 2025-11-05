@@ -3,6 +3,7 @@
 	const ICEPATH1F_POKE_BALL2
 	const ICEPATH1F_BEAUTY1
 	const ICEPATH1F_ROCKER1
+	const ICEPATH1F_BEAUTY2
 
 IcePath1F_MapScripts:
 	db 0 ; scene scripts
@@ -33,6 +34,17 @@ TrainerBoarderNolan:
 	endifjustbattled
 	opentext
 	writetext BoarderNolanAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerSkierOlivia:
+	trainer SKIER, OLIVIA, EVENT_BEAT_SKIER_OLIVIA, SkierOliviaSeenText, SkierOliviaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SkierOliviaAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -73,6 +85,26 @@ BoarderNolanAfterBattleText:
 	line "the slippery ICE!"
 	done
 
+SkierOliviaSeenText:
+	text "I'm surprised"
+	line "that you made it"
+	cont "through here!"
+
+	para "Prepare to fight!"
+	done
+
+SkierOliviaBeatenText:
+	text "You are strong!"
+	done
+
+SkierOliviaAfterBattleText:
+	text "I guess I will"
+	line "continue to train"
+	cont "much harder!"
+
+	para "Next time will be"
+	line "better!"
+	done
 
 IcePath1F_MapEvents:
 	db 0, 0 ; filler
@@ -87,8 +119,9 @@ IcePath1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 31,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FHMWaterfall, EVENT_GOT_HM07_WATERFALL
 	object_event 32, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FPPUp, EVENT_ICE_PATH_1F_PP_UP
 	object_event  7, 16, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSkierRidley, -1
 	object_event 23, 22, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBoarderNolan, -1
+	object_event 20, 12, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSkierOlivia, -1
