@@ -3352,6 +3352,14 @@ BoarderGroup:
 	db 50, DELIBIRD
 	db 51, BLASTOISE
 	db -1 ; end
+	
+	; BOARDER (4)
+	db "NOLAN@", TRAINERTYPE_NORMAL
+	db 61, DELIBIRD
+	db 61, GYARADOS
+	db 61, SLOWBRO
+	db 61, PILOSWINE
+	db -1 ; end
 
 PokefanMGroup:
 	; POKEFANM (1)

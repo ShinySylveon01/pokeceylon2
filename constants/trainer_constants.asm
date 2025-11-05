@@ -617,6 +617,7 @@ CHRIS EQU __trainer_class__
 	const RONALD
 	const BRAD
 	const DOUGLAS
+	const NOLAN
 
 	trainerclass POKEFANM ; 3b
 	const WILLIAM
