@@ -4,6 +4,7 @@
 	const ICEPATH1F_BEAUTY1
 	const ICEPATH1F_ROCKER1
 	const ICEPATH1F_BEAUTY2
+	const ICEPATH1F_ROCKER2
 
 IcePath1F_MapScripts:
 	db 0 ; scene scripts
@@ -45,6 +46,17 @@ TrainerSkierOlivia:
 	endifjustbattled
 	opentext
 	writetext SkierOliviaAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerBoarderLuke:
+	trainer BOARDER, LUKE, EVENT_BEAT_BOARDER_LUKE, BoarderLukeSeenText, BoarderLukeBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BoarderLukeAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -105,6 +117,22 @@ SkierOliviaAfterBattleText:
 	para "Next time will be"
 	line "better!"
 	done
+	
+BoarderLukeSeenText:
+	text "A new opponent"
+	line "to battle with!"
+
+	para "Let's fight!"
+	done
+
+BoarderLukeBeatenText:
+	text "You are good!"
+	done
+
+BoarderLukeAfterBattleText:
+	text "Some guy with red"
+	line "hair beat me!"
+	done
 
 IcePath1F_MapEvents:
 	db 0, 0 ; filler
@@ -119,9 +147,10 @@ IcePath1F_MapEvents:
 
 	db 0 ; bg events
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 31,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FHMWaterfall, EVENT_GOT_HM07_WATERFALL
 	object_event 32, 23, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePath1FPPUp, EVENT_ICE_PATH_1F_PP_UP
 	object_event  7, 16, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSkierRidley, -1
 	object_event 23, 22, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBoarderNolan, -1
 	object_event 20, 12, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSkierOlivia, -1
+	object_event 26,  2, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 3, TrainerBoarderLuke, -1

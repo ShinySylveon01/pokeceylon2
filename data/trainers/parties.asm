@@ -3369,6 +3369,15 @@ BoarderGroup:
 	db 61, SLOWBRO
 	db 61, PILOSWINE
 	db -1 ; end
+	
+	; BOARDER (5)
+	db "LUKE@", TRAINERTYPE_NORMAL
+	db 61, LAPRAS
+	db 61, VAPOREON
+	db 61, DEWGONG
+	db 61, CLOYSTER
+	db 61, JYNX
+	db -1 ; end
 
 PokefanMGroup:
 	; POKEFANM (1)
