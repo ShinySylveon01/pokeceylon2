@@ -2,6 +2,7 @@
 	const ICEPATHB3F_POKE_BALL
 	const ICEPATHB3F_ROCK
 	const ICEPATHB3F_BEAUTY1
+	const ICEPATHB3F_ROCKER1
 
 IcePathB3F_MapScripts:
 	db 0 ; scene scripts
@@ -21,6 +22,17 @@ TrainerSkierAva:
 	endifjustbattled
 	opentext
 	writetext SkierAvaAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerBoarderElijah:
+	trainer BOARDER, ELIJAH, EVENT_BEAT_BOARDER_ELIJAH, BoarderElijahSeenText, BoarderElijahBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BoarderElijahAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -45,6 +57,25 @@ SkierAvaAfterBattleText:
 	para "Dragon types are"
 	line "very powerful!"
 	done
+	
+BoarderElijahSeenText:
+	text "I got almost all"
+	line "of the badges but"
+	cont "lost to CLAIR!"
+	done
+
+BoarderElijahBeatenText:
+	text "You've put a lot"
+	line "of effort!"
+	done
+
+BoarderElijahAfterBattleText:
+	text "That was a good"
+	line "battle!"
+	
+	para "Next time I'll beat"
+	line "you!"
+	done
 
 IcePathB3F_MapEvents:
 	db 0, 0 ; filler
@@ -57,7 +88,8 @@ IcePathB3F_MapEvents:
 
 	db 0 ; bg events
 
-	db 3 ; object events
+	db 4 ; object events
 	object_event  5,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathB3FNevermeltice, EVENT_ICE_PATH_B3F_NEVERMELTICE
 	object_event  6,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IcePathB3FRock, -1
 	object_event  3, 10, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSkierAva, -1
+	object_event  6, 14, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBoarderElijah, -1

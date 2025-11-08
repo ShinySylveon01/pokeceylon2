@@ -3372,10 +3372,10 @@ BoarderGroup:
 	
 	; BOARDER (4)
 	db "NOLAN@", TRAINERTYPE_NORMAL
-	db 61, DELIBIRD
-	db 61, GYARADOS
-	db 61, SLOWBRO
-	db 61, PILOSWINE
+	db 62, DELIBIRD
+	db 62, GYARADOS
+	db 62, SLOWBRO
+	db 62, PILOSWINE
 	db -1 ; end
 	
 	; BOARDER (5)
@@ -3385,6 +3385,13 @@ BoarderGroup:
 	db 61, DEWGONG
 	db 61, CLOYSTER
 	db 61, JYNX
+	db -1 ; end
+	
+	; BOARDER (6)
+	db "ELIJAH@", TRAINERTYPE_NORMAL
+	db 63, LAPRAS
+	db 63, FERALIGATR
+	db 63, DEWGONG
 	db -1 ; end
 
 PokefanMGroup:
