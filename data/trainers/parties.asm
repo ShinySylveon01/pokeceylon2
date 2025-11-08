@@ -1646,6 +1646,14 @@ SkierGroup:
 	db 61, LAPRAS
 	db 61, VAPOREON
 	db -1 ; end
+	
+	; SKIER (5)
+	db "AVA@", TRAINERTYPE_NORMAL
+	db 62, SNEASEL
+	db 62, DELIBIRD
+	db 62, JYNX
+	db 62, PILOSWINE
+	db -1 ; end
 
 TeacherGroup:
 	; TEACHER (1)

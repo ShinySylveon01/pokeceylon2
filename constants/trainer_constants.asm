@@ -321,6 +321,7 @@ CHRIS EQU __trainer_class__
 	const CLARISSA
 	const RIDLEY
 	const OLIVIA
+	const AVA
 
 	trainerclass TEACHER ; 22
 	const COLETTE

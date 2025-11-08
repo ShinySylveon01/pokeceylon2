@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const ICEPATHB3F_POKE_BALL
 	const ICEPATHB3F_ROCK
+	const ICEPATHB3F_BEAUTY1
 
 IcePathB3F_MapScripts:
 	db 0 ; scene scripts
@@ -12,6 +13,38 @@ IcePathB3FNevermeltice:
 
 IcePathB3FRock:
 	jumpstd SmashRockScript
+	
+TrainerSkierAva:
+	trainer SKIER, AVA, EVENT_BEAT_SKIER_AVA, SkierAvaSeenText, SkierAvaBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext SkierAvaAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+SkierAvaSeenText:
+	text "You will not be"
+	line "able to pass me"
+	cont "until the battle"
+
+	para "is over!"
+	done
+
+SkierAvaBeatenText:
+	text "Wow!"
+	done
+
+SkierAvaAfterBattleText:
+	text "I would be very"
+	line "cautious about the"
+	cont "BLACKTHORN GYM!"
+
+	para "Dragon types are"
+	line "very powerful!"
+	done
 
 IcePathB3F_MapEvents:
 	db 0, 0 ; filler
@@ -24,6 +57,7 @@ IcePathB3F_MapEvents:
 
 	db 0 ; bg events
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event  5,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IcePathB3FNevermeltice, EVENT_ICE_PATH_B3F_NEVERMELTICE
 	object_event  6,  6, SPRITE_ROCK, SPRITEMOVEDATA_SMASHABLE_ROCK, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IcePathB3FRock, -1
+	object_event  3, 10, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_TRAINER, 3, TrainerSkierAva, -1
