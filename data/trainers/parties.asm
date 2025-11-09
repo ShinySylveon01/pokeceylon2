@@ -1654,6 +1654,12 @@ SkierGroup:
 	db 62, JYNX
 	db 62, PILOSWINE
 	db -1 ; end
+	
+	; SKIER (6)
+	db "SADIE@", TRAINERTYPE_NORMAL
+	db 64, DEWGONG
+	db 64, CLOYSTER
+	db -1 ; end
 
 TeacherGroup:
 	; TEACHER (1)
