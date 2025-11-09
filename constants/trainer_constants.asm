@@ -623,6 +623,7 @@ CHRIS EQU __trainer_class__
 	const NOLAN
 	const LUKE
 	const ELIJAH
+	const JOSIAH
 
 	trainerclass POKEFANM ; 3b
 	const WILLIAM

@@ -3399,6 +3399,13 @@ BoarderGroup:
 	db 63, FERALIGATR
 	db 63, DEWGONG
 	db -1 ; end
+	
+	; BOARDER (7)
+	db "JOSIAH@", TRAINERTYPE_NORMAL
+	db 63, SNEASEL
+	db 63, JYNX
+	db 63, VAPOREON
+	db -1 ; end
 
 PokefanMGroup:
 	; POKEFANM (1)
