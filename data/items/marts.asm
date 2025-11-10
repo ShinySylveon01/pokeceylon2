@@ -222,7 +222,7 @@ MartBlackthorn:
 	db REVIVE
 	db MAX_REPEL
 	db MAX_REVIVE
-	db X_ATTACK
+	db TM_MAGICAL_LEAF
 	db -1 ; end
 
 MartViridian:

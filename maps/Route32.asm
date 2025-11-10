@@ -107,7 +107,7 @@ Route32RoarTMGuyScript:
 	iftrue .AlreadyHaveRoar
 	writetext Text_RoarIntro
 	promptbutton
-	verbosegiveitem TM_ROAR
+	verbosegiveitem TM_MAGICAL_LEAF
 	iffalse .Finish
 	setevent EVENT_GOT_TM05_ROAR
 .AlreadyHaveRoar:
@@ -753,22 +753,21 @@ Route32UnusedText:
 	done
 
 Text_RoarIntro:
-	text "WROOOOAR!"
-	line "PEOPLE RUN WHEN I"
+	text "You must be a"
+	line "beginner?"
 
-	para "ROAR! BUT YOU"
-	line "CAME LOOKING!"
-
-	para "THAT PLEASES ME!"
-	line "NOW TAKE THIS!"
+	para "Maybe this can be"
+	line "of good use to"
+	cont "help fight ROCK"
+	
+	para "type #MON!"
 	done
 
 Text_RoarOutro:
-	text "WROOOAR!"
-	line "IT'S ROAR!"
-
-	para "EVEN #MON RUN"
-	line "FROM A GOOD ROAR!"
+	text "TM05 contains"
+	line "MAGICAL LEAF!"
+	
+	para "It never misses!"
 	done
 
 MeetFriedaText:

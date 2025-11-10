@@ -226,7 +226,7 @@ ENDM
 	add_tm CURSE        ; c1
 	add_tm ROLLOUT      ; c2
 	const ITEM_C3       ; c3
-	add_tm ROAR         ; c4
+	add_tm MAGICAL_LEAF ; c4
 	add_tm TOXIC        ; c5
 	add_tm ZAP_CANNON   ; c6
 	add_tm ROCK_SMASH   ; c7
