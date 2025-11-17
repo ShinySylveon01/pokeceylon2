@@ -259,7 +259,7 @@ ENDM
 	add_tm SWAGGER      ; e2
 	add_tm SLEEP_TALK   ; e3
 	add_tm SLUDGE_BOMB  ; e4
-	add_tm SANDSTORM    ; e5
+	add_tm HURRICANE    ; e5
 	add_tm FIRE_BLAST   ; e6
 	add_tm SWIFT        ; e7
 	add_tm DEFENSE_CURL ; e8

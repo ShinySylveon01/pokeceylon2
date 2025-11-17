@@ -20,7 +20,7 @@ SandstormHouseWoman:
 .Loyal:
 	writetext SandstormHouseWomanLoyalText
 	promptbutton
-	verbosegiveitem TM_SANDSTORM
+	verbosegiveitem TM_HURRICANE
 	iffalse .Done
 	setevent EVENT_GOT_TM37_SANDSTORM
 .AlreadyGotItem:
@@ -65,18 +65,19 @@ SandstormHouseWomanLoyalText:
 	done
 
 SandstormHouseSandstormDescription:
-	text "TM37 happens to be"
-	line "SANDSTORM."
+	text "TM37 contains the"
+	line "move HURRICANE!"
 
-	para "It's a move that"
-	line "inflicts damage on"
-	cont "both battlers."
+	para "It's a very good"
+	line "move that packs a"
+	cont "punch!"
 
-	para "It's for advanced"
-	line "trainers only."
+	para "It's only for"
+	line "trainers who are"
+	cont "knowledgeable!"
 
-	para "Use it if you"
-	line "dare. Good luck!"
+	para "You can only use"
+	line "it once though!"
 	done
 
 SandstormHouseWomanDisloyalText:

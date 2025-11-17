@@ -57,7 +57,7 @@ MartViolet:
 	db 10 ; # items
 	db POKE_BALL
 	db SUPER_POTION
-	db X_ACCURACY
+	db TM_HURRICANE
 	db FULL_HEAL
 	db SUPER_REPEL
 	db REVIVE
@@ -317,7 +317,7 @@ MartCeladon3F:
 	db TM_SUNNY_DAY
 	db TM_PROTECT
 	db TM_RAIN_DANCE
-	db TM_SANDSTORM
+	db TM_HURRICANE
 	db -1 ; end
 
 MartCeladon4F:
