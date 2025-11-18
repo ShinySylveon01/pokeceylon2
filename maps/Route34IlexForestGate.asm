@@ -15,7 +15,7 @@ Route34IlexForestGateTeacherScript:
 	iftrue .GotSweetScent
 	writetext Route34IlexForestGateTeacherText
 	promptbutton
-	verbosegiveitem TM_SWEET_SCENT
+	verbosegiveitem TM_ICICLE_SPEAR
 	iffalse .NoRoom
 	setevent EVENT_GOT_TM12_SWEET_SCENT
 .GotSweetScent:
@@ -37,24 +37,23 @@ Route34IlexForestGateLassScript:
 	jumptextfaceplayer Route34IlexForestGateLassText
 
 Route34IlexForestGateTeacherText:
-	text "Oh, honey. You're"
-	line "making a #DEX?"
+	text "You must be new"
+	line "to JOHTO 2.0!"
 
-	para "It must be hard if"
-	line "#MON won't"
-
-	para "appear. Try using"
-	line "this TM."
+	para "Here, take this"
+	line "TM!"
 	done
 
 Route34IlexForestGateTeacher_GotSweetScent:
-	text "It's SWEET SCENT."
+	text "It contains the"
+	line "move ICICLE SPEAR!"
 
-	para "Use it wherever"
-	line "#MON appear."
+	para "Only some #MON"
+	line "will be able to"
+	cont "learn it!"
 
-	para "#MON will be"
-	line "enticed by it."
+	para "It's a very good"
+	line "move!"
 	done
 
 Route34IlexForestGateButterfreeText:

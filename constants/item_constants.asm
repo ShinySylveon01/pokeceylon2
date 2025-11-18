@@ -233,7 +233,7 @@ ENDM
 	add_tm PSYCH_UP     ; c8
 	add_tm HIDDEN_POWER ; c9
 	add_tm SUNNY_DAY    ; ca
-	add_tm SWEET_SCENT  ; cb
+	add_tm ICICLE_SPEAR ; cb
 	add_tm SNORE        ; cc
 	add_tm BLIZZARD     ; cd
 	add_tm HYPER_BEAM   ; ce

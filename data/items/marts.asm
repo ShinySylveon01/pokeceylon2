@@ -216,7 +216,7 @@ MartBlackthorn:
 	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
-	db HYPER_POTION
+	db TM_ICICLE_SPEAR
 	db MAX_POTION
 	db FULL_HEAL
 	db REVIVE
