@@ -233,7 +233,6 @@ SlowpokeEggMoves:
 FarfetchDEggMoves:
 	db STEEL_WING
 	db FORESIGHT
-	db MIRROR_MOVE
 	db GUST
 	db QUICK_ATTACK
 	db FLAIL
@@ -475,7 +474,6 @@ SentretEggMoves:
 	db -1 ; end
 
 HoothootEggMoves:
-	db MIRROR_MOVE
 	db SUPERSONIC
 	db FAINT_ATTACK
 	db WING_ATTACK
@@ -522,7 +520,6 @@ IgglybuffEggMoves:
 	db -1 ; end
 
 TogepiEggMoves:
-	db MIRROR_MOVE
 	db PECK
 	db FORESIGHT
 	db FUTURE_SIGHT
@@ -596,7 +593,6 @@ MurkrowEggMoves:
 	db WHIRLWIND
 	db DRILL_PECK
 	db QUICK_ATTACK
-	db MIRROR_MOVE
 	db WING_ATTACK
 	db -1 ; end
 

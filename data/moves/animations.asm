@@ -119,7 +119,7 @@ BattleAnimations::
 	dw BattleAnim_FocusEnergy
 	dw BattleAnim_Bide
 	dw BattleAnim_Metronome
-	dw BattleAnim_MirrorMove
+	dw BattleAnim_DrillRun
 	dw BattleAnim_Selfdestruct
 	dw BattleAnim_EggBomb
 	dw BattleAnim_Lick
@@ -282,7 +282,6 @@ BattleAnimations::
 
 BattleAnim_0:
 BattleAnim_254:
-BattleAnim_MirrorMove:
 	anim_ret
 
 BattleAnim_SweetScent2:
@@ -1348,6 +1347,27 @@ BattleAnim_Sonicboom:
 	anim_wait 8
 	anim_obj ANIM_OBJ_01, 128, 32, $18
 	anim_wait 16
+	anim_ret
+	
+BattleAnim_DrillRun:
+	anim_2gfx ANIM_GFX_HORN, ANIM_GFX_HIT
+	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $40
+	anim_obj ANIM_OBJ_HORN, 72, 80, $3
+	anim_wait 8
+.loop
+	anim_sound 0, 1, SFX_HORN_ATTACK
+	anim_obj ANIM_OBJ_00, 132, 40, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_HORN_ATTACK
+	anim_obj ANIM_OBJ_00, 140, 48, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_HORN_ATTACK
+	anim_obj ANIM_OBJ_00, 132, 56, $0
+	anim_wait 8
+	anim_sound 0, 1, SFX_HORN_ATTACK
+	anim_obj ANIM_OBJ_00, 124, 48, $0
+	anim_wait 8
+	anim_loop 3, .loop
 	anim_ret
 
 BattleAnim_Selfdestruct:

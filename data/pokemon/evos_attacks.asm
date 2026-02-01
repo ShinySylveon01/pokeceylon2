@@ -218,7 +218,7 @@ BeedrillEvosAttacks:
 	db 15, PIN_MISSILE
 	db 20, PURSUIT
 	db 23, GIGA_DRAIN
-	db 24, RETURN
+	db 24, DRILL_RUN
 	db 25, TWINEEDLE
 	db 26, SLUDGE_BOMB
 	db 0 ; no more level-up moves
@@ -233,7 +233,6 @@ PidgeyEvosAttacks:
 	db 21, WHIRLWIND
 	db 29, WING_ATTACK
 	db 37, AGILITY
-	db 47, MIRROR_MOVE
 	db 0 ; no more level-up moves
 
 PidgeottoEvosAttacks:
@@ -298,7 +297,6 @@ SpearowEvosAttacks:
 	db 7, MUD_SLAP
 	db 9, SWIFT
 	db 25, PURSUIT
-	db 31, MIRROR_MOVE
 	db 37, DRILL_PECK
 	db 43, AGILITY
 	db 0 ; no more level-up moves
@@ -308,7 +306,7 @@ FearowEvosAttacks:
 	db 1, DRILL_PECK
 	db 1, TRI_ATTACK
 	db 1, STEEL_WING
-	db 1, DOUBLE_TEAM
+	db 1, DRILL_RUN
 	db 7, DRILL_PECK
 	db 13, DRILL_PECK
 	db 26, DRILL_PECK
@@ -1516,6 +1514,7 @@ RhyhornEvosAttacks:
 	db 24, DOUBLE_EDGE
 	db 26, DOUBLE_EDGE
 	db 28, EARTHQUAKE
+	db 30, DRILL_RUN
 	db 0 ; no more level-up moves
 
 RhydonEvosAttacks:
@@ -2763,7 +2762,7 @@ ForretressEvosAttacks:
 DunsparceEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BITE
-	db 1, HEADBUTT
+	db 1, DRILL_RUN
 	db 1, ROCK_SLIDE
 	db 1, GLARE
 	db 20, EARTHQUAKE
@@ -3031,7 +3030,7 @@ SkarmoryEvosAttacks:
 	db 1, ROCK_SLIDE
 	db 1, SKY_ATTACK
 	db 1, STEEL_WING
-	db 1, SWORDS_DANCE
+	db 1, DRILL_RUN
 	db 25, STEEL_WING
 	db 37, STEEL_WING
 	db 49, STEEL_WING

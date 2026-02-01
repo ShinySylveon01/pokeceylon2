@@ -118,7 +118,7 @@ MoveDescriptions::
 	dw FocusEnergyDescription
 	dw BideDescription
 	dw MetronomeDescription
-	dw MirrorMoveDescription
+	dw DrillRunDescription
 	dw SelfdestructDescription
 	dw EggBombDescription
 	dw LickDescription
@@ -733,9 +733,9 @@ MetronomeDescription:
 	db   "Randomly uses any"
 	next "#MON move.@"
 
-MirrorMoveDescription:
-	db   "Counters with the"
-	next "same move.@"
+DrillRunDescription:
+	db   "A very powerful"
+	next "drill attack.@"
 
 SelfdestructDescription:
 	db   "Powerful but makes"

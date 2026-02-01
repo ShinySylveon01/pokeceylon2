@@ -117,7 +117,7 @@ MoveNames::
 	db "FOCUS ENERGY@"
 	db "BIDE@"
 	db "METRONOME@"
-	db "MIRROR MOVE@"
+	db "DRILL RUN@"
 	db "SELFDESTRUCT@"
 	db "EGG BOMB@"
 	db "LICK@"
