@@ -95,7 +95,7 @@ MartGoldenrod2F1:
 	db HYPER_POTION
 	db FULL_HEAL
 	db MAX_REVIVE
-	db AWAKENING
+	db TM_DRILL_RUN
 	db ELIXER
 	db ICE_HEAL
 	db -1 ; end

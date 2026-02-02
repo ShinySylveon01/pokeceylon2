@@ -132,7 +132,7 @@ Route31MailRecipientScript:
 	writetext Text_Route31ReadingMail
 	promptbutton
 	setevent EVENT_GAVE_KENYA
-	verbosegiveitem TM_NIGHTMARE
+	verbosegiveitem TM_DRILL_RUN
 	iffalse .NoRoomForItems
 	setevent EVENT_GOT_TM50_NIGHTMARE
 .DescribeNightmare:
@@ -276,19 +276,16 @@ Text_Route31ReadingMail:
 	done
 
 Text_Route31DescribeNightmare:
-	text "TM50 is NIGHTMARE."
+	text "TM50 is DRILL RUN."
 
-	para "It's a wicked move"
-	line "that steadily cuts"
+	para "It's a very strong"
+	line "GROUND type move!"
 
-	para "the HP of a sleep-"
-	line "ing enemy."
+	para "It lands crits on"
+	line "the enemy #MON!"
 
-	para "Ooooh…"
-	line "That's scary…"
-
-	para "I don't want to"
-	line "have bad dreams."
+	para "Be wise when you"
+	line "use it!"
 	done
 
 Text_Route31WrongMail:
