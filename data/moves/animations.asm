@@ -171,7 +171,7 @@ BattleAnimations::
 	dw BattleAnim_Thief
 	dw BattleAnim_SpiderWeb
 	dw BattleAnim_MindReader
-	dw BattleAnim_Nightmare
+	dw BattleAnim_BraveBird
 	dw BattleAnim_FlameWheel
 	dw BattleAnim_Snore
 	dw BattleAnim_Curse
@@ -3199,14 +3199,23 @@ BattleAnim_MindReader:
 	anim_wait 32
 	anim_ret
 
-BattleAnim_Nightmare:
-	anim_1gfx ANIM_GFX_ANGELS
-	anim_bgp $1b
-	anim_obp0 $f
-	anim_obj ANIM_OBJ_NIGHTMARE, 132, 40, $0
-	anim_obj ANIM_OBJ_NIGHTMARE, 132, 40, $a0
-	anim_sound 0, 1, SFX_NIGHTMARE
-	anim_wait 96
+BattleAnim_BraveBird:
+	anim_if_param_equal $1, BattleAnim_FocusEnergy
+	anim_1gfx ANIM_GFX_SKY_ATTACK
+	anim_bgeffect ANIM_BG_26, $0, $1, $0
+	anim_wait 32
+	anim_sound 0, 0, SFX_HYPER_BEAM
+	anim_obj ANIM_OBJ_SKY_ATTACK, 48, 88, $40
+	anim_wait 64
+	anim_incobj 1
+	anim_wait 21
+	anim_sound 0, 1, SFX_HYPER_BEAM
+	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
+	anim_wait 64
+	anim_incobj 1
+	anim_wait 32
+	anim_bgeffect ANIM_BG_SHOW_MON, $0, $1, $0
+	anim_wait 16
 	anim_ret
 
 BattleAnim_FlameWheel:

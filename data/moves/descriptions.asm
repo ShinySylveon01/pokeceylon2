@@ -170,7 +170,7 @@ MoveDescriptions::
 	dw ThiefDescription
 	dw SpiderWebDescription
 	dw MindReaderDescription
-	dw NightmareDescription
+	dw BraveBirdDescription
 	dw FlameWheelDescription
 	dw SnoreDescription
 	dw CurseDescription
@@ -941,9 +941,9 @@ MindReaderDescription:
 	db   "Ensures the next"
 	next "attack will hit.@"
 
-NightmareDescription:
-	db   "A sleeper loses"
-	next "1/4 HP every turn.@"
+BraveBirdDescription:
+	db   "A tackle that also"
+	next "hurts the user.@"
 
 FlameWheelDescription:
 	db   "An attack that may"

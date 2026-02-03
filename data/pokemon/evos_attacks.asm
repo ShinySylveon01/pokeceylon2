@@ -546,7 +546,7 @@ GolbatEvosAttacks:
 	db EVOLVE_HAPPINESS, TR_ANYTIME, CROBAT
 	db 0 ; no more evolutions
 	db 1, HYPNOSIS
-	db 1, WING_ATTACK
+	db 1, BRAVE_BIRD
 	db 1, GIGA_DRAIN
 	db 1, POISON_FANG
 	db 12, POISON_FANG
@@ -1147,14 +1147,14 @@ DodrioEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, TRI_ATTACK
 	db 1, STEEL_WING
-	db 1, DRILL_PECK
+	db 1, BRAVE_BIRD
 	db 1, DOUBLE_EDGE
-	db 9, DRILL_PECK
-	db 13, DRILL_PECK
-	db 21, DRILL_PECK
-	db 25, DRILL_PECK
-	db 38, DRILL_PECK
-	db 47, DRILL_PECK
+	db 9, BRAVE_BIRD
+	db 13, BRAVE_BIRD
+	db 21, BRAVE_BIRD
+	db 25, BRAVE_BIRD
+	db 38, BRAVE_BIRD
+	db 47, BRAVE_BIRD
 	db 0 ; no more level-up moves
 
 SeelEvosAttacks:
@@ -1951,7 +1951,7 @@ SnorlaxEvosAttacks:
 ArticunoEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BLIZZARD
-	db 1, SKY_ATTACK
+	db 1, BRAVE_BIRD
 	db 1, STEEL_WING
 	db 1, DOUBLE_EDGE
 	db 37, BLIZZARD
@@ -1963,7 +1963,7 @@ ArticunoEvosAttacks:
 ZapdosEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, THUNDERBOLT
-	db 1, SKY_ATTACK
+	db 1, BRAVE_BIRD
 	db 1, STEEL_WING
 	db 1, HIDDEN_POWER
 	db 37, THUNDERBOLT
@@ -1975,7 +1975,7 @@ ZapdosEvosAttacks:
 MoltresEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, STEEL_WING
-	db 1, SKY_ATTACK
+	db 1, BRAVE_BIRD
 	db 1, FIRE_BLAST
 	db 1, HIDDEN_POWER
 	db 37, FIRE_BLAST
@@ -2674,7 +2674,7 @@ MurkrowEvosAttacks:
 	db 1, WING_ATTACK
 	db 1, FAINT_ATTACK
 	db 1, NIGHT_SHADE
-	db 20, DRILL_PECK
+	db 20, BRAVE_BIRD
 	db 22, SHADOW_BALL
 	db 24, SHADOW_BALL
 	db 0 ; no more level-up moves
@@ -3009,7 +3009,7 @@ DelibirdEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, BLIZZARD
 	db 1, HIDDEN_POWER
-	db 1, SKY_ATTACK
+	db 1, BRAVE_BIRD
 	db 1, ATTRACT
 	db 0 ; no more level-up moves
 
@@ -3028,7 +3028,7 @@ MantineEvosAttacks:
 SkarmoryEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ROCK_SLIDE
-	db 1, SKY_ATTACK
+	db 1, BRAVE_BIRD
 	db 1, STEEL_WING
 	db 1, DRILL_RUN
 	db 25, STEEL_WING

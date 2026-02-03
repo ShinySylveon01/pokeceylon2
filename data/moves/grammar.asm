@@ -86,7 +86,7 @@ MoveGrammar:
 	db BUBBLE
 	db SLASH
 	db SPIDER_WEB
-	db NIGHTMARE
+	db BRAVE_BIRD
 	db CURSE
 	db FORESIGHT
 	db CHARM
