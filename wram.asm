@@ -2326,9 +2326,8 @@ wVermilionPortSceneID::                           db
 wFastShip1FSceneID::                              db
 wFastShipB1FSceneID::                             db
 wMountMoonSquareSceneID::                         db
-wEcruteakCitySceneID::                            db
 
-	ds 196
+	ds 197
 
 wEventFlags:: flag_array NUM_EVENTS
 
