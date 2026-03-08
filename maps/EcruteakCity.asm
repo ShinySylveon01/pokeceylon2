@@ -6,6 +6,7 @@
 	const ECRUTEAKCITY_FISHER
 	const ECRUTEAKCITY_YOUNGSTER
 	const ECRUTEAKCITY_GRAMPS3
+	const ECRUTEAKCITY_LASS3
 
 EcruteakCity_MapScripts:
 	db 0 ; scene scripts
@@ -63,6 +64,9 @@ EcruteakCityYoungsterScript:
 
 EcruteakCityGramps3Script:
 	jumptextfaceplayer EcruteakCityGramps3Text
+	
+EcruteakCityLass3Script:
+	jumptextfaceplayer EcruteakCityLass3Text
 
 EcruteakCitySign:
 	jumptext EcruteakCitySignText
@@ -197,6 +201,16 @@ EcruteakCityGramps3Text:
 	para "I'm sure he'll be"
 	line "back soon!"
 	done
+	
+EcruteakCityLass3Text:
+	text "You should check"
+	line "out the OLIVINE"
+	cont "GYM!"
+
+	para "Trainers on the"
+	line "east are hard to"
+	cont "battle!"
+	done
 
 EcruteakCitySignText:
 	text "ECRUTEAK CITY"
@@ -271,7 +285,7 @@ EcruteakCity_MapEvents:
 	bg_event 26, 27, BGEVENT_READ, EcruteakCityMartSign
 	bg_event 21, 11, BGEVENT_ITEM, EcruteakCityHiddenHyperPotion
 
-	db 7 ; object events
+	db 8 ; object events
 	object_event 18, 15, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps1Script, -1
 	object_event 20, 21, SPRITE_GRAMPS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps2Script, -1
 	object_event 21, 29, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass1Script, -1
@@ -279,4 +293,5 @@ EcruteakCity_MapEvents:
 	object_event  9, 22, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, EcruteakCityFisherScript, -1
 	object_event 13, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, EcruteakCityYoungsterScript, -1
 	object_event  6, 28, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, EcruteakCityGramps3Script, EVENT_ECRUTEAK_CITY_GRAMPS_BLOCKS_GYM
+	object_event 33, 27, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, EcruteakCityLass3Script, EVENT_ECRUTEAK_CITY_LASS_BLOCKS_EAST
 	
