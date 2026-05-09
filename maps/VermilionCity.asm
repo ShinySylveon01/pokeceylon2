@@ -5,6 +5,8 @@
 	const VERMILIONCITY_SUPER_NERD
 	const VERMILIONCITY_BIG_SNORLAX
 	const VERMILIONCITY_POKEFAN_M
+	const VERMILIONCITY_YOUNGSTER1
+	const VERMILIONCITY_YOUNGSTER2
 
 VermilionCity_MapScripts:
 	db 0 ; scene scripts
@@ -122,6 +124,12 @@ VermilionCityMartSign:
 
 VermilionCityHiddenFullHeal:
 	hiddenitem FULL_HEAL, EVENT_VERMILION_CITY_HIDDEN_FULL_HEAL
+	
+VermilionCityYoungster1Script:
+	jumptextfaceplayer VermilionCityYoungster1Text
+	
+VermilionCityYoungster2Script:
+	jumptextfaceplayer VermilionCityYoungster2Text
 
 VermilionCityTeacherText:
 	text "VERMILION PORT is"
@@ -264,6 +272,27 @@ VermilionCityPortSignText:
 	text "VERMILION PORT"
 	line "ENTRANCE"
 	done
+	
+VermilionCityYoungster1Text:
+	text "This ROUTE is"
+	line "going through a"
+	cont "little bit of"
+	
+	para "maintenanace!"
+
+	para "It will be"
+	line "finished later on!"
+	done
+	
+VermilionCityYoungster2Text:
+	text "Unfortuantely I am"
+	line "unable to let you"
+	cont "pass because of"
+	
+	para "construction!"
+
+	para "Sorry about that!"
+	done
 
 VermilionCity_MapEvents:
 	db 0, 0 ; filler
@@ -292,10 +321,12 @@ VermilionCity_MapEvents:
 	bg_event 22, 13, BGEVENT_READ, VermilionCityMartSign
 	bg_event 12, 19, BGEVENT_ITEM, VermilionCityHiddenFullHeal
 
-	db 6 ; object events
+	db 8 ; object events
 	object_event 18,  9, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionCityTeacherScript, -1
 	object_event 23,  6, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionMachopOwner, -1
 	object_event 26,  7, SPRITE_MACHOP, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, VermilionMachop, -1
 	object_event 14, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionCitySuperNerdScript, -1
 	object_event 34,  8, SPRITE_BIG_SNORLAX, SPRITEMOVEDATA_BIGDOLLSYM, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VermilionSnorlax, EVENT_VERMILION_CITY_SNORLAX
 	object_event 31, 12, SPRITE_POKEFAN_M, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, VermilionGymBadgeGuy, -1
+	object_event 16,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionCityYoungster1Script, EVENT_VERMILION_CITY_YOUNGSTER1_BLOCKS_ROUTE
+	object_event 17,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, VermilionCityYoungster2Script, EVENT_VERMILION_CITY_YOUNGSTER2_BLOCKS_ROUTE

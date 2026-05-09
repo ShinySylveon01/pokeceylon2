@@ -26,6 +26,8 @@ VermilionGymSurgeScript:
 	setevent EVENT_BEAT_GENTLEMAN_GREGORY
 	setevent EVENT_BEAT_GUITARIST_VINCENT
 	setevent EVENT_BEAT_JUGGLER_HORTON
+	setevent EVENT_VERMILION_CITY_YOUNGSTER1_BLOCKS_ROUTE
+	setevent EVENT_VERMILION_CITY_YOUNGSTER2_BLOCKS_ROUTE
 	opentext
 	writetext ReceivedThunderBadgeText
 	playsound SFX_GET_BADGE
@@ -34,6 +36,8 @@ VermilionGymSurgeScript:
 	writetext LtSurgeThunderBadgeText
 	waitbutton
 	closetext
+	disappear VERMILIONCITY_YOUNGSTER1
+	disappear VERMILIONCITY_YOUNGSTER2
 	end
 
 .FightDone:
