@@ -28,6 +28,11 @@ SaffronGymSabrinaScript:
 	setevent EVENT_BEAT_MEDIUM_DORIS
 	setevent EVENT_BEAT_PSYCHIC_FRANKLIN
 	setevent EVENT_BEAT_PSYCHIC_JARED
+	setevent EVENT_SAFFRON_CITY_LASS3_BLOCKS_GATE
+	setevent EVENT_SAFFRON_CITY_LASS4_BLOCKS_GATE
+	setevent EVENT_SAFFRON_CITY_YOUNGSTER3_BLOCKS_GATE
+	setevent EVENT_SAFFRON_CITY_YOUNGSTER4_BLOCKS_GATE
+	setevent EVENT_SAFFRON_CITY_YOUNGSTER5_BLOCKS_GATE
 	opentext
 	writetext ReceivedMarshBadgeText
 	playsound SFX_GET_BADGE
@@ -36,6 +41,11 @@ SaffronGymSabrinaScript:
 	writetext SabrinaMarshBadgeText
 	waitbutton
 	closetext
+	disappear SAFFRONCITY_LASS3
+	disappear SAFFRONCITY_LASS4
+	disappear SAFFRONCITY_YOUNGSTER3
+	disappear SAFFRONCITY_YOUNGSTER4
+	disappear SAFFRONCITY_YOUNGSTER5
 	end
 
 .FightDone:

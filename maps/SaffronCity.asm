@@ -7,6 +7,11 @@
 	const SAFFRONCITY_YOUNGSTER1
 	const SAFFRONCITY_YOUNGSTER2
 	const SAFFRONCITY_LASS2
+	const SAFFRONCITY_LASS3
+	const SAFFRONCITY_LASS4
+	const SAFFRONCITY_YOUNGSTER3
+	const SAFFRONCITY_YOUNGSTER4
+	const SAFFRONCITY_YOUNGSTER5
 
 SaffronCity_MapScripts:
 	db 0 ; scene scripts
@@ -104,6 +109,21 @@ SaffronCityPokecenterSign:
 
 SaffronCityMartSign:
 	jumpstd MartSignScript
+	
+SaffronCityLass3Script:
+	jumptextfaceplayer SaffronCityLass3Text
+	
+SaffronCityLass4Script:
+	jumptextfaceplayer SaffronCityLass4Text
+	
+SaffronCityYoungster3Script:
+	jumptextfaceplayer SaffronCityYoungster3Text
+	
+SaffronCityYoungster4Script:
+	jumptextfaceplayer SaffronCityYoungster4Text
+	
+SaffronCityYoungster5Script:
+	jumptextfaceplayer SaffronCityYoungster5Text
 
 SaffronCityLass1Text:
 	text "A little girl who"
@@ -262,6 +282,54 @@ SaffronCityMagnetTrainStationSignText:
 	line "MAGNET TRAIN"
 	cont "STATION"
 	done
+	
+SaffronCityLass3Text:
+	text "I highly suggest"
+	line "battling SABRINA"
+	cont "first!"
+
+	para "You will not"
+	line "regret it!"
+	done
+	
+SaffronCityLass4Text:
+	text "Trainers in"
+	line "CELADON CITY are"
+	cont "hard to battle!"
+	
+	para "We only let those"
+	line "who have proven"
+	cont "to be good!"
+	done
+	
+SaffronCityYoungster3Text:
+	text "Trainers in"
+	line "CERULEAN CITY are"
+	cont "hard to battle!"
+	
+	para "I cannot let you"
+	line "pass!"
+
+	para "Sorry about that!"
+	done
+	
+SaffronCityYoungster4Text:
+	text "The bikers down"
+	line "there are very"
+	cont "tough trainers!"
+	
+	para "You have not yet"
+	line "proven that you"
+	cont "are strong to"
+	
+	para "beat them!"
+	done
+	
+SaffronCityYoungster5Text:
+	text "You must defeat"
+	line "SABRINA in order"
+	cont "to pass!"
+	done
 
 SaffronCity_MapEvents:
 	db 0, 0 ; filler
@@ -295,7 +363,7 @@ SaffronCity_MapEvents:
 	bg_event 10, 29, BGEVENT_READ, SaffronCityPokecenterSign
 	bg_event 26, 11, BGEVENT_READ, SaffronCityMartSign
 
-	db 8 ; object events
+	db 13 ; object events
 	object_event  7, 14, SPRITE_LASS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityLass1Script, -1
 	object_event 19, 30, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, SaffronCityPokefanMScript, -1
 	object_event 32,  7, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityCooltrainerMScript, -1
@@ -304,3 +372,8 @@ SaffronCity_MapEvents:
 	object_event 15, 19, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster1Script, -1
 	object_event 35, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster2Script, -1
 	object_event 18,  7, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, SaffronCityLass2Script, -1
+	object_event  1, 24, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityLass3Script, EVENT_SAFFRON_CITY_LASS3_BLOCKS_GATE
+	object_event  1, 25, SPRITE_LASS, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, SaffronCityLass4Script, EVENT_SAFFRON_CITY_LASS4_BLOCKS_GATE
+	object_event 18,  4, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster3Script, EVENT_SAFFRON_CITY_YOUNGSTER3_BLOCKS_GATE
+	object_event 38, 22, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster4Script, EVENT_SAFFRON_CITY_YOUNGSTER4_BLOCKS_GATE
+	object_event 38, 23, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, SaffronCityYoungster5Script, EVENT_SAFFRON_CITY_YOUNGSTER5_BLOCKS_GATE	
