@@ -29,6 +29,7 @@ FuchsiaGymJanineScript:
 	setevent EVENT_BEAT_LASS_LINDA
 	setevent EVENT_BEAT_PICNICKER_CINDY
 	setevent EVENT_BEAT_CAMPER_BARRY
+	setevent EVENT_CELADON_CITY_GRAMPS_BLOCKS_GYM
 	variablesprite SPRITE_FUCHSIA_GYM_1, SPRITE_LASS
 	variablesprite SPRITE_FUCHSIA_GYM_2, SPRITE_LASS
 	variablesprite SPRITE_FUCHSIA_GYM_3, SPRITE_LASS
@@ -51,6 +52,7 @@ FuchsiaGymJanineScript:
 	verbosegiveitem TM_TOXIC
 	iffalse .AfterTM
 	setevent EVENT_GOT_TM06_TOXIC
+	disappear CELADONCITY_GRAMPS3
 .AfterTM:
 	writetext JanineText_ApplyMyself
 	waitbutton

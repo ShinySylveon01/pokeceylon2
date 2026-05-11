@@ -8,6 +8,7 @@
 	const CELADONCITY_YOUNGSTER2
 	const CELADONCITY_TEACHER2
 	const CELADONCITY_LASS
+	const CELADONCITY_GRAMPS3
 
 CeladonCity_MapScripts:
 	db 0 ; scene scripts
@@ -74,6 +75,9 @@ CeladonCityPokecenterSign:
 
 CeladonCityHiddenPpUp:
 	hiddenitem PP_UP, EVENT_CELADON_CITY_HIDDEN_PP_UP
+	
+CeladonCityGramps3Script:
+	jumptextfaceplayer CeladonCityGramps3Text
 
 CeladonCityFisherText:
 	text "This POLIWRATH is"
@@ -212,6 +216,20 @@ CeladonCityTrainerTipsText:
 	line "CELADON DEPT."
 	cont "STORE!"
 	done
+	
+CeladonCityGramps3Text:
+	text "I cannot let you"
+	line "pass sadly!"
+
+	para "You should go to"
+	line "FUCHSIA GYM!"
+
+	para "I can only let"
+	line "you pass if you"
+	cont "have beaten the"
+	
+	para "leader JANINE!"
+	done
 
 CeladonCity_MapEvents:
 	db 0, 0 ; filler
@@ -239,7 +257,7 @@ CeladonCity_MapEvents:
 	bg_event 30,  9, BGEVENT_READ, CeladonCityPokecenterSign
 	bg_event 37, 21, BGEVENT_ITEM, CeladonCityHiddenPpUp
 
-	db 9 ; object events
+	db 10 ; object events
 	object_event 26, 11, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonCityFisherScript, -1
 	object_event 27, 11, SPRITE_POLIWAG, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeladonCityPoliwrath, -1
 	object_event 20, 24, SPRITE_TEACHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonCityTeacher1Script, -1
@@ -249,3 +267,4 @@ CeladonCity_MapEvents:
 	object_event 24, 33, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonCityYoungster2Script, -1
 	object_event  6, 13, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeladonCityTeacher2Script, -1
 	object_event  7, 22, SPRITE_LASS, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeladonCityLassScript, -1
+	object_event 10, 30, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, CeladonCityGramps3Script, EVENT_CELADON_CITY_GRAMPS_BLOCKS_GYM
