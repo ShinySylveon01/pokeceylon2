@@ -18,12 +18,12 @@ Red:
 	startbattle
 	dontrestartmapmusic
 	reloadmapafterbattle
+	setevent EVENT_VIRIDIAN_CITY_LASS_BLOCKS_TRAINER_HOUSE
 	special FadeOutMusic
 	opentext
 	writetext RedLeavesText
 	waitbutton
 	closetext
-	setevent EVENT_VIRIDIAN_CITY_LASS_BLOCKS_TRAINER_HOUSE
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear SILVERCAVEROOM3_RED
