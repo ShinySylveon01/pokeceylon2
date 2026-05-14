@@ -4,6 +4,7 @@
 	const VIRIDIANCITY_FISHER
 	const VIRIDIANCITY_YOUNGSTER
 	const VIRIDIANCITY_LASS
+	const VIRIDIANCITY_YOUNGSTER1
 
 ViridianCity_MapScripts:
 	db 0 ; scene scripts
@@ -71,6 +72,9 @@ ViridianCityYoungsterScript:
 ViridianCityLassScript:
 	jumptextfaceplayer ViridianCityLassText
 
+ViridianCityYoungster1Script:
+	jumptextfaceplayer ViridianCityYoungster1Text
+	
 ViridianCitySign:
 	jumptext ViridianCitySignText
 
@@ -194,6 +198,15 @@ ViridianCityLassText:
 	para "Maybe try beating"
 	line "CHAMPION RED!"
 	done
+	
+ViridianCityYoungster1Text:
+	text "Nobody is in here"
+	line "right now at the"
+	cont "moment!"
+
+	para "I did see BLUE in"
+	line "CINNABAR!"
+	done
 
 ViridianCitySignText:
 	text "VIRIDIAN CITY"
@@ -240,15 +253,16 @@ ViridianCity_MapEvents:
 
 	db 6 ; bg events
 	bg_event 17, 17, BGEVENT_READ, ViridianCitySign
-	bg_event 19,  7, BGEVENT_READ, ViridianGymSign
+	bg_event 25,  7, BGEVENT_READ, ViridianGymSign
 	bg_event 19,  1, BGEVENT_READ, ViridianCityWelcomeSign
 	bg_event 21, 15, BGEVENT_READ, TrainerHouseSign
 	bg_event 24, 25, BGEVENT_READ, ViridianCityPokecenterSign
 	bg_event 32, 25, BGEVENT_READ, ViridianCityMartSign
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 18,  5, SPRITE_GRAMPS, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ViridianCityCoffeeGramps, -1
 	object_event 30,  8, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityGrampsNearGym, -1
 	object_event  6, 23, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityDreamEaterFisher, -1
 	object_event 17, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 3, 3, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungsterScript, -1
 	object_event 23, 16, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, ViridianCityLassScript, EVENT_VIRIDIAN_CITY_LASS_BLOCKS_TRAINER_HOUSE
+	object_event 32,  8, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ViridianCityYoungster1Script, EVENT_VIRIDIAN_CITY_YOUNGSTER_BLOCKS_GYM

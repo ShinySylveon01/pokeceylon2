@@ -25,6 +25,7 @@ CinnabarGymBlaineScript:
 .ReturnAfterBattle:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLAINE
+	setevent EVENT_VIRIDIAN_CITY_YOUNGSTER_BLOCKS_GYM
 	opentext
 	writetext ReceivedVolcanoBadgeText
 	playsound SFX_GET_BADGE
@@ -33,6 +34,7 @@ CinnabarGymBlaineScript:
 	writetext BlaineAfterBattleText
 	waitbutton
 	closetext
+	disappear VIRIDIANCITY_YOUNGSTER1
 	end
 
 .FightDone:
