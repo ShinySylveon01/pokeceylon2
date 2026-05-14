@@ -4,6 +4,7 @@
 	const PEWTERCITY_GRAMPS
 	const PEWTERCITY_FRUIT_TREE1
 	const PEWTERCITY_FRUIT_TREE2
+	const PEWTERCITY_YOUNGSTER
 
 PewterCity_MapScripts:
 	db 0 ; scene scripts
@@ -78,6 +79,9 @@ PewterCityFruitTree1:
 
 PewterCityFruitTree2:
 	fruittree FRUITTREE_PEWTER_CITY_2
+	
+PewterCityYoungsterScript:
+	jumptextfaceplayer PewterCityYoungsterText
 
 PewterCityCooltrainerFText:
 	text "Have you visited"
@@ -162,6 +166,15 @@ PewterCityWelcomeSignText:
 	text "Welcome to"
 	line "PEWTER CITY!"
 	done
+	
+PewterCityYoungsterText:
+	text "If only someone"
+	line "could put an end"
+	cont "to that dreaded"
+
+	para "red haired man in"
+	line "MOUNT MOON!"
+	done
 
 PewterCity_MapEvents:
 	db 0, 0 ; filler
@@ -184,9 +197,10 @@ PewterCity_MapEvents:
 	bg_event 14, 25, BGEVENT_READ, PewterCityPokecenterSign
 	bg_event 24, 17, BGEVENT_READ, PewterCityMartSign
 
-	db 5 ; object events
+	db 6 ; object events
 	object_event 19, 11, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityCooltrainerFScript, -1
 	object_event 14, 30, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, PewterCityBugCatcherScript, -1
 	object_event 29, 17, SPRITE_GRAMPS, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 2, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, PewterCityGrampsScript, -1
 	object_event 32,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree1, -1
 	object_event 30,  3, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, PewterCityFruitTree2, -1
+	object_event 16, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, PewterCityYoungsterScript, EVENT_PEWTER_CITY_YOUNGSTER_BLOCKS_GYM

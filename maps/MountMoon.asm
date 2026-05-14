@@ -66,8 +66,10 @@ MountMoon_MapScripts:
 	turnobject PLAYER, RIGHT
 	applymovement MOUNTMOON_SILVER, MountMoonSilverMovementAfter
 	disappear MOUNTMOON_SILVER
+	disappear PEWTERCITY_YOUNGSTER
 	setscene SCENE_FINISHED
 	setevent EVENT_BEAT_RIVAL_IN_MT_MOON
+	setevent EVENT_PEWTER_CITY_YOUNGSTER_BLOCKS_GYM
 	playmapmusic
 	end
 
