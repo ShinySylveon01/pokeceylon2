@@ -279,3 +279,13 @@ SECTION "Tileset Data 6", ROMX
 
 TilesetKantoGFX::
 INCBIN "gfx/tilesets/kanto.2bpp.lz"
+
+TilesetSafariGFX::
+INCBIN "gfx/tilesets/safari_zone.2bpp.lz"
+
+TilesetSafariMeta::
+INCBIN "data/tilesets/safari_zone_metatiles.bin"
+
+TilesetSafariColl::
+INCLUDE "data/tilesets/safari_zone_collision.asm"
+

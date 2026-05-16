@@ -94,6 +94,9 @@ INCLUDE "gfx/tilesets/ice_path_palette_map.asm"
 TilesetForestPalMap:
 INCLUDE "gfx/tilesets/forest_palette_map.asm"
 
+TilesetSafariPalMap:
+INCLUDE "gfx/tilesets/safari_zone_palette_map.asm"
+
 MapGroupPalettes:
 ; entries correspond to GROUP_* constants
 rept NUM_MAP_GROUPS
