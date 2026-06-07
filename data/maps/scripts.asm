@@ -19,8 +19,6 @@ INCLUDE "maps/MountMoon.asm"
 INCLUDE "maps/UndergroundPath.asm"
 INCLUDE "maps/RockTunnel1F.asm"
 INCLUDE "maps/RockTunnelB1F.asm"
-INCLUDE "maps/SafariZoneFuchsiaGateBeta.asm"
-INCLUDE "maps/SafariZoneBeta.asm"
 INCLUDE "maps/VictoryRoad.asm"
 
 
@@ -513,3 +511,16 @@ SECTION "Map Scripts 34", ROMX
 INCLUDE "maps/CeruleanCave1F.asm"
 INCLUDE "maps/CeruleanCave2F.asm"
 INCLUDE "maps/CeruleanCaveB1F.asm"
+
+SECTION "Map Scripts 35", ROMX
+
+INCLUDE "maps/SafariZoneFuchsiaGate.asm"
+INCLUDE "maps/SafariZoneHub.asm"
+INCLUDE "maps/SafariZoneEast.asm"
+INCLUDE "maps/SafariZoneNorth.asm"
+INCLUDE "maps/SafariZoneWest.asm"
+INCLUDE "maps/SafariZoneHubRestHouse.asm"
+INCLUDE "maps/SafariZoneEastRestHouse.asm"
+INCLUDE "maps/SafariZoneNorthRestHouse.asm"
+INCLUDE "maps/SafariZoneWestRestHouse1.asm"
+INCLUDE "maps/SafariZoneWestRestHouse2.asm"

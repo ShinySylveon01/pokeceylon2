@@ -135,8 +135,7 @@ ENDM
 	map_const UNDERGROUND_PATH,                             3, 14 ; 77
 	map_const ROCK_TUNNEL_1F,                              15, 18 ; 78
 	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 79
-	map_const SAFARI_ZONE_FUCHSIA_GATE_BETA,                5,  4 ; 80
-	map_const SAFARI_ZONE_BETA,                            10, 18 ; 81
+	map_const SAFARI_ZONE_FUCHSIA_GATE,                     5,  4 ; 80
 	map_const VICTORY_ROAD,                                10, 36 ; 82
 	map_const SEAFOAM_ISLANDS_1F,                          15,  9 ; 92
 	map_const SEAFOAM_ISLANDS_B1F,                         15,  9 ; 93
@@ -493,5 +492,17 @@ ENDM
 	map_const VIRIDIAN_FOREST, 17, 24
 	map_const ROUTE_2_NORTH_GATE,       5,  4
 	map_const ROUTE_2_SOUTH_GATE,       5,  4
+	
+	newgroup
+	
+	map_const SAFARI_ZONE_HUB,                            17, 16 ;  1
+	map_const SAFARI_ZONE_EAST,                           17, 15 ;  2
+	map_const SAFARI_ZONE_NORTH,                          22, 20 ;  3
+	map_const SAFARI_ZONE_WEST,                           17, 15 ;  4
+	map_const SAFARI_ZONE_HUB_REST_HOUSE,                  4,  4 ;  5
+	map_const SAFARI_ZONE_EAST_REST_HOUSE,                 4,  4 ;  6
+	map_const SAFARI_ZONE_NORTH_REST_HOUSE,                4,  4 ;  7
+	map_const SAFARI_ZONE_WEST_REST_HOUSE_1,               4,  4 ;  8
+	map_const SAFARI_ZONE_WEST_REST_HOUSE_2,               4,  4 ;  9
 
 NUM_MAP_GROUPS EQU const_value ; 27
