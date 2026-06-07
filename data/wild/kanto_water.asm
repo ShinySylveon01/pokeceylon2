@@ -145,5 +145,41 @@ KantoWaterWildMons:
 	db 70, SHELLDER
 	db 71, STARYU
 	db 73, LANTURN
+	
+	map_id CERULEAN_CAVE_1F
+	db 6 percent ; encounter rate
+	db 82, SLOWBRO
+	db 83, GOLDUCK
+	db 82, GYARADOS
+
+	map_id CERULEAN_CAVE_B1F
+	db 6 percent ; encounter rate
+	db 82, SLOWKING
+	db 83, GOLDUCK
+	db 82, GYARADOS
+	
+	map_id SAFARI_ZONE_HUB
+	db 6 percent ; encounter rate
+	db 76, SLOWBRO
+	db 74, OCTILLERY
+	db 75, VAPOREON
+
+	map_id SAFARI_ZONE_EAST
+	db 6 percent ; encounter rate
+	db 76, LANTURN
+	db 74, SEADRA
+	db 75, SEAKING
+
+	map_id SAFARI_ZONE_NORTH
+	db 6 percent ; encounter rate
+	db 76, DEWGONG
+	db 74, CLOYSTER
+	db 75, LAPRAS
+	
+	map_id SAFARI_ZONE_WEST
+	db 6 percent ; encounter rate
+	db 76, OMASTAR
+	db 74, KABUTOPS
+	db 75, GYARADOS
 
 	db -1 ; end

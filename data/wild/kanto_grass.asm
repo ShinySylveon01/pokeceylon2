@@ -1523,5 +1523,113 @@ KantoGrassWildMons:
 	db 83, MACHAMP
 	db 84, ELECTRODE
 	db 84, DITTO
+	
+	map_id SAFARI_ZONE_HUB
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 76, DODRIO
+	db 75, PARASECT
+	db 74, PRIMEAPE
+	db 76, EXEGGUTOR
+	db 77, TANGELA
+	db 76, SCYTHER
+	db 75, VENUSAUR
+	; day
+	db 76, DODRIO
+	db 75, PARASECT
+	db 74, PRIMEAPE
+	db 76, EXEGGUTOR
+	db 77, TANGELA
+	db 76, SCYTHER
+	db 75, VENUSAUR
+	; nite
+	db 76, DODRIO
+	db 75, PARASECT
+	db 74, PRIMEAPE
+	db 76, EXEGGUTOR
+	db 77, TANGELA
+	db 76, SCYTHER
+	db 75, VENUSAUR
+	
+	map_id SAFARI_ZONE_EAST
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 76, PARASECT
+	db 75, NIDOQUEEN
+	db 74, NIDOKING
+	db 76, BEEDRILL
+	db 77, BUTTERFREE
+	db 76, SCYTHER
+	db 75, CHARIZARD
+	; day
+	db 76, PARASECT
+	db 75, NIDOQUEEN
+	db 74, NIDOKING
+	db 76, BEEDRILL
+	db 77, BUTTERFREE
+	db 76, SCYTHER
+	db 75, CHARIZARD
+	; nite
+	db 76, PARASECT
+	db 75, NIDOQUEEN
+	db 74, NIDOKING
+	db 76, BEEDRILL
+	db 77, BUTTERFREE
+	db 76, SCYTHER
+	db 75, CHARIZARD
+	
+	map_id SAFARI_ZONE_NORTH
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 76, VENOMOTH
+	db 75, YANMA
+	db 74, ARIADOS
+	db 76, RHYDON
+	db 77, KANGASKHAN
+	db 76, CHANSEY
+	db 75, BLISSEY
+	; day
+	db 76, VENOMOTH
+	db 75, YANMA
+	db 74, ARIADOS
+	db 76, RHYDON
+	db 77, KANGASKHAN
+	db 76, CHANSEY
+	db 75, BLISSEY
+	; nite
+	db 76, VENOMOTH
+	db 75, YANMA
+	db 74, ARIADOS
+	db 76, RHYDON
+	db 77, KANGASKHAN
+	db 76, CHANSEY
+	db 75, BLISSEY
+	
+	map_id SAFARI_ZONE_WEST
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 76, VENOMOTH
+	db 75, TAUROS
+	db 74, PINSIR
+	db 76, NIDOQUEEN
+	db 77, KANGASKHAN
+	db 76, NIDOKING
+	db 75, BLASTOISE
+	; day
+	db 76, VENOMOTH
+	db 75, TAUROS
+	db 74, PINSIR
+	db 76, NIDOQUEEN
+	db 77, KANGASKHAN
+	db 76, NIDOKING
+	db 75, BLASTOISE
+	; nite
+	db 76, VENOMOTH
+	db 75, TAUROS
+	db 74, PINSIR
+	db 76, NIDOQUEEN
+	db 77, KANGASKHAN
+	db 76, NIDOKING
+	db 75, BLASTOISE
 
 	db -1 ; end
