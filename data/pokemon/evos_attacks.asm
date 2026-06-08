@@ -517,7 +517,7 @@ JigglypuffEvosAttacks:
 	db 14, FAINT_ATTACK
 	db 19, DIZZY_PUNCH
 	db 24, DIZZY_PUNCH
-	db 29, DIZZY_PUNCH
+	db 29, HYPER_VOICE
 	db 34, DIZZY_PUNCH
 	db 39, DIZZY_PUNCH
 	db 0 ; no more level-up moves
@@ -527,7 +527,7 @@ WigglytuffEvosAttacks:
 	db 1, SING
 	db 1, THUNDERBOLT
 	db 1, BLIZZARD
-	db 1, PSYCHIC_M
+	db 1, HYPER_VOICE
 	db 0 ; no more level-up moves
 
 ZubatEvosAttacks:
@@ -1827,7 +1827,7 @@ VaporeonEvosAttacks:
 JolteonEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, THUNDERBOLT
-	db 1, YAWN
+	db 1, SIGNAL_BEAM
 	db 1, DIG
 	db 1, SHADOW_BALL 
 	db 23, THUNDERBOLT
@@ -2197,7 +2197,7 @@ SentretEvosAttacks:
 	db 1, QUICK_ATTACK
 	db 5, SWIFT
 	db 11, QUICK_ATTACK
-	db 17, SLASH
+	db 14, HYPER_VOICE
 	db 25, DIZZY_PUNCH
 	db 33, DOUBLE_EDGE
 	db 41, PURSUIT
@@ -2207,7 +2207,7 @@ FurretEvosAttacks:
 	db 0 ; no more evolutions
 	db 1, ICE_PUNCH
 	db 1, THUNDERPUNCH
-	db 1, SHADOW_BALL
+	db 1, HYPER_VOICE
 	db 1, SURF
 	db 11, SURF
 	db 18, SURF
@@ -2513,7 +2513,7 @@ SudowoodoEvosAttacks:
 
 PolitoedEvosAttacks:
 	db 0 ; no more evolutions
-	db 1, LOVELY_KISS
+	db 1, HYPER_VOICE
 	db 1, BLIZZARD
 	db 1, EARTHQUAKE
 	db 1, HYDRO_PUMP
@@ -2646,7 +2646,7 @@ EspeonEvosAttacks:
 	db 1, MORNING_SUN
 	db 1, PSYCHIC_M
 	db 1, SHADOW_BALL
-	db 1, YAWN
+	db 1, SIGNAL_BEAM
 	db 23, PSYCHIC_M
 	db 30, PSYCHIC_M
 	db 36, PSYCHIC_M

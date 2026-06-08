@@ -250,6 +250,6 @@ MoveNames::
 	db "ROCK SMASH@"
 	db "WHIRLPOOL@"
 	db "BEAT UP@"
-	db "YAWN@"
+	db "HYPER VOICE@"
 	db "MAGICAL LEAF@"
 	db "HURRICANE@"

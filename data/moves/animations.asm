@@ -252,7 +252,7 @@ BattleAnimations::
 	dw BattleAnim_RockSmash
 	dw BattleAnim_Whirlpool
 	dw BattleAnim_BeatUp
-	dw BattleAnim_Yawn
+	dw BattleAnim_HyperVoice
 	dw BattleAnim_MagicalLeaf
 	dw BattleAnim_Hurricane
 	dw BattleAnim_SweetScent2
@@ -4604,18 +4604,23 @@ BattleAnim_BeatUp:
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 	
-BattleAnim_Yawn:
-	anim_1gfx ANIM_GFX_BUBBLE
-	anim_sound 32, 2, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BUBBLE, 64, 92, $c1
-	anim_wait 6
-	anim_sound 32, 2, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BUBBLE, 64, 92, $e1
-	anim_wait 6
-	anim_sound 32, 2, SFX_WATER_GUN
-	anim_obj ANIM_OBJ_BUBBLE, 64, 92, $d1
-	anim_wait 128
+BattleAnim_HyperVoice:
+	anim_1gfx ANIM_GFX_PSYCHIC
+	anim_bgeffect ANIM_BG_PSYCHIC, $0, $0, $0
+.loop
+	anim_sound 6, 2, SFX_HYPER_BEAM
+	anim_obj ANIM_OBJ_WAVE, 64, 80, $2
+	anim_wait 8
+	anim_sound 6, 2, SFX_HYPER_BEAM
+	anim_obj ANIM_OBJ_WAVE, 64, 88, $3
+	anim_wait 8
+	anim_sound 6, 2, SFX_HYPER_BEAM
+	anim_obj ANIM_OBJ_WAVE, 64, 96, $4
+	anim_wait 8
+	anim_loop 3, .loop
 	anim_wait 32
+	anim_incbgeffect ANIM_BG_PSYCHIC
+	anim_wait 4
 	anim_ret
 	
 BattleAnim_MagicalLeaf:

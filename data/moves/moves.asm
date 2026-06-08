@@ -263,6 +263,6 @@ Moves:
 	move ROCK_SMASH,   EFFECT_DEFENSE_DOWN_HIT,   20, FIGHTING,     100, 15,  50
 	move WHIRLPOOL,    EFFECT_TRAP_TARGET,        15, WATER,         70, 15,   0
 	move BEAT_UP,      EFFECT_BEAT_UP,            10, DARK,         100, 10,   0
-	move YAWN,         EFFECT_SLEEP,               0, NORMAL,        55, 15,   0
+	move HYPER_VOICE,  EFFECT_NORMAL_HIT,         90, NORMAL,       100, 10,   0
 	move MAGICAL_LEAF, EFFECT_ALWAYS_HIT,         80, GRASS,         95, 20,   0
 	move HURRICANE,    EFFECT_CONFUSE_HIT,       110, FLYING,       100, 10,   0

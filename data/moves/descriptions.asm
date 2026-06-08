@@ -251,7 +251,7 @@ MoveDescriptions::
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw YawnDescription
+	dw HyperVoiceDescription
 	dw MagicalLeafDescription
 	dw HurricaneDescription
 	dw MoveFFDescription
@@ -1265,9 +1265,9 @@ BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
 	
-YawnDescription:
-	db   "May put the foe to"
-	next "sleep.@"
+HyperVoiceDescription:
+	db   "An attack using"
+	next "sound waves.@"
 	
 MagicalLeafDescription:
 	db   "An attack that"

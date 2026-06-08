@@ -257,7 +257,7 @@
 	const ROCK_SMASH   ; f9
 	const WHIRLPOOL    ; fa
 	const BEAT_UP      ; fb
-	const YAWN         ; fc
+	const HYPER_VOICE  ; fc
 	const MAGICAL_LEAF ; fd
 	const HURRICANE    ; fe
 NUM_ATTACKS EQU const_value - 1
