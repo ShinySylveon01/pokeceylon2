@@ -4606,7 +4606,6 @@ BattleAnim_BeatUp:
 	
 BattleAnim_HyperVoice:
 	anim_1gfx ANIM_GFX_PSYCHIC
-	anim_bgeffect ANIM_BG_PSYCHIC, $0, $0, $0
 .loop
 	anim_sound 6, 2, SFX_HYPER_BEAM
 	anim_obj ANIM_OBJ_WAVE, 64, 80, $2
