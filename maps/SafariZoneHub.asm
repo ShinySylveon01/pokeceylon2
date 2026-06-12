@@ -2,6 +2,21 @@ SafariZoneHub_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+	
+SafariZoneHubSign:
+	jumptext SafariZoneHubSignText
+	
+SafariZoneHubSign1:
+	jumptext SafariZoneHubSignText1
+	
+SafariZoneHubSignText:
+	text "Safari Zone"
+	line "Center Area"
+	done
+	
+SafariZoneHubSignText1:
+	text "Rest House"
+	done
 
 SafariZoneHub_MapEvents:
 	db 0, 0 ; filler
@@ -19,7 +34,9 @@ SafariZoneHub_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 2 ; bg events
+	bg_event 16, 24, BGEVENT_READ, SafariZoneHubSign
+	bg_event 20, 22, BGEVENT_READ, SafariZoneHubSign1
 
 	db 0 ; object events
 	
