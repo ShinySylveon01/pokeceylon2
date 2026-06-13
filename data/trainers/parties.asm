@@ -407,6 +407,7 @@ YoungsterGroup:
 	db 13, ELEKID
 	db 13, LARVITAR
 	db 13, SUNKERN
+	db 13, EKANS
 	db -1 ; end
 
 	; YOUNGSTER (4)
@@ -1395,14 +1396,18 @@ PokemaniacGroup:
 GruntMGroup:
 	; GRUNTM (1)
 	db "GRUNT@", TRAINERTYPE_NORMAL
-	db 19, WEEPINBELL
+	db 20, WEEPINBELL
+	db 19, GLOOM
+	db 20, EKANS
 	db -1 ; end
 
 	; GRUNTM (2)
 	db "GRUNT@", TRAINERTYPE_NORMAL
 	db 18, MAGNEMITE
-	db 18, GRIMER
-	db 18, VULPIX
+	db 19, GRIMER
+	db 18, EKANS
+	db 19, KOFFING
+	db 19, MEOWTH
 	db -1 ; end
 
 	; GRUNTM (3)
@@ -1694,6 +1699,7 @@ BugCatcherGroup:
 	db "DON@", TRAINERTYPE_NORMAL
 	db  4, LEDYBA
 	db  5, METAPOD
+	db  4, SPINARAK
 	db -1 ; end
 
 	; BUG_CATCHER (2)
@@ -2647,10 +2653,10 @@ BikerGroup:
 BlaineGroup:
 	; BLAINE (1)
 	db "BLAINE@", TRAINERTYPE_ITEM
-	db 87, MAGCARGO,     LEFTOVERS
+	db 87, NINETALES,     LEFTOVERS
 	db 87, MAGMAR,     LEFTOVERS
 	db 91, ARCANINE,     LEFTOVERS
-	db 90, TAUROS,     LEFTOVERS
+	db 90, HO_OH,     LEFTOVERS
 	db 87, ENTEI,     LEFTOVERS
 	db 92, MOLTRES,     LEFTOVERS
 	db -1 ; end
@@ -2978,6 +2984,7 @@ PicnickerGroup:
 	db 14, MARILL
 	db 14, PONYTA
 	db 14, NIDORAN_F
+	db 14, EKANS
 	db -1 ; end
 
 	; PICNICKER (2)
