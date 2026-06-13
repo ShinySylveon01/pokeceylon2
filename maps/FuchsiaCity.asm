@@ -68,12 +68,17 @@ FuchsiaCityPokefanMText:
 	done
 
 FuchsiaCityTeacherText:
-	text "The SAFARI ZONE is"
-	line "closed… It's sad,"
+	text "The SAFARI GAME is"
+	line "canceled…"
 
-	para "considering it's"
-	line "FUCHSIA's main"
-	cont "attraction."
+	para "At least the"
+	line "SAFARI ZONE is"
+	cont "still open."
+
+	para "You'll need a"
+	line "strong #MON"
+	cont "to explore it,"
+	cont "though."
 	done
 
 FuchsiaCitySignText:
