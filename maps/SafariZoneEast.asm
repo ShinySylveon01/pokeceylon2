@@ -2,6 +2,32 @@ SafariZoneEast_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+	
+SafariZoneEastSign:
+	jumptext SafariZoneEastSignText
+	
+SafariZoneEastSign1:
+	jumptext SafariZoneEastSignText1
+	
+SafariZoneEastSign2:
+	jumptext SafariZoneEastSignText2
+	
+SafariZoneEastSignText:
+	text "SAFARI ZONE"
+	line "EAST AREA"
+	done
+	
+SafariZoneEastSignText1:
+	text "REST HOUSE"
+	done
+	
+SafariZoneEastSignText2:
+	text "TRAINER TIPS"
+
+	para "Search for rare"
+	line "#MON at night"
+	cont "or in the morning!"
+	done
 
 SafariZoneEast_MapEvents:
 	db 0, 0 ; filler
@@ -15,6 +41,9 @@ SafariZoneEast_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 3 ; bg events
+	bg_event  6, 24, BGEVENT_READ, SafariZoneEastSign
+	bg_event 28, 12, BGEVENT_READ, SafariZoneEastSign1
+	bg_event  8,  6, BGEVENT_READ, SafariZoneEastSign2
 
 	db 0 ; object events

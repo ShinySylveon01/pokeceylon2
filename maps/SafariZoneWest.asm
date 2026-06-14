@@ -2,6 +2,50 @@ SafariZoneWest_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+	
+SafariZoneWestSign:
+	jumptext SafariZoneWestSignText
+	
+SafariZoneWestSign1:
+	jumptext SafariZoneWestSignText1
+	
+SafariZoneWestSign2:
+	jumptext SafariZoneWestSignText2
+	
+SafariZoneWestSign3:
+	jumptext SafariZoneWestSignText3
+	
+SafariZoneWestSignText:
+	text "SAFARI ZONE"
+	line "WEST AREA"
+	done
+	
+SafariZoneWestSignText1:
+	text "REST HOUSE"
+	done
+	
+SafariZoneWestSignText2:
+	text "TRAINER TIPS"
+
+	para "Fire-type #MON"
+	line "cannot be burnt,"
+
+	para "Electric types"
+	line "can't be paralyzed,"
+
+	para "and Ice types can't"
+	line "be frozen solid."
+	done
+	
+SafariZoneWestSignText3:
+	text "TRAINER TIPS"
+
+	para "In a sandstorm,"
+	line "Rock-type #MON"
+
+	para "get a boost to"
+	line "their Sp.Def."
+	done
 
 SafariZoneWest_MapEvents:
 	db 0, 0 ; filler
@@ -18,6 +62,10 @@ SafariZoneWest_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 4 ; bg events
+	bg_event 26, 24, BGEVENT_READ, SafariZoneWestSign
+	bg_event 14, 14, BGEVENT_READ, SafariZoneWestSign1
+	bg_event 28,  6, BGEVENT_READ, SafariZoneWestSign2
+	bg_event 19,  5, BGEVENT_READ, SafariZoneWestSign3
 
 	db 0 ; object events
