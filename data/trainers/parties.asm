@@ -1819,7 +1819,8 @@ FisherGroup:
 	db 12, MAGIKARP
 	db 13, PSYDUCK
 	db 12, HORSEA
-	db 13, SEEL
+	db 12, SEEL
+	db 13, WOOPER
 	db -1 ; end
 
 	; FISHER (2)
@@ -1828,6 +1829,8 @@ FisherGroup:
 	db 13, CHINCHOU
 	db 14, REMORAID
 	db 13, SWINUB
+	db 14, WOOPER
+	db 14, TENTACOOL
 	db -1 ; end
 
 	; FISHER (3)
@@ -1845,7 +1848,9 @@ FisherGroup:
 	; FISHER (5)
 	db "HENRY@", TRAINERTYPE_NORMAL
 	db 13, SHELLDER
-	db 13, SQUIRTLE
+	db 14, SQUIRTLE
+	db 13, POLIWAG
+	db 14, TENTACOOL
 	db -1 ; end
 
 	; FISHER (6)
@@ -2465,8 +2470,9 @@ HikerGroup:
 	; HIKER (2)
 	db "RUSSELL@", TRAINERTYPE_NORMAL
 	db 16, MACHOP
-	db 16, ZUBAT
+	db 17, ZUBAT
 	db 17, CLEFAIRY
+	db 17, WOOPER
 	db -1 ; end
 
 	; HIKER (3)
