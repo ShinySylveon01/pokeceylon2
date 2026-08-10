@@ -591,6 +591,7 @@ CHRIS EQU __trainer_class__
 	const JOHN
 	const JERRY
 	const SPENCER
+	const ISAIAH
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1

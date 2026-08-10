@@ -3246,6 +3246,15 @@ CamperGroup:
 	db 42, TOGETIC
 	db 43, BUTTERFREE
 	db -1 ; end
+	
+	; CAMPER (20)
+	db "ISAIAH@", TRAINERTYPE_NORMAL
+	db 100, SNORLAX
+	db 100, GOLEM
+	db 100, SCYTHER
+	db 100, DUGTRIO
+	db 100, SANDSLASH
+	db -1 ; end
 
 ExecutiveFGroup:
 	; EXECUTIVEF (1)

@@ -31,6 +31,7 @@ OutdoorSprites:
 	dw CherrygroveGroupSprites
 	dw GlobalTerminalSprites
 	dw ViridianForestGroupSprites
+	dw SafariZoneGroupSprites
 
 PalletGroupSprites:
 	db SPRITE_TEACHER
@@ -242,6 +243,11 @@ EcruteakGroupSprites:
 	
 ViridianForestGroupSprites:
 	db SPRITE_BUG_CATCHER
+	db SPRITE_LASS
+	db SPRITE_BEAUTY
+	
+SafariZoneGroupSprites:
+	db SPRITE_YOUNGSTER
 	db SPRITE_LASS
 	db SPRITE_BEAUTY
 

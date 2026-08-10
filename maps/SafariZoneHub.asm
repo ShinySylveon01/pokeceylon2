@@ -1,8 +1,22 @@
+	object_const_def ; object_event constants
+	const SAFARI_ZONE_YOUNGSTER
+
 SafariZoneHub_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
-	
+
+TrainerCamperIsaiah:
+	trainer CAMPER, ISAIAH, EVENT_BEAT_CAMPER_ISAIAH, CamperIsaiahSeenText, CamperIsaiahBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CamperIsaiahAfterBattleText
+	waitbutton
+	closetext
+	end
+
 SafariZoneHubSign:
 	jumptext SafariZoneHubSignText
 	
@@ -16,6 +30,26 @@ SafariZoneHubSignText:
 	
 SafariZoneHubSignText1:
 	text "REST HOUSE"
+	done
+	
+CamperIsaiahSeenText:
+	text "This place is"
+	line "now testing"
+	cont "people if they"
+
+	para "are proven to be"
+	line "good trainers!"
+	
+	para "Let's fight!"
+	done
+
+CamperIsaiahBeatenText:
+	text "Why!"
+	done
+
+CamperIsaiahAfterBattleText:
+	text "I heard ZAPDOS"
+	line "flew over here!"
 	done
 
 SafariZoneHub_MapEvents:
@@ -38,5 +72,6 @@ SafariZoneHub_MapEvents:
 	bg_event 16, 24, BGEVENT_READ, SafariZoneHubSign
 	bg_event 20, 22, BGEVENT_READ, SafariZoneHubSign1
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event 29, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaiah, -1
 	
