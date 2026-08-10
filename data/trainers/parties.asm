@@ -3118,6 +3118,16 @@ PicnickerGroup:
 	db 66, VICTREEBEL
 	db 67, RAPIDASH
 	db -1 ; end
+	
+	; PICNICKER (22)
+	db "LUNA@", TRAINERTYPE_NORMAL
+	db 100, VILEPLUME
+	db 100, SMEARGLE
+	db 100, ALAKAZAM
+	db 100, QUAGSIRE
+	db 100, RAICHU
+	db 100, FLAREON
+	db -1 ; end
 
 CamperGroup:
 	; CAMPER (1)

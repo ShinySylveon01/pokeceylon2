@@ -570,6 +570,7 @@ CHRIS EQU __trainer_class__
 	const TANYA
 	const TIFFANY3
 	const ERIN3
+	const LUNA
 
 	trainerclass CAMPER ; 36
 	const ROLAND
