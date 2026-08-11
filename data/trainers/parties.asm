@@ -1811,6 +1811,16 @@ BugCatcherGroup:
 	db 80, HERACROSS
 	db 81, LEDIAN
 	db -1 ; end
+	
+	; BUG_CATCHER (18)
+	db "WALLY@", TRAINERTYPE_NORMAL
+	db 100, PINSIR
+	db 100, SCYTHER
+	db 100, ARIADOS
+	db 100, PARASECT
+	db 100, HERACROSS
+	db 100, SCIZOR
+	db -1 ; end
 
 FisherGroup:
 	; FISHER (1)

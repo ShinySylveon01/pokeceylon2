@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const SAFARI_ZONE_HUB_YOUNGSTER
 	const SAFARI_ZONE_HUB_LASS
+	const SAFARI_ZONE_HUB_BUG_CATCHER
 
 SafariZoneHub_MapScripts:
 	db 0 ; scene scripts
@@ -25,6 +26,17 @@ TrainerPicnickerLuna:
 	endifjustbattled
 	opentext
 	writetext PicnickerLunaAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerBugCatcherWally:
+	trainer BUG_CATCHER, WALLY, EVENT_BEAT_BUG_CATCHER_WALLY, BugCatcherWallySeenText, BugCatcherWallyBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BugCatcherWallyAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -84,6 +96,29 @@ PicnickerLunaAfterBattleText:
 	
 	para "got the last HM!"
 	done
+	
+BugCatcherWallySeenText:
+	text "My #MON got"
+	line "beaten by ZAPDOS!"
+
+	para "I challenge you"
+	line "to a battle!"
+	done
+
+BugCatcherWallyBeatenText:
+	text "Good job!"
+	done
+
+BugCatcherWallyAfterBattleText:
+	text "Beware of the"
+	line "legendary ZAPDOS!"
+	
+	para "If you have birds"
+	line "and WATER types!"
+	
+	para "You don't stand a"
+	line "chance!"
+	done
 
 SafariZoneHub_MapEvents:
 	db 0, 0 ; filler
@@ -105,7 +140,8 @@ SafariZoneHub_MapEvents:
 	bg_event 16, 24, BGEVENT_READ, SafariZoneHubSign
 	bg_event 20, 22, BGEVENT_READ, SafariZoneHubSign1
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 29, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaiah, -1
 	object_event 20,  6, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerLuna, -1
+	object_event  7,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherWally, -1
 	
