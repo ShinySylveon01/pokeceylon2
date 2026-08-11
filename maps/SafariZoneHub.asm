@@ -2,6 +2,7 @@
 	const SAFARI_ZONE_HUB_YOUNGSTER
 	const SAFARI_ZONE_HUB_LASS
 	const SAFARI_ZONE_HUB_BUG_CATCHER
+	const SAFARI_ZONE_HUB_BEAUTY
 
 SafariZoneHub_MapScripts:
 	db 0 ; scene scripts
@@ -37,6 +38,17 @@ TrainerBugCatcherWally:
 	endifjustbattled
 	opentext
 	writetext BugCatcherWallyAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerBeautyAurora:
+	trainer BEAUTY, AURORA, EVENT_BEAT_BEAUTY_AURORA, BeautyAuroraSeenText, BeautyAuroraBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BeautyAuroraAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -119,6 +131,24 @@ BugCatcherWallyAfterBattleText:
 	para "You don't stand a"
 	line "chance!"
 	done
+	
+BeautyAuroraSeenText:
+	text "You got all of"
+	line "the GYM badges!"
+
+	para "I want to see how"
+	line "good you are!"
+	done
+
+BeautyAuroraBeatenText:
+	text "Nice!"
+	done
+
+BeautyAuroraAfterBattleText:
+	text "You have beaten"
+	line "me but I will"
+	cont "try harder!"
+	done
 
 SafariZoneHub_MapEvents:
 	db 0, 0 ; filler
@@ -140,8 +170,9 @@ SafariZoneHub_MapEvents:
 	bg_event 16, 24, BGEVENT_READ, SafariZoneHubSign
 	bg_event 20, 22, BGEVENT_READ, SafariZoneHubSign1
 
-	db 3 ; object events
-	object_event 29, 12, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaiah, -1
+	db 4 ; object events
+	object_event 26, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaiah, -1
 	object_event 20,  6, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerLuna, -1
 	object_event  7,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherWally, -1
+	object_event  9, 22, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyAurora, -1
 	

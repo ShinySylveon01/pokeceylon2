@@ -1312,6 +1312,16 @@ BeautyGroup:
 	db 80, ALAKAZAM
 	db 81, RHYDON
 	db -1 ; end
+	
+	; BEAUTY (18)
+	db "AURORA@", TRAINERTYPE_NORMAL
+	db 100, CLOYSTER
+	db 100, BELLOSSOM
+	db 100, NINETALES
+	db 100, GENGAR
+	db 100, ESPEON
+	db 100, CHARIZARD
+	db -1 ; end
 
 PokemaniacGroup:
 	; POKEMANIAC (1)
