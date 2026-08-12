@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const SAFARI_ZONE_EAST_YOUNGSTER
 	const SAFARI_ZONE_EAST_LASS
+	const SAFARI_ZONE_EAST_BUG_CATCHER
 
 SafariZoneEast_MapScripts:
 	db 0 ; scene scripts
@@ -25,6 +26,17 @@ TrainerPicnickerAbigail:
 	endifjustbattled
 	opentext
 	writetext PicnickerAbigailAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerBugCatcherGus:
+	trainer BUG_CATCHER, GUS, EVENT_BEAT_BUG_CATCHER_GUS, BugCatcherGusSeenText, BugCatcherGusBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext BugCatcherGusAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -96,6 +108,32 @@ PicnickerAbigailAfterBattleText:
 	para "wild #MON"
 	line "caught!"
 	done
+	
+BugCatcherGusSeenText:
+	text "Hey, a new person"
+	line "I see!"
+
+	para "I have trained my"
+	line "bugs very well!"
+	
+	para "Prepare to fight!"
+	done
+
+BugCatcherGusBeatenText:
+	text "No, no, no!"
+	done
+
+BugCatcherGusAfterBattleText:
+	text "Watch out for"
+	line "legendaries!"
+	
+	para "Some of them are"
+	line "wary of humans!"
+	
+	para "A powerful move"
+	line "like MEAN LOOK can"
+	cont "trap them!"
+	done
 
 SafariZoneEast_MapEvents:
 	db 0, 0 ; filler
@@ -114,6 +152,7 @@ SafariZoneEast_MapEvents:
 	bg_event 28, 12, BGEVENT_READ, SafariZoneEastSign1
 	bg_event  8,  6, BGEVENT_READ, SafariZoneEastSign2
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event 28, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperOliver, -1
 	object_event  7, 13, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerAbigail, -1
+	object_event 26,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherGus, -1

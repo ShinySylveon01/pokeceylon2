@@ -1831,6 +1831,16 @@ BugCatcherGroup:
 	db 100, HERACROSS
 	db 100, SCIZOR
 	db -1 ; end
+	
+	; BUG_CATCHER (19)
+	db "GUS@", TRAINERTYPE_NORMAL
+	db 100, YANMA
+	db 100, BEEDRILL
+	db 100, SHUCKLE
+	db 100, LEDIAN
+	db 100, VENOMOTH
+	db 100, FORRETRESS
+	db -1 ; end
 
 FisherGroup:
 	; FISHER (1)

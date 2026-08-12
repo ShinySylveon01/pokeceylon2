@@ -352,6 +352,7 @@ CHRIS EQU __trainer_class__
 	const VINCE
 	const NOAH
 	const WALLY
+	const GUS
 
 	trainerclass FISHER ; 25
 	const JUSTIN
