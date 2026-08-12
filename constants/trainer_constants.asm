@@ -261,6 +261,7 @@ CHRIS EQU __trainer_class__
 	const VALERIE
 	const AMBER
 	const AURORA
+	const WILLOW
 
 	trainerclass POKEMANIAC ; 1e
 	const LARRY

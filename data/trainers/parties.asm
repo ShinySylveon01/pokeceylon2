@@ -1322,6 +1322,16 @@ BeautyGroup:
 	db 100, ESPEON
 	db 100, CHARIZARD
 	db -1 ; end
+	
+	; BEAUTY (19)
+	db "WILLOW@", TRAINERTYPE_NORMAL
+	db 100, VAPOREON
+	db 100, VICTREEBEL
+	db 100, MAGCARGO
+	db 100, MACHAMP
+	db 100, RAICHU
+	db 100, RHYDON
+	db -1 ; end
 
 PokemaniacGroup:
 	; POKEMANIAC (1)
