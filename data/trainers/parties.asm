@@ -3284,6 +3284,17 @@ CamperGroup:
 	db 100, SCYTHER
 	db 100, DUGTRIO
 	db 100, SANDSLASH
+	db 100, BLASTOISE
+	db -1 ; end
+	
+	; CAMPER (21)
+	db "OLIVER@", TRAINERTYPE_NORMAL
+	db 100, GRANBULL
+	db 100, AERODACTYL
+	db 100, SCIZOR
+	db 100, NIDOQUEEN
+	db 100, AMPHAROS
+	db 100, CHARIZARD
 	db -1 ; end
 
 ExecutiveFGroup:

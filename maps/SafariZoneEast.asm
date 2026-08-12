@@ -1,7 +1,21 @@
+	object_const_def ; object_event constants
+	const SAFARI_ZONE_EAST_YOUNGSTER
+
 SafariZoneEast_MapScripts:
 	db 0 ; scene scripts
 
 	db 0 ; callbacks
+	
+TrainerCamperOliver:
+	trainer CAMPER, OLIVER, EVENT_BEAT_CAMPER_OLIVER, CamperOliverSeenText, CamperOliverBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext CamperOliverAfterBattleText
+	waitbutton
+	closetext
+	end
 	
 SafariZoneEastSign:
 	jumptext SafariZoneEastSignText
@@ -28,6 +42,23 @@ SafariZoneEastSignText2:
 	line "#MON at night"
 	cont "or in the morning!"
 	done
+	
+CamperOliverSeenText:
+	text "Welcome to the"
+	line "rebuilt SAFARI"
+	cont "ZONE!"
+
+	para "Let's battle!"
+	done
+
+CamperOliverBeatenText:
+	text "How!"
+	done
+
+CamperOliverAfterBattleText:
+	text "Your #MON are"
+	line "very powerful!"
+	done
 
 SafariZoneEast_MapEvents:
 	db 0, 0 ; filler
@@ -46,4 +77,5 @@ SafariZoneEast_MapEvents:
 	bg_event 28, 12, BGEVENT_READ, SafariZoneEastSign1
 	bg_event  8,  6, BGEVENT_READ, SafariZoneEastSign2
 
-	db 0 ; object events
+	db 1 ; object events
+	object_event 28, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperOliver, -1
