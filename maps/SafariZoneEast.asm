@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
 	const SAFARI_ZONE_EAST_YOUNGSTER
+	const SAFARI_ZONE_EAST_LASS
 
 SafariZoneEast_MapScripts:
 	db 0 ; scene scripts
@@ -13,6 +14,17 @@ TrainerCamperOliver:
 	endifjustbattled
 	opentext
 	writetext CamperOliverAfterBattleText
+	waitbutton
+	closetext
+	end
+	
+TrainerPicnickerAbigail:
+	trainer PICNICKER, ABIGAIL, EVENT_BEAT_PICNICKER_ABIGAIL, PicnickerAbigailSeenText, PicnickerAbigailBeatenText, 0, .Script
+
+.Script:
+	endifjustbattled
+	opentext
+	writetext PicnickerAbigailAfterBattleText
 	waitbutton
 	closetext
 	end
@@ -59,6 +71,31 @@ CamperOliverAfterBattleText:
 	text "Your #MON are"
 	line "very powerful!"
 	done
+	
+PicnickerAbigailSeenText:
+	text "You managed to"
+	line "defeat CHAMPION"
+	cont "RED!"
+
+	para "Try beating me"
+	line "next!"
+	done
+
+PicnickerAbigailBeatenText:
+	text "Unbelievable!"
+	done
+
+PicnickerAbigailAfterBattleText:
+	text "A word of advice"
+	line "for you!"
+	
+	para "Use ULTRA BALLS"
+	line "to boost your"
+	cont "odds of getting"
+	
+	para "wild #MON"
+	line "caught!"
+	done
 
 SafariZoneEast_MapEvents:
 	db 0, 0 ; filler
@@ -77,5 +114,6 @@ SafariZoneEast_MapEvents:
 	bg_event 28, 12, BGEVENT_READ, SafariZoneEastSign1
 	bg_event  8,  6, BGEVENT_READ, SafariZoneEastSign2
 
-	db 1 ; object events
+	db 2 ; object events
 	object_event 28, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperOliver, -1
+	object_event  7, 13, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerAbigail, -1

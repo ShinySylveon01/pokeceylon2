@@ -3148,6 +3148,16 @@ PicnickerGroup:
 	db 100, RAICHU
 	db 100, FLAREON
 	db -1 ; end
+	
+	; PICNICKER (23)
+	db "ABIGAIL@", TRAINERTYPE_NORMAL
+	db 100, EXEGGUTOR
+	db 100, UMBREON
+	db 100, GYARADOS
+	db 100, ARCANINE
+	db 100, ALAKAZAM
+	db 100, MAGNETON
+	db -1 ; end
 
 CamperGroup:
 	; CAMPER (1)
