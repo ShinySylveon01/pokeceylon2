@@ -263,6 +263,7 @@ CHRIS EQU __trainer_class__
 	const AURORA
 	const WILLOW
 	const MAYA
+	const ROSE
 
 	trainerclass POKEMANIAC ; 1e
 	const LARRY
@@ -356,6 +357,7 @@ CHRIS EQU __trainer_class__
 	const WALLY
 	const GUS
 	const MILES
+	const DYLAN
 
 	trainerclass FISHER ; 25
 	const JUSTIN
@@ -579,6 +581,7 @@ CHRIS EQU __trainer_class__
 	const LUNA
 	const ABIGAIL
 	const ADDISON
+	const IVY
 
 	trainerclass CAMPER ; 36
 	const ROLAND
@@ -603,6 +606,7 @@ CHRIS EQU __trainer_class__
 	const ISAIAH
 	const OLIVER
 	const LOGAN
+	const JOSEPH
 
 	trainerclass EXECUTIVEF ; 37
 	const EXECUTIVEF_1

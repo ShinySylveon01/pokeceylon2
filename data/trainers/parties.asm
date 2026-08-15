@@ -1342,6 +1342,16 @@ BeautyGroup:
 	db 100, NIDOKING
 	db 100, SCIZOR
 	db -1 ; end
+	
+	; BEAUTY (21)
+	db "ROSE@", TRAINERTYPE_NORMAL
+	db 100, CLEFABLE
+	db 100, ARCANINE
+	db 100, ESPEON
+	db 100, GOLEM
+	db 100, GYARADOS
+	db 100, DRAGONITE
+	db -1 ; end
 
 PokemaniacGroup:
 	; POKEMANIAC (1)
@@ -1862,7 +1872,7 @@ BugCatcherGroup:
 	db 100, FORRETRESS
 	db -1 ; end
 	
-	; BUG_CATCHER (19)
+	; BUG_CATCHER (20)
 	db "MILES@", TRAINERTYPE_NORMAL
 	db 100, BUTTERFREE
 	db 100, DUNSPARCE
@@ -1870,6 +1880,16 @@ BugCatcherGroup:
 	db 100, PINSIR
 	db 100, BEEDRILL
 	db 100, SCIZOR
+	db -1 ; end
+	
+	; BUG_CATCHER (21)
+	db "DYLAN@", TRAINERTYPE_NORMAL
+	db 100, VENOMOTH
+	db 100, YANMA
+	db 100, FORRETRESS
+	db 100, BUTTERFREE
+	db 100, BEEDRILL
+	db 100, LEDIAN
 	db -1 ; end
 
 FisherGroup:
@@ -3208,6 +3228,16 @@ PicnickerGroup:
 	db 100, MISDREAVUS
 	db 100, JOLTEON
 	db -1 ; end
+	
+	; PICNICKER (25)
+	db "IVY@", TRAINERTYPE_NORMAL
+	db 100, MAGCARGO
+	db 100, CLOYSTER
+	db 100, TYRANITAR
+	db 100, ALAKAZAM
+	db 100, RAICHU
+	db 100, VENUSAUR
+	db -1 ; end
 
 CamperGroup:
 	; CAMPER (1)
@@ -3365,6 +3395,16 @@ CamperGroup:
 	db 100, NIDOKING
 	db 100, LANTURN
 	db 100, VENUSAUR
+	db -1 ; end
+	
+	; CAMPER (23)
+	db "JOSEPH@", TRAINERTYPE_NORMAL
+	db 100, UNOWN
+	db 100, URSARING
+	db 100, MISDREAVUS
+	db 100, TYRANITAR
+	db 100, UMBREON
+	db 100, HOUNDOOM
 	db -1 ; end
 
 ExecutiveFGroup:
