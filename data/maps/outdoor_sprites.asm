@@ -251,6 +251,7 @@ SafariZoneGroupSprites:
 	db SPRITE_LASS
 	db SPRITE_BEAUTY
 	db SPRITE_BUG_CATCHER
+	db SPRITE_MOLTRES
 
 AzaleaGroupSprites:
 	db SPRITE_GRAMPS

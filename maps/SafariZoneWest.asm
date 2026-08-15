@@ -3,6 +3,7 @@
 	const SAFARI_ZONE_WEST_LASS
 	const SAFARI_ZONE_WEST_BUG_CATCHER
 	const SAFARI_ZONE_WEST_BEAUTY
+	const SAFARI_ZONE_WEST_ZAPDOS
 
 SafariZoneWest_MapScripts:
 	db 0 ; scene scripts
@@ -51,6 +52,21 @@ TrainerBeautyRose:
 	writetext BeautyRoseAfterBattleText
 	waitbutton
 	closetext
+	end
+	
+SafariZoneWestZapdos:
+	faceplayer
+	opentext
+	writetext ZapdosText
+	cry ZAPDOS
+	pause 15
+	closetext
+	loadwildmon ZAPDOS, 85
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	startbattle
+	disappear SAFARI_ZONE_WEST_ZAPDOS
+	setevent EVENT_SAFARI_ZONE_WEST_ZAPDOS
+	reloadmapafterbattle
 	end
 	
 SafariZoneWestSign:
@@ -176,6 +192,10 @@ BeautyRoseAfterBattleText:
 	
 	para "better moves!"
 	done
+	
+ZapdosText:
+	text "Gyaoo!"
+	done
 
 SafariZoneWest_MapEvents:
 	db 0, 0 ; filler
@@ -198,8 +218,9 @@ SafariZoneWest_MapEvents:
 	bg_event 28,  6, BGEVENT_READ, SafariZoneWestSign2
 	bg_event 19,  5, BGEVENT_READ, SafariZoneWestSign3
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 27, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperJoseph, -1
 	object_event 15,  5, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerIvy, -1
 	object_event 13, 23, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDylan, -1
 	object_event 17, 18, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyRose, -1
+	object_event  6,  8, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0,  SafariZoneWestZapdos, EVENT_SAFARI_ZONE_WEST_ZAPDOS
