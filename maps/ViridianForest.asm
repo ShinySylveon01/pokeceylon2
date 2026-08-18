@@ -4,6 +4,10 @@
 	const VIRIDIANFOREST_BUG_CATCHER3
 	const VIRIDIANFOREST_LASS
 	const VIRIDIANFOREST_BEAUTY
+	const VIRIDIANFOREST_POKE_BALL1
+	const VIRIDIANFOREST_POKE_BALL2
+	const VIRIDIANFOREST_POKE_BALL3
+	const VIRIDIANFOREST_POKE_BALL4
 
 ViridianForest_MapScripts:
 	db 0 ; scene scripts
@@ -64,6 +68,18 @@ TrainerBeautyAmber:
 	waitbutton
 	closetext
 	end
+	
+ViridianForestCalcium:
+	itemball CALCIUM
+	
+ViridianForestPPUp:
+	itemball PP_UP
+	
+ViridianForestFullRestore:
+	itemball FULL_RESTORE
+	
+ViridianForestMaxRepel:
+	itemball MAX_REPEL
 	
 ViridianForestSign:
 	jumptext ViridianForestSignText
@@ -252,9 +268,13 @@ ViridianForest_MapEvents:
 	bg_event  4, 24, BGEVENT_READ, ViridianForestSign4
 	bg_event  1,  2, BGEVENT_READ, ViridianForestSign5
 
-	db 5 ; object events
+	db 9 ; object events
 	object_event 19, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherRandy, -1
 	object_event 11,  2, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherVince, -1
 	object_event  6, 20, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherNoah, -1
 	object_event 28, 33, SPRITE_LASS, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerLassCarlie, -1
 	object_event 28, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 4, TrainerBeautyAmber, -1
+	object_event 31, 41, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestCalcium, EVENT_VIRIDIAN_FOREST_CALCIUM
+	object_event  0, 30, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestPPUp, EVENT_VIRIDIAN_FOREST_PP_UP
+	object_event 25, 10, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestFullRestore, EVENT_VIRIDIAN_FOREST_FULL_RESTORE
+	object_event 11, 29, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, ViridianForestMaxRepel, EVENT_VIRIDIAN_FOREST_MAX_REPEL

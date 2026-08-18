@@ -245,6 +245,7 @@ ViridianForestGroupSprites:
 	db SPRITE_BUG_CATCHER
 	db SPRITE_LASS
 	db SPRITE_BEAUTY
+	db SPRITE_POKE_BALL
 	
 SafariZoneGroupSprites:
 	db SPRITE_YOUNGSTER
