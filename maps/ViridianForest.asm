@@ -65,6 +65,24 @@ TrainerBeautyAmber:
 	closetext
 	end
 	
+ViridianForestSign:
+	jumptext ViridianForestSignText
+	
+ViridianForestSign1:
+	jumptext ViridianForestSignText1
+	
+ViridianForestSign2:
+	jumptext ViridianForestSignText2
+	
+ViridianForestSign3:
+	jumptext ViridianForestSignText3
+	
+ViridianForestSign4:
+	jumptext ViridianForestSignText4
+
+ViridianForestSign5:
+	jumptext ViridianForestSignText5
+
 BugCatcherRandySeenText:
 	text "Hello there new"
 	line "person from JOHTO!"
@@ -162,6 +180,57 @@ BeautyAmberAfterBattleText:
 	para "They will poison"
 	line "you!"
 	done
+	
+ViridianForestSignText:
+	text "TRAINER TIPS"
+
+	para "Weaken #MON"
+	line "before attempting"
+	cont "capture!"
+
+	para "When healthy,"
+	line "they may escape!"
+	done
+	
+ViridianForestSignText1:
+	text "TRAINER TIPS"
+
+	para "If you want to"
+	line "avoid battles,"
+	cont "stay away from"
+	cont "grassy areas!"
+	done
+	
+ViridianForestSignText2:
+	text "For poison, use"
+	line "ANTIDOTE! Get it"
+	cont "at #MON MARTs!"
+	done
+	
+ViridianForestSignText3:
+	text "TRAINER TIPS"
+
+	para "Contact PROF.OAK"
+	line "via PC to get"
+	cont "your #DEX"
+	cont "evaluated!"
+	done
+	
+ViridianForestSignText4:
+	text "TRAINER TIPS"
+
+	para "No stealing of"
+	line "#MON from"
+	cont "other trainers!"
+	cont "Catch only wild"
+	cont "#MON!"
+	done
+	
+ViridianForestSignText5:
+	text "LEAVING"
+	line "VIRIDIAN FOREST"
+	cont "PEWTER CITY AHEAD"
+	done
 
 ViridianForest_MapEvents:
 	db 0, 0 ; filler
@@ -175,7 +244,13 @@ ViridianForest_MapEvents:
 
 	db 0 ; coord events
 
-	db 0 ; bg events
+	db 6 ; bg events
+	bg_event 16, 42, BGEVENT_READ, ViridianForestSign
+	bg_event 22, 40, BGEVENT_READ, ViridianForestSign1
+	bg_event 14, 32, BGEVENT_READ, ViridianForestSign2
+	bg_event 25, 17, BGEVENT_READ, ViridianForestSign3
+	bg_event  4, 24, BGEVENT_READ, ViridianForestSign4
+	bg_event  1,  2, BGEVENT_READ, ViridianForestSign5
 
 	db 5 ; object events
 	object_event 19, 16, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 2, TrainerBugCatcherRandy, -1
