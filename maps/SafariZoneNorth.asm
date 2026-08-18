@@ -3,6 +3,9 @@
 	const SAFARI_ZONE_NORTH_LASS
 	const SAFARI_ZONE_NORTH_BUG_CATCHER
 	const SAFARI_ZONE_NORTH_BEAUTY
+	const SAFARI_ZONE_NORTH_POKE_BALL1
+	const SAFARI_ZONE_NORTH_POKE_BALL2
+	const SAFARI_ZONE_NORTH_POKE_BALL3
 
 SafariZoneNorth_MapScripts:
 	db 0 ; scene scripts
@@ -52,7 +55,16 @@ TrainerBeautyMaya:
 	waitbutton
 	closetext
 	end
+
+SafariZoneNorthCarbos:
+	itemball CARBOS
 	
+SafariZoneNorthHyperPotion:
+	itemball HYPER_POTION
+	
+SafariZoneNorthRareCandy:
+	itemball RARE_CANDY
+
 SafariZoneNorthSign:
 	jumptext SafariZoneNorthSignText
 	
@@ -217,8 +229,11 @@ SafariZoneNorth_MapEvents:
 	bg_event 15, 33, BGEVENT_READ, SafariZoneNorthSign3
 	bg_event 28, 30, BGEVENT_READ, SafariZoneNorthSign4
 
-	db 4 ; object events
+	db 7 ; object events
 	object_event 24,  9, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperLogan, -1
 	object_event  7,  7, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerAddison, -1
 	object_event 25, 30, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherMiles, -1
 	object_event 14, 19, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyMaya, -1
+	object_event 26, 17, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneNorthCarbos, EVENT_SAFARI_ZONE_NORTH_CARBOS
+	object_event 10, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneNorthHyperPotion, EVENT_SAFARI_ZONE_NORTH_HYPER_POTION
+	object_event  5, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneNorthRareCandy, EVENT_SAFARI_ZONE_NORTH_RARE_CANDY
