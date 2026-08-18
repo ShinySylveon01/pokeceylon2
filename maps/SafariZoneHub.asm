@@ -3,6 +3,8 @@
 	const SAFARI_ZONE_HUB_LASS
 	const SAFARI_ZONE_HUB_BUG_CATCHER
 	const SAFARI_ZONE_HUB_BEAUTY
+	const SAFARI_ZONE_HUB_POKE_BALL1
+	const SAFARI_ZONE_HUB_POKE_BALL2
 
 SafariZoneHub_MapScripts:
 	db 0 ; scene scripts
@@ -52,6 +54,12 @@ TrainerBeautyAurora:
 	waitbutton
 	closetext
 	end
+	
+SafariZoneHubFullRestore:
+	itemball FULL_RESTORE
+	
+SafariZoneHubMaxRevive:
+	itemball MAX_REVIVE
 
 SafariZoneHubSign:
 	jumptext SafariZoneHubSignText
@@ -170,9 +178,11 @@ SafariZoneHub_MapEvents:
 	bg_event 16, 24, BGEVENT_READ, SafariZoneHubSign
 	bg_event 20, 22, BGEVENT_READ, SafariZoneHubSign1
 
-	db 4 ; object events
+	db 6 ; object events
 	object_event 26, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperIsaiah, -1
 	object_event 20,  6, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerLuna, -1
 	object_event  7,  7, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherWally, -1
 	object_event  9, 22, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyAurora, -1
+	object_event 17, 12, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneHubFullRestore, EVENT_SAFARI_ZONE_HUB_FULL_RESTORE
+	object_event  5, 16, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneHubMaxRevive, EVENT_SAFARI_ZONE_HUB_MAX_REVIVE
 	

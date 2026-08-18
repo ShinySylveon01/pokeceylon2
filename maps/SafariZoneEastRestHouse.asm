@@ -1,7 +1,6 @@
 	object_const_def ; object_event constants
 	const SAFARI_ZONE_EAST_REST_HOUSE_LASS
 
-
 SafariZoneEastRestHouse_MapScripts:
 	db 0 ; scene scripts
 
