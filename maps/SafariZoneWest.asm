@@ -4,6 +4,10 @@
 	const SAFARI_ZONE_WEST_BUG_CATCHER
 	const SAFARI_ZONE_WEST_BEAUTY
 	const SAFARI_ZONE_WEST_ZAPDOS
+	const SAFARI_ZONE_WEST_POKE_BALL1
+	const SAFARI_ZONE_WEST_POKE_BALL2
+	const SAFARI_ZONE_WEST_POKE_BALL3
+	const SAFARI_ZONE_WEST_POKE_BALL4
 
 SafariZoneWest_MapScripts:
 	db 0 ; scene scripts
@@ -68,6 +72,18 @@ SafariZoneWestZapdos:
 	setevent EVENT_SAFARI_ZONE_WEST_ZAPDOS
 	reloadmapafterbattle
 	end
+	
+SafariZoneWestIron:
+	itemball IRON
+	
+SafariZoneWestMaxPotion:
+	itemball MAX_POTION
+	
+SafariZoneWestEther:
+	itemball ETHER
+	
+SafariZoneWestMaxRepel:
+	itemball MAX_REPEL
 	
 SafariZoneWestSign:
 	jumptext SafariZoneWestSignText
@@ -218,9 +234,13 @@ SafariZoneWest_MapEvents:
 	bg_event 28,  6, BGEVENT_READ, SafariZoneWestSign2
 	bg_event 19,  5, BGEVENT_READ, SafariZoneWestSign3
 
-	db 5 ; object events
+	db 9 ; object events
 	object_event 27, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperJoseph, -1
 	object_event 15,  5, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerIvy, -1
 	object_event 13, 23, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherDylan, -1
 	object_event 17, 18, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyRose, -1
 	object_event  6,  8, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0,  SafariZoneWestZapdos, EVENT_SAFARI_ZONE_WEST_ZAPDOS
+	object_event 29, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneWestIron, EVENT_SAFARI_ZONE_WEST_IRON
+	object_event  4, 24, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneWestMaxPotion, EVENT_SAFARI_ZONE_WEST_MAX_POTION
+	object_event 22, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneWestEther, EVENT_SAFARI_ZONE_WEST_ETHER
+	object_event 11, 11, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneWestMaxRepel, EVENT_SAFARI_ZONE_WEST_MAX_REPEL
