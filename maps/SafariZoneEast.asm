@@ -3,6 +3,10 @@
 	const SAFARI_ZONE_EAST_LASS
 	const SAFARI_ZONE_EAST_BUG_CATCHER
 	const SAFARI_ZONE_EAST_BEAUTY
+	const SAFARI_ZONE_EAST_POKE_BALL1
+	const SAFARI_ZONE_EAST_POKE_BALL2
+	const SAFARI_ZONE_EAST_POKE_BALL3
+	const SAFARI_ZONE_EAST_POKE_BALL4
 
 SafariZoneEast_MapScripts:
 	db 0 ; scene scripts
@@ -52,6 +56,18 @@ TrainerBeautyWillow:
 	waitbutton
 	closetext
 	end
+	
+SafariZoneEastProtein:
+	itemball PROTEIN
+	
+SafariZoneEastNugget:
+	itemball NUGGET
+	
+SafariZoneEastElixer:
+	itemball ELIXER
+	
+SafariZoneEastUltraBall:
+	itemball ULTRA_BALL
 	
 SafariZoneEastSign:
 	jumptext SafariZoneEastSignText
@@ -182,8 +198,12 @@ SafariZoneEast_MapEvents:
 	bg_event 28, 12, BGEVENT_READ, SafariZoneEastSign1
 	bg_event  8,  6, BGEVENT_READ, SafariZoneEastSign2
 
-	db 4 ; object events
+	db 8 ; object events
 	object_event 28, 21, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerCamperOliver, -1
 	object_event  7, 13, SPRITE_LASS, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_TRAINER, 3, TrainerPicnickerAbigail, -1
 	object_event 26,  6, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 3, TrainerBugCatcherGus, -1
 	object_event 10,  5, SPRITE_BEAUTY, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_TRAINER, 2, TrainerBeautyWillow, -1
+	object_event 23, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneEastProtein, EVENT_SAFARI_ZONE_EAST_PROTEIN
+	object_event 17, 14, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneEastNugget, EVENT_SAFARI_ZONE_EAST_NUGGET
+	object_event 17,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneEastElixer, EVENT_SAFARI_ZONE_EAST_ELIXER
+	object_event  5,  7, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, SafariZoneEastUltraBall, EVENT_SAFARI_ZONE_EAST_ULTRA_BALL
