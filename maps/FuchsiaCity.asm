@@ -3,6 +3,7 @@
 	const FUCHSIACITY_POKEFAN_M
 	const FUCHSIACITY_TEACHER
 	const FUCHSIACITY_FRUIT_TREE
+	const FUCHSIACITY_GRAMPS
 
 FuchsiaCity_MapScripts:
 	db 0 ; scene scripts
@@ -49,6 +50,9 @@ FuchsiaCityMartSign:
 
 FuchsiaCityFruitTree:
 	fruittree FRUITTREE_FUCHSIA_CITY
+	
+FuchsiaCityGrampsScript:
+	jumptextfaceplayer FuchsiaCityGrampsText
 
 FuchsiaCityYoungsterText:
 	text "One of the ELITE"
@@ -126,6 +130,15 @@ NoLitteringSignText:
 	para "Please take your"
 	line "waste with you."
 	done
+	
+FuchsiaCityGrampsText:
+	text "The SAFARI ZONE is"
+	line "open but you must"
+	cont "beat CHAMPION RED!"
+
+	para "I cannot let you"
+	line "pass unfortunately!"
+	done
 
 FuchsiaCity_MapEvents:
 	db 0, 0 ; filler
@@ -155,8 +168,9 @@ FuchsiaCity_MapEvents:
 	bg_event 20, 27, BGEVENT_READ, FuchsiaCityPokecenterSign
 	bg_event  6, 13, BGEVENT_READ, FuchsiaCityMartSign
 
-	db 4 ; object events
+	db 5 ; object events
 	object_event 23, 18, SPRITE_YOUNGSTER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityYoungster, -1
 	object_event 13,  8, SPRITE_POKEFAN_M, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityPokefanM, -1
 	object_event 16, 14, SPRITE_TEACHER, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, FuchsiaCityTeacher, -1
 	object_event  8,  1, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, FuchsiaCityFruitTree, -1
+	object_event 18,  4, SPRITE_GRAMPS, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FuchsiaCityGrampsScript, EVENT_FUCHSIA_CITY_GRAMPS_BLOCKS_SAFARI_ZONE

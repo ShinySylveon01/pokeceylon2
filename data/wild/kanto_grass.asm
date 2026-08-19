@@ -1505,7 +1505,7 @@ KantoGrassWildMons:
 	db 83, PRIMEAPE
 	db 83, TANGELA
 	db 83, MACHAMP
-	db 84, ELECTRODE
+	db 84, CELEBI
 	db 84, CELEBI
 	; day
 	db 82, CROBAT
