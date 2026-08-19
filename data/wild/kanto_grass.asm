@@ -1450,25 +1450,25 @@ KantoGrassWildMons:
 	db 82, PARASECT
 	db 83, PRIMEAPE
 	db 83, TANGELA
-	db 83, MACHAMP
-	db 84, ELECTRODE
-	db 84, DITTO
+	db 83, RAIKOU
+	db 84, LUGIA
+	db 84, HO_OH
 	; day
 	db 82, CROBAT
 	db 82, PARASECT
 	db 83, PRIMEAPE
 	db 83, TANGELA
-	db 83, MACHAMP
-	db 84, ELECTRODE
-	db 84, DITTO
+	db 83, RAIKOU
+	db 84, LUGIA
+	db 84, HO_OH
 	; nite
 	db 82, CROBAT
 	db 82, PARASECT
 	db 83, PRIMEAPE
 	db 83, TANGELA
-	db 83, MACHAMP
-	db 84, ELECTRODE
-	db 84, DITTO
+	db 83, RAIKOU
+	db 84, LUGIA
+	db 84, HO_OH
 	
 	map_id CERULEAN_CAVE_2F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1478,24 +1478,24 @@ KantoGrassWildMons:
 	db 83, PRIMEAPE
 	db 83, TANGELA
 	db 83, MACHAMP
-	db 84, ELECTRODE
-	db 84, DITTO
+	db 84, ENTEI
+	db 84, SUICUNE
 	; day
 	db 82, CROBAT
 	db 82, PARASECT
 	db 83, PRIMEAPE
 	db 83, TANGELA
 	db 83, MACHAMP
-	db 84, ELECTRODE
-	db 84, DITTO
+	db 84, ENTEI
+	db 84, SUICUNE
 	; nite
 	db 82, CROBAT
 	db 82, PARASECT
 	db 83, PRIMEAPE
 	db 83, TANGELA
 	db 83, MACHAMP
-	db 84, ELECTRODE
-	db 84, DITTO
+	db 84, ENTEI
+	db 84, SUICUNE
 	
 	map_id CERULEAN_CAVE_B1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -1506,23 +1506,23 @@ KantoGrassWildMons:
 	db 83, TANGELA
 	db 83, MACHAMP
 	db 84, ELECTRODE
-	db 84, DITTO
+	db 84, CELEBI
 	; day
 	db 82, CROBAT
 	db 82, PARASECT
 	db 83, PRIMEAPE
 	db 83, TANGELA
 	db 83, MACHAMP
-	db 84, ELECTRODE
-	db 84, DITTO
+	db 84, CELEBI
+	db 84, CELEBI
 	; nite
 	db 82, CROBAT
 	db 82, PARASECT
 	db 83, PRIMEAPE
 	db 83, TANGELA
 	db 83, MACHAMP
-	db 84, ELECTRODE
-	db 84, DITTO
+	db 84, CELEBI
+	db 84, CELEBI
 	
 	map_id SAFARI_ZONE_HUB
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
