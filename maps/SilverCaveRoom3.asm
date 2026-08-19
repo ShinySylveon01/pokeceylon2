@@ -20,6 +20,7 @@ Red:
 	reloadmapafterbattle
 	setevent EVENT_VIRIDIAN_CITY_LASS_BLOCKS_TRAINER_HOUSE
 	setevent EVENT_FUCHSIA_CITY_GRAMPS_BLOCKS_SAFARI_ZONE
+	setevent EVENT_CERULEAN_CITY_LASS_BLOCKS_CERULEAN_CAVE
 	special FadeOutMusic
 	opentext
 	writetext RedLeavesText
@@ -30,6 +31,7 @@ Red:
 	disappear SILVERCAVEROOM3_RED
 	disappear VIRIDIANCITY_LASS
 	disappear FUCHSIACITY_GRAMPS
+	disappear CERULEANCITY_LASS
 	pause 15
 	special FadeInQuickly
 	pause 30

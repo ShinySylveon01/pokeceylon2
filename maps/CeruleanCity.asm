@@ -5,6 +5,7 @@
 	const CERULEANCITY_COOLTRAINER_F
 	const CERULEANCITY_FISHER
 	const CERULEANCITY_YOUNGSTER
+	const CERULEANCITY_LASS
 
 CeruleanCity_MapScripts:
 	db 0 ; scene scripts
@@ -119,6 +120,9 @@ CeruleanCityYoungsterScript:
 	waitbutton
 	closetext
 	end
+
+CeruleanCityLassScript:
+	jumptextfaceplayer CeruleanCityLassText
 
 CeruleanCitySign:
 	jumptext CeruleanCitySignText
@@ -265,6 +269,14 @@ CeruleanCapeSignText:
 	line "Ahead"
 	done
 
+CeruleanCityLassText:
+	text "#MON in this"
+	line "cave are high level!"
+
+	para "You have to beat"
+	line "the CHAMPION first!"
+	done
+
 CeruleanLockedDoorText:
 	text "It's locked…"
 	done
@@ -294,10 +306,11 @@ CeruleanCity_MapEvents:
 	bg_event 26, 29, BGEVENT_READ, CeruleanCityMartSign
 	bg_event  6,  7, BGEVENT_ITEM, CeruleanCityHiddenBerserkGene
 
-	db 6 ; object events
+	db 7 ; object events
 	object_event 16, 23, SPRITE_COOLTRAINER_M, SPRITEMOVEDATA_WANDER, 2, 2, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerMScript, -1
 	object_event 22, 16, SPRITE_SUPER_NERD, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCitySuperNerdScript, -1
 	object_event  9, 21, SPRITE_SLOWPOKE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeruleanCitySlowbro, -1
 	object_event 10, 21, SPRITE_COOLTRAINER_F, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, CeruleanCityCooltrainerFScript, -1
 	object_event 30, 25, SPRITE_FISHER, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityFisherScript, -1
 	object_event 11, 16, SPRITE_YOUNGSTER, SPRITEMOVEDATA_SPINRANDOM_SLOW, 1, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, CeruleanCityYoungsterScript, -1
+	object_event  4,  6, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 1, 1, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, CeruleanCityLassScript, EVENT_CERULEAN_CITY_LASS_BLOCKS_CERULEAN_CAVE
