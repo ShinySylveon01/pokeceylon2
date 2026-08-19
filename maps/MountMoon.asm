@@ -1,5 +1,6 @@
 	object_const_def ; object_event constants
 	const MOUNTMOON_SILVER
+	const MOUNTMOON_MEW
 
 MountMoon_MapScripts:
 	db 2 ; scene scripts
@@ -89,6 +90,21 @@ MountMoonSilverMovementAfter:
 	step DOWN
 	step_end
 
+MountMoonMew:
+	faceplayer
+	opentext
+	writetext MewText
+	cry MEW
+	pause 15
+	closetext
+	loadwildmon MEW, 85
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	startbattle
+	disappear MOUNTMOON_MEW
+	setevent EVENT_MOUNT_MOON_MEW
+	reloadmapafterbattle
+	end
+
 MountMoonSilverTextBefore:
 	text "<……> <……> <……>"
 
@@ -161,6 +177,10 @@ MountMoonSilverTextLoss:
 	line "become the world's"
 	cont "greatest trainer."
 	done
+	
+MewText:
+	text "Myuu!"
+	done
 
 MountMoon_MapEvents:
 	db 0, 0 ; filler
@@ -179,5 +199,6 @@ MountMoon_MapEvents:
 
 	db 0 ; bg events
 
-	db 1 ; object events
+	db 2 ; object events
 	object_event  7,  3, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL
+	object_event  4, 12, SPRITE_RHYDON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,  MountMoonMew, EVENT_MOUNT_MOON_MEW
