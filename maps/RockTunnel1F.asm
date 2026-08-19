@@ -1,6 +1,7 @@
 	object_const_def ; object_event constants
 	const ROCKTUNNEL1F_POKE_BALL1
 	const ROCKTUNNEL1F_POKE_BALL2
+	const ROCKTUNNEL1F_MOLTRES
 
 RockTunnel1F_MapScripts:
 	db 0 ; scene scripts
@@ -18,6 +19,25 @@ RockTunnel1FHiddenXAccuracy:
 
 RockTunnel1FHiddenXDefend:
 	hiddenitem X_DEFEND, EVENT_ROCK_TUNNEL_1F_HIDDEN_X_DEFEND
+	
+RockTunnel1FMoltres:
+	faceplayer
+	opentext
+	writetext MoltresText
+	cry MOLTRES
+	pause 15
+	closetext
+	loadwildmon MOLTRES, 85
+	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
+	startbattle
+	disappear ROCKTUNNEL1F_MOLTRES
+	setevent EVENT_ROCK_TUNNEL_MOLTRES
+	reloadmapafterbattle
+	end
+	
+MoltresText:
+	text "Gyaoo!"
+	done
 
 RockTunnel1F_MapEvents:
 	db 0, 0 ; filler
@@ -36,6 +56,7 @@ RockTunnel1F_MapEvents:
 	bg_event 24,  4, BGEVENT_ITEM, RockTunnel1FHiddenXAccuracy
 	bg_event 21, 15, BGEVENT_ITEM, RockTunnel1FHiddenXDefend
 
-	db 2 ; object events
+	db 3 ; object events
 	object_event  4, 18, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FElixer, EVENT_ROCK_TUNNEL_1F_ELIXER
 	object_event 10, 15, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, RockTunnel1FTMSteelWing, EVENT_ROCK_TUNNEL_1F_TM_STEEL_WING
+	object_event  5, 15, SPRITE_MOLTRES, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,  RockTunnel1FMoltres, EVENT_ROCK_TUNNEL_MOLTRES
