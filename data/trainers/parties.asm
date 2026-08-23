@@ -412,6 +412,7 @@ YoungsterGroup:
 
 	; YOUNGSTER (4)
 	db "GORDON@", TRAINERTYPE_NORMAL
+	db 14, SLOWPOKE
 	db 14, SNUBBULL
 	db -1 ; end
 
@@ -1931,6 +1932,7 @@ FisherGroup:
 	db 14, SQUIRTLE
 	db 13, POLIWAG
 	db 14, TENTACOOL
+	db 13, SLOWPOKE
 	db -1 ; end
 
 	; FISHER (6)
@@ -2559,13 +2561,16 @@ HikerGroup:
 	db "PHILLIP@", TRAINERTYPE_NORMAL
 	db 16, TYROGUE
 	db 16, JIGGLYPUFF
+	db 16, SLOWPOKE
 	db 16, GEODUDE
 	db -1 ; end
 
 	; HIKER (4)
 	db "LEONARD@", TRAINERTYPE_NORMAL
 	db 17, GEODUDE
+	db 17, SLOWPOKE
 	db 17, MACHOP
+	db 17, WOOPER
 	db -1 ; end
 
 	; HIKER (5)
@@ -2981,6 +2986,7 @@ PsychicGroup:
 	; PSYCHIC_T (1)
 	db "NATHAN@", TRAINERTYPE_NORMAL
 	db 11, TOGEPI
+	db 11, SLOWPOKE
 	db 11, SMOOCHUM
 	db -1 ; end
 
