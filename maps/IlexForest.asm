@@ -275,7 +275,7 @@ IlexForestHeadbuttGuyScript:
 	iftrue .AlreadyGotHeadbutt
 	writetext Text_HeadbuttIntro
 	promptbutton
-	verbosegiveitem TM_HEADBUTT
+	verbosegiveitem TM_SHOCK_WAVE
 	iffalse .BagFull
 	setevent EVENT_GOT_TM02_HEADBUTT
 .AlreadyGotHeadbutt:
@@ -620,20 +620,21 @@ Text_CharcoalMasterTalkAfter:
 	done
 
 Text_HeadbuttIntro:
-	text "What am I doing?"
+	text "You must be a"
+	line "beginner?"
 
-	para "I'm shaking trees"
-	line "using HEADBUTT."
-
-	para "It's fun. Here,"
-	line "you try it too!"
+	para "Maybe this can be"
+	line "of good use to"
+	cont "help fight WATER"
+	cont "and FLYING type"
+	cont "#MON!"
 	done
 
 Text_HeadbuttOutro:
-	text "Rattle trees with"
-	line "HEADBUTT. Some-"
-	cont "times, sleeping"
-	cont "#MON fall out."
+	text "TM02 contains"
+	line "SHOCK WAVE!"
+	
+	para "It never misses!"
 	done
 
 IlexForestSignpostText:

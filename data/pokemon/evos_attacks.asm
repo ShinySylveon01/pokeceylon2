@@ -350,7 +350,7 @@ PikachuEvosAttacks:
 	db 6, THUNDER_WAVE
 	db 10, SWIFT
 	db 11, QUICK_ATTACK
-	db 14, SPARK
+	db 14, SHOCK_WAVE
 	db 20, THUNDERBOLT
 	db 24, THUNDERBOLT
 	db 33, SEISMIC_TOSS
@@ -2322,12 +2322,12 @@ CrobatEvosAttacks:
 ChinchouEvosAttacks:
 	db EVOLVE_LEVEL, 27, LANTURN
 	db 0 ; no more evolutions
-	db 1, SPARK
+	db 1, SHOCK_WAVE
 	db 1, BUBBLEBEAM
 	db 1, CONFUSE_RAY
 	db 1, THUNDER_WAVE
-	db 17, SPARK
-	db 22, SPARK
+	db 17, SHOCK_WAVE
+	db 22, SHOCK_WAVE
 	db 25, SIGNAL_BEAM
 	db 37, THUNDERBOLT
 	db 41, HYDRO_PUMP
@@ -2430,7 +2430,7 @@ MareepEvosAttacks:
 	db 1, THUNDERSHOCK
 	db 1, SWIFT
 	db 9, THUNDER_WAVE
-	db 11, SPARK
+	db 11, SHOCK_WAVE
 	db 23, SAFEGUARD
 	db 30, LIGHT_SCREEN
 	db 37, THUNDERBOLT
@@ -3186,7 +3186,7 @@ ElekidEvosAttacks:
 	db 9, KARATE_CHOP
 	db 12, DIZZY_PUNCH
 	db 15, THUNDER_WAVE
-	db 17, THUNDERPUNCH
+	db 17, SHOCK_WAVE
 	db 41, THUNDERBOLT
 	db 49, CROSS_CHOP
 	db 0 ; no more level-up moves

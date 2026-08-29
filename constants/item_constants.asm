@@ -222,7 +222,7 @@ ENDM
 
 ; see data/moves/tmhm_moves.asm for moves
 	add_tm DYNAMICPUNCH ; bf
-	add_tm HEADBUTT     ; c0
+	add_tm SHOCK_WAVE   ; c0
 	add_tm CURSE        ; c1
 	add_tm ROLLOUT      ; c2
 	const ITEM_C3       ; c3
