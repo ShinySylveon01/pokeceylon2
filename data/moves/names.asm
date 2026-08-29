@@ -215,7 +215,7 @@ MoveNames::
 	db "SLEEP TALK@"
 	db "HEAL BELL@"
 	db "RETURN@"
-	db "COVET@"
+	db "SHOCK WAVE@"
 	db "FRUSTRATION@"
 	db "SAFEGUARD@"
 	db "PAIN SPLIT@"

@@ -774,7 +774,7 @@ GrowlitheEvosAttacks:
 	db 1, BITE
 	db 9, TAKE_DOWN
 	db 14, FLAME_WHEEL
-	db 20, COVET
+	db 20, CRUNCH
 	db 23, FLAMETHROWER
 	db 25, DIG
 	db 0 ; no more level-up moves
@@ -2363,7 +2363,7 @@ CleffaEvosAttacks:
 	db 1, TOXIC
 	db 1, FAINT_ATTACK
 	db 1, SWEET_KISS
-	db 1, COVET
+	db 1, SHOCK_WAVE
 	db 15, SING
 	db 0 ; no more level-up moves
 

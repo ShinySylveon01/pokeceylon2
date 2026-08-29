@@ -216,7 +216,7 @@ MoveDescriptions::
 	dw SleepTalkDescription
 	dw HealBellDescription
 	dw ReturnDescription
-	dw CovetDescription
+	dw ShockWaveDescription
 	dw FrustrationDescription
 	dw SafeguardDescription
 	dw PainSplitDescription
@@ -1125,9 +1125,9 @@ ReturnDescription:
 	db   "An attack that is"
 	next "based on loyalty.@"
 
-CovetDescription:
-	db   "An attack that may"
-	next "steal a held item.@"
+ShockWaveDescription:
+	db   "An attack that"
+	next "never misses.@"
 
 FrustrationDescription:
 	db   "An attack based on"
