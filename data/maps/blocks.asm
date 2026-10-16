@@ -1061,3 +1061,8 @@ SafariZoneNorthRestHouse_Blocks:
 SafariZoneWestRestHouse1_Blocks:
 SafariZoneWestRestHouse2_Blocks:
 	INCBIN "maps/SafariZoneRestHouse.blk"
+	
+SECTION "Map Blocks 7", ROMX
+	
+NewBarkMeadow_Blocks:	
+	INCBIN "maps/NewBarkMeadow.blk"

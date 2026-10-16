@@ -158,8 +158,9 @@ ENDM
 	map_attributes Route28, ROUTE_28, $2c, WEST
 	connection west, SilverCaveOutside, SILVER_CAVE_OUTSIDE, -9
 
-	map_attributes Route29, ROUTE_29, $05, NORTH | WEST | EAST
+	map_attributes Route29, ROUTE_29, $05, NORTH | SOUTH | WEST | EAST 
 	connection north, Route46, ROUTE_46, 10
+	connection south, NewBarkMeadow, NEW_BARK_MEADOW, -9
 	connection west, CherrygroveCity, CHERRYGROVE_CITY, 0
 	connection east, NewBarkTown, NEW_BARK_TOWN, 0
 
@@ -377,6 +378,10 @@ ENDM
 	map_attributes Route10South, ROUTE_10_SOUTH, $2c, NORTH | SOUTH
 	connection north, Route10North, ROUTE_10_NORTH, 0
 	connection south, LavenderTown, LAVENDER_TOWN, 0
+	
+	map_attributes NewBarkMeadow, NEW_BARK_MEADOW, $05, NORTH
+	connection north, Route29, ROUTE_29, 9
+
 
 	map_attributes Route23, ROUTE_23, $0f, 0
 	map_attributes SproutTower1F, SPROUT_TOWER_1F, $00, 0

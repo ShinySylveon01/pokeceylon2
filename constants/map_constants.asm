@@ -504,5 +504,9 @@ ENDM
 	map_const SAFARI_ZONE_NORTH_REST_HOUSE,                4,  4 ;  7
 	map_const SAFARI_ZONE_WEST_REST_HOUSE_1,               4,  4 ;  8
 	map_const SAFARI_ZONE_WEST_REST_HOUSE_2,               4,  4 ;  9
+	
+	newgroup
+
+    map_const NEW_BARK_MEADOW,                            30,  9 ;  1
 
 NUM_MAP_GROUPS EQU const_value ; 27

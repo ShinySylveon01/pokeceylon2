@@ -32,6 +32,7 @@ OutdoorSprites:
 	dw GlobalTerminalSprites
 	dw ViridianForestGroupSprites
 	dw SafariZoneGroupSprites
+	dw NewBarkMeadowGroupSprites
 
 PalletGroupSprites:
 	db SPRITE_TEACHER
@@ -254,6 +255,19 @@ SafariZoneGroupSprites:
 	db SPRITE_BUG_CATCHER
 	db SPRITE_MOLTRES
 	db SPRITE_POKE_BALL
+	
+NewBarkMeadowGroupSprites:	
+	db SPRITE_SILVER
+	db SPRITE_TEACHER
+	db SPRITE_FISHER
+	db SPRITE_COOLTRAINER_M
+	db SPRITE_YOUNGSTER
+	db SPRITE_MONSTER
+	db SPRITE_GRAMPS
+	db SPRITE_BUG_CATCHER
+	db SPRITE_COOLTRAINER_F
+	db SPRITE_POKE_BALL
+	db SPRITE_FRUIT_TREE
 
 AzaleaGroupSprites:
 	db SPRITE_GRAMPS

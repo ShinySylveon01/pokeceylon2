@@ -37,6 +37,9 @@ MapGroupRoofs:
 	db -1             ; 25
 	db ROOF_NEW_BARK  ; 26 (Cherrygrove)
 	db ROOF_GOLDENROD ; 27 (Global Terminal)
+	db -1             ; 28
+	db -1             ; 29
+	db -1             ; 30
 
 Roofs:
 ; entries correspond to ROOF_* constants

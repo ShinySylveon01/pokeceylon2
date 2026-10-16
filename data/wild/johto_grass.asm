@@ -2359,5 +2359,32 @@ JohtoGrassWildMons:
 	db 85, MILTANK
 	db 85, SKARMORY
 	ENDC
+	
+	map_id NEW_BARK_MEADOW
+	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
+	; morn
+    db 3, CHIKORITA
+    db 4, CHIKORITA
+    db 2, HOPPIP
+    db 3, PICHU
+    db 4, CHIKORITA
+    db 5, CHIKORITA
+    db 4, PICHU
+	; day
+    db 3, CHIKORITA
+    db 4, CHIKORITA
+    db 2, HOPPIP
+    db 3, PICHU
+    db 4, CHIKORITA
+    db 5, CHIKORITA
+    db 4, PICHU
+	; nite
+    db 3, CHIKORITA
+    db 4, CHIKORITA
+    db 2, HOPPIP
+    db 3, CLEFFA
+    db 4, CHIKORITA
+    db 5, CHIKORITA
+    db 5, CLEFFA
 
 	db -1 ; end

@@ -524,3 +524,7 @@ INCLUDE "maps/SafariZoneEastRestHouse.asm"
 INCLUDE "maps/SafariZoneNorthRestHouse.asm"
 INCLUDE "maps/SafariZoneWestRestHouse1.asm"
 INCLUDE "maps/SafariZoneWestRestHouse2.asm"
+
+SECTION "Map Scripts 36", ROMX
+
+INCLUDE "maps/NewBarkMeadow.asm"
