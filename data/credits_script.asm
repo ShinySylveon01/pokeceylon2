@@ -225,16 +225,16 @@ CreditsScript:
 	db CREDITS_WAIT, 12
 
 	db       SPECIAL_THANKS, 0
-	db           AKITO_MORI, 1
-	db      TAKAHIRO_HARADA, 2
-	db         SATORU_IWATA, 3
+	db                RANGI, 1
+	db      JUSTREGULARLUNA, 2
+	db            SOURAPPLE, 3
 
 	db CREDITS_WAIT, 12
 
 	db       SPECIAL_THANKS, 0
-	db      HIROYUKI_ZINNAI, 1
-	db      KUNIMI_KAWAMURA, 2
-	db     KIMIKO_NAKAMICHI, 3
+	db                 ZUMI, 1
+	db           CRYSTALRBY, 2
+	db          THEPRETTEAM, 3
 
 	db CREDITS_WAIT, 12
 

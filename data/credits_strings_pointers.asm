@@ -76,3 +76,9 @@ CreditsStringsPointers:
 	dw Credits_UsCoordination
 	dw Credits_TextTranslation
 	dw Credits_PaadTesting
+	dw Credits_Rangi
+	dw Credits_JustRegularLuna
+	dw Credits_SourApple
+	dw Credits_Zumi
+	dw Credits_Crystal
+	dw Credits_PretTeam

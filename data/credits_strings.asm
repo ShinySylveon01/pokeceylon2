@@ -53,7 +53,7 @@ Credits_KimikoNakamichi::     db "  KIMIKO NAKAMICHI@"
 Credits_End::                 db "END@"                       ; "おしまい@"
 Credits_Staff::               db "      #MON"                 ; "ポケットモンスター"
                             IF DEF(_GOLD)
-                            next "    GOLD SUPREME"
+                            next "   OPAL VERSION"
                             ELIF DEF(_SILVER)
                             next "   OPAL VERSION"
                             ENDC
@@ -81,6 +81,12 @@ Credits_UsVersionStaff::      db "  US VERSION STAFF@"
 Credits_UsCoordination::      db "  US COORDINATION@"
 Credits_TextTranslation::     db "  TEXT TRANSLATION@"
 Credits_PaadTesting::         db "    PAAD TESTING@"
+Credits_Rangi::               db "       RANGI@"
+Credits_JustRegularLuna::     db "  JUSTREGULARLUNA@"
+Credits_SourApple::           db "     SOURAPPLE@"
+Credits_Zumi::                db "        ZUMI@"
+Credits_Crystal::             db "     CRYSTALRBY@"
+Credits_PretTeam::            db "    THE PRET TEAM@"
 
 Credits_Copyright::
 	;    (C) 1  9  9  5 - 2  0  0  0     N  i  n  t  e  n  d  o

@@ -76,6 +76,12 @@
 	const US_COORDINATION
 	const TEXT_TRANSLATION
 	const PAAD_TESTING
+	const RANGI
+	const JUSTREGULARLUNA
+	const SOURAPPLE
+	const ZUMI
+	const CRYSTALRBY
+	const THEPRETTEAM
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -1, -1
