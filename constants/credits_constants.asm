@@ -82,6 +82,18 @@
 	const ZUMI
 	const CRYSTALRBY
 	const THEPRETTEAM
+	const HACK_CREATOR
+	const SHINYSYLVEON
+	const GEN_TWO_RESOURCES
+	const PIACARROT
+	const BLOODLESS
+	const FRIENDS
+	const IDAIN
+	const MAJOR_AGNOSTIC
+	const AXSIX
+	const MONSTARULES
+	const EEVEEEE1999
+	const CHICKASAURUSGL
 
 ; CreditsScript indexes (see data/credits_script.asm)
 	const_def -1, -1

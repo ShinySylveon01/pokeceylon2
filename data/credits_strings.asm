@@ -87,6 +87,18 @@ Credits_SourApple::           db "     SOURAPPLE@"
 Credits_Zumi::                db "        ZUMI@"
 Credits_Crystal::             db "     CRYSTALRBY@"
 Credits_PretTeam::            db "    THE PRET TEAM@"
+Credits_HackCreator::         db "    HACK CREATOR@"
+Credits_ShinySylveon::        db "   SHINYSYLVEON01@"
+Credits_GenTwoResources::     db "RESOURCES FOR GEN 2@"
+Credits_PiaCarrot::           db "     PIA CARROT@"
+Credits_Bloodless::           db "     BLOODLESS@"
+Credits_Friends::             db "      FRIENDS@"
+Credits_Idain::               db "       IDAIN@"
+Credits_MajorAgnostic::       db "   MAJOR AGNOSTIC@"
+Credits_AxSix::               db "        AX6@"
+Credits_Monstarules::         db "    MONSTARULES@"
+Credits_Eevee1999::           db "    EEVEEEE1999@"
+Credits_ChickasaurusGL::      db "   CHICKASAURUSGL@"
 
 Credits_Copyright::
 	;    (C) 1  9  9  5 - 2  0  0  0     N  i  n  t  e  n  d  o

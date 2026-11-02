@@ -82,3 +82,15 @@ CreditsStringsPointers:
 	dw Credits_Zumi
 	dw Credits_Crystal
 	dw Credits_PretTeam
+	dw Credits_HackCreator
+	dw Credits_ShinySylveon
+	dw Credits_GenTwoResources
+	dw Credits_PiaCarrot
+	dw Credits_Bloodless
+	dw Credits_Friends
+	dw Credits_Idain
+	dw Credits_MajorAgnostic
+	dw Credits_AxSix
+	dw Credits_Monstarules
+	dw Credits_Eevee1999
+	dw Credits_ChickasaurusGL

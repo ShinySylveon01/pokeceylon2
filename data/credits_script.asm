@@ -235,11 +235,31 @@ CreditsScript:
 	db                 ZUMI, 1
 	db           CRYSTALRBY, 2
 	db          THEPRETTEAM, 3
+	
+	db CREDITS_WAIT, 12
+
+	db         HACK_CREATOR, 0
+	db         SHINYSYLVEON, 1
 
 	db CREDITS_WAIT, 12
 
-	db   EXECUTIVE_PRODUCER, 1
-	db     HIROSHI_YAMAUCHI, 2
+	db    GEN_TWO_RESOURCES, 0
+	db            PIACARROT, 1
+	db            BLOODLESS, 2
+	
+	db CREDITS_WAIT, 12
+
+	db              FRIENDS, 0
+	db                IDAIN, 1
+	db       MAJOR_AGNOSTIC, 2
+	db                AXSIX, 3
+	
+	db CREDITS_WAIT, 12
+
+	db              FRIENDS, 0
+	db          MONSTARULES, 1
+	db          EEVEEEE1999, 2
+	db       CHICKASAURUSGL, 3
 
 	db CREDITS_WAIT, 12
 
