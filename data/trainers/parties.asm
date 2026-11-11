@@ -1741,6 +1741,7 @@ BugCatcherGroup:
 	db  4, LEDYBA
 	db  5, METAPOD
 	db  4, SPINARAK
+	db  5, PARAS
 	db -1 ; end
 
 	; BUG_CATCHER (2)
@@ -1770,14 +1771,15 @@ BugCatcherGroup:
 	; BUG_CATCHER (5)
 	db "BENNY@", TRAINERTYPE_NORMAL
 	db 20, PUPITAR
-	db 20, PINECO
+	db 21, PINECO
 	db 20, LEDIAN
 	db -1 ; end
 
 	; BUG_CATCHER (6)
 	db "AL@", TRAINERTYPE_NORMAL
 	db 20, SPINARAK
-	db 20, LEDYBA
+	db 21, PARAS
+	db 21, LEDYBA
 	db 20, BUTTERFREE
 	db 20, BEEDRILL
 	db -1 ; end
