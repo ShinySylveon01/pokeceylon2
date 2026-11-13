@@ -359,6 +359,7 @@ CHRIS EQU __trainer_class__
 	const MILES
 	const DYLAN
 	const WYATT
+	const ROWAN
 
 	trainerclass FISHER ; 25
 	const JUSTIN

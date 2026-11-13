@@ -14,6 +14,7 @@
 	const ILEXFOREST_ROCKER
 	const ILEXFOREST_POKE_BALL
 	const ILEXFOREST_BUG_CATCHER1
+	const ILEXFOREST_BUG_CATCHER2
 
 IlexForest_MapScripts:
 	db 0 ; scene scripts
@@ -546,6 +547,17 @@ TrainerBugCatcherWyatt:
 	waitbutton
 	closetext
 	end
+	
+TrainerBugCatcherRowan:
+	trainer BUG_CATCHER, ROWAN, EVENT_BEAT_BUG_CATCHER_ROWAN, BugCatcherRowanSeenText, BugCatcherRowanBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext BugCatcherRowanAfterBattleText
+	waitbutton
+	closetext
+	end
 
 IlexForestApprenticeIntroText:
 	text "Oh, man… My boss"
@@ -690,6 +702,27 @@ BugCatcherWyattAfterBattleText:
 	line "ATTRACT then you"
 	cont "will likely lose!"
 	done
+	
+BugCatcherRowanSeenText:
+	text "Lots of insects"
+	line "here!"
+
+	para "Let's battle!"
+	done
+
+BugCatcherRowanBeatenText:
+	text "How!"
+	done
+
+BugCatcherRowanAfterBattleText:
+	text "Good luck against"
+	line "the GOLDENROD GYM"
+	cont "leader!"
+
+	para "If you get hit by"
+	line "ATTRACT then you"
+	cont "will likely lose!"
+	done
 
 IlexForest_MapEvents:
 	db 0, 0 ; filler
@@ -708,7 +741,7 @@ IlexForest_MapEvents:
 	bg_event  9, 17, BGEVENT_ITEM, IlexForestHiddenFullHeal
 	bg_event  8, 22, BGEVENT_READ, IlexForestShrineScript
 
-	db 15 ; object events
+	db 16 ; object events
 	object_event 14, 31, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition1, EVENT_ILEX_FOREST_FARFETCHD_1
 	object_event 15, 25, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition2, EVENT_ILEX_FOREST_FARFETCHD_2
 	object_event 20, 24, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition3, EVENT_ILEX_FOREST_FARFETCHD_3
@@ -724,3 +757,4 @@ IlexForest_MapEvents:
 	object_event 15, 14, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestHeadbuttGuyScript, -1
 	object_event 20, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestRevive, EVENT_ILEX_FOREST_REVIVE
 	object_event  6, 13, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherWyatt, -1
+	object_event 12,  4, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherRowan, -1
