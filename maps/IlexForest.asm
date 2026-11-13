@@ -704,24 +704,26 @@ BugCatcherWyattAfterBattleText:
 	done
 	
 BugCatcherRowanSeenText:
-	text "Lots of insects"
-	line "here!"
+	text "I caught some BUG"
+	line "#MON here!"
 
-	para "Let's battle!"
+	para "I want to see if"
+	line "they will pummel"
+	cont "your #MON!"
 	done
 
 BugCatcherRowanBeatenText:
-	text "How!"
+	text "I was wrong!"
 	done
 
 BugCatcherRowanAfterBattleText:
-	text "Good luck against"
-	line "the GOLDENROD GYM"
-	cont "leader!"
+	text "I should battle"
+	line "BUGSY until I win"
+	cont "the match someday!"
 
-	para "If you get hit by"
-	line "ATTRACT then you"
-	cont "will likely lose!"
+	para "I feel jealous"
+	line "that you have your"
+	cont "second badge!"
 	done
 
 IlexForest_MapEvents:
