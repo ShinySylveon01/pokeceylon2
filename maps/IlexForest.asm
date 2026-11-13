@@ -13,6 +13,7 @@
 	const ILEXFOREST_BLACK_BELT
 	const ILEXFOREST_ROCKER
 	const ILEXFOREST_POKE_BALL
+	const ILEXFOREST_BUG_CATCHER1
 
 IlexForest_MapScripts:
 	db 0 ; scene scripts
@@ -534,6 +535,17 @@ MovementData_Farfetched_Pos9_Pos8_Down:
 	big_step UP
 	big_step UP
 	step_end
+	
+TrainerBugCatcherWyatt:
+	trainer BUG_CATCHER, WYATT, EVENT_BEAT_BUG_CATCHER_WYATT, BugCatcherWyattSeenText, BugCatcherWyattBeatenText, 0, .AfterScript
+
+.AfterScript:
+	endifjustbattled
+	opentext
+	writetext BugCatcherWyattAfterBattleText
+	waitbutton
+	closetext
+	end
 
 IlexForestApprenticeIntroText:
 	text "Oh, man… My boss"
@@ -657,6 +669,27 @@ Text_IlexForestShrine:
 	line "the forest's"
 	cont "protector…"
 	done
+	
+BugCatcherWyattSeenText:
+	text "Lots of insects"
+	line "here!"
+
+	para "Let's battle!"
+	done
+
+BugCatcherWyattBeatenText:
+	text "How!"
+	done
+
+BugCatcherWyattAfterBattleText:
+	text "Good luck against"
+	line "the GOLDENROD GYM"
+	cont "leader!"
+
+	para "If you get hit by"
+	line "ATTRACT then you"
+	cont "will likely lose!"
+	done
 
 IlexForest_MapEvents:
 	db 0, 0 ; filler
@@ -675,7 +708,7 @@ IlexForest_MapEvents:
 	bg_event  9, 17, BGEVENT_ITEM, IlexForestHiddenFullHeal
 	bg_event  8, 22, BGEVENT_READ, IlexForestShrineScript
 
-	db 14 ; object events
+	db 15 ; object events
 	object_event 14, 31, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition1, EVENT_ILEX_FOREST_FARFETCHD_1
 	object_event 15, 25, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition2, EVENT_ILEX_FOREST_FARFETCHD_2
 	object_event 20, 24, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition3, EVENT_ILEX_FOREST_FARFETCHD_3
@@ -685,8 +718,9 @@ IlexForest_MapEvents:
 	object_event 22, 31, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition7, EVENT_ILEX_FOREST_FARFETCHD_7
 	object_event 15, 29, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition8, EVENT_ILEX_FOREST_FARFETCHD_8
 	object_event 10, 35, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition9, EVENT_ILEX_FOREST_FARFETCHD_9
- 	object_event 6, 28, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition10, EVENT_ILEX_FOREST_FARFETCHD_10
-    object_event  7, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IlexForestCharcoalApprenticeScript, EVENT_ILEX_FOREST_APPRENTICE
-    object_event  5, 28, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestCharcoalMasterScript, EVENT_ILEX_FOREST_CHARCOAL_MASTER
-    object_event 15, 14, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestHeadbuttGuyScript, -1
-    object_event 20, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestRevive, EVENT_ILEX_FOREST_REVIVE
+	object_event 6, 28, SPRITE_BIRD, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_SCRIPT, 0, FarfetchdPosition10, EVENT_ILEX_FOREST_FARFETCHD_10
+	object_event  7, 28, SPRITE_YOUNGSTER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, 0, IlexForestCharcoalApprenticeScript, EVENT_ILEX_FOREST_APPRENTICE
+	object_event  5, 28, SPRITE_BLACK_BELT, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestCharcoalMasterScript, EVENT_ILEX_FOREST_CHARCOAL_MASTER
+	object_event 15, 14, SPRITE_ROCKER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, IlexForestHeadbuttGuyScript, -1
+	object_event 20, 32, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, IlexForestRevive, EVENT_ILEX_FOREST_REVIVE
+	object_event  6, 13, SPRITE_BUG_CATCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BROWN, OBJECTTYPE_TRAINER, 4, TrainerBugCatcherWyatt, -1

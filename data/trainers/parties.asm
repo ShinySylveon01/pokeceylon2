@@ -1894,6 +1894,14 @@ BugCatcherGroup:
 	db 100, BEEDRILL
 	db 100, LEDIAN
 	db -1 ; end
+	
+	; BUG_CATCHER (22)
+	db "WYATT@", TRAINERTYPE_NORMAL
+	db 22, SPINARAK
+	db 21, PARAS
+	db 22, VENONAT
+	db 21, LEDIAN
+	db -1 ; end
 
 FisherGroup:
 	; FISHER (1)
