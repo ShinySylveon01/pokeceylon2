@@ -29,10 +29,8 @@ KantoGrassWildMons:
 	db 75, SANDSLASH
 	db 80, DIGLETT
 
-	map_id MOUNT_MOON
+	map_id MOUNT_MOON_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
-
-	IF DEF(_GOLD)
 	; morn
 	db 68, CLEFABLE
 	db 69, GOLEM
@@ -57,8 +55,9 @@ KantoGrassWildMons:
 	db 68, OMASTAR
 	db 70, RHYDON
 	db 70, WIGGLYTUFF
-
-	ELIF DEF(_SILVER)
+	
+	map_id MOUNT_MOON_B1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 68, CLEFABLE
 	db 69, GOLEM
@@ -83,7 +82,33 @@ KantoGrassWildMons:
 	db 68, OMASTAR
 	db 70, RHYDON
 	db 70, WIGGLYTUFF
-	ENDC
+	
+	map_id MOUNT_MOON_B2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 68, CLEFABLE
+	db 69, GOLEM
+	db 67, KABUTOPS
+	db 68, SUDOWOODO
+	db 68, OMASTAR
+	db 70, RHYDON
+	db 70, WIGGLYTUFF
+	; day
+	db 68, CLEFABLE
+	db 69, GOLEM
+	db 67, KABUTOPS
+	db 68, SUDOWOODO
+	db 68, OMASTAR
+	db 70, RHYDON
+	db 70, WIGGLYTUFF
+	; nite
+	db 68, CLEFABLE
+	db 69, GOLEM
+	db 67, KABUTOPS
+	db 68, SUDOWOODO
+	db 68, OMASTAR
+	db 70, RHYDON
+	db 70, WIGGLYTUFF
 
 	map_id ROCK_TUNNEL_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite

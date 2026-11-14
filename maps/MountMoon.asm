@@ -1,6 +1,6 @@
 	object_const_def ; object_event constants
-	const MOUNTMOON_SILVER
-	const MOUNTMOON_MEW
+	const MOUNTMOON1F_SILVER
+	const MOUNTMOON1F_MEW
 
 MountMoon_MapScripts:
 	db 2 ; scene scripts
@@ -21,7 +21,7 @@ MountMoon_MapScripts:
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special FadeOutMusic
 	pause 15
-	applymovement MOUNTMOON_SILVER, MountMoonSilverMovementBefore
+	applymovement MOUNTMOON1F_SILVER, MountMoonSilverMovementBefore
 	playmusic MUSIC_RIVAL_ENCOUNTER
 	opentext
 	writetext MountMoonSilverTextBefore
@@ -32,7 +32,7 @@ MountMoon_MapScripts:
 	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
 	iftrue .Chikorita
 	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
+	setlasttalked MOUNTMOON1F_SILVER
 	loadtrainer RIVAL2, RIVAL2_1_TOTODILE
 	startbattle
 	dontrestartmapmusic
@@ -41,7 +41,7 @@ MountMoon_MapScripts:
 
 .Totodile:
 	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
+	setlasttalked MOUNTMOON1F_SILVER
 	loadtrainer RIVAL2, RIVAL2_1_CHIKORITA
 	startbattle
 	dontrestartmapmusic
@@ -50,7 +50,7 @@ MountMoon_MapScripts:
 
 .Chikorita:
 	winlosstext MountMoonSilverTextWin, MountMoonSilverTextLoss
-	setlasttalked MOUNTMOON_SILVER
+	setlasttalked MOUNTMOON1F_SILVER
 	loadtrainer RIVAL2, RIVAL2_1_CYNDAQUIL
 	startbattle
 	dontrestartmapmusic
@@ -65,8 +65,8 @@ MountMoon_MapScripts:
 	closetext
 	turnobject PLAYER, UP
 	turnobject PLAYER, RIGHT
-	applymovement MOUNTMOON_SILVER, MountMoonSilverMovementAfter
-	disappear MOUNTMOON_SILVER
+	applymovement MOUNTMOON1F_SILVER, MountMoonSilverMovementAfter
+	disappear MOUNTMOON1F_SILVER
 	disappear PEWTERCITY_YOUNGSTER
 	setscene SCENE_FINISHED
 	setevent EVENT_BEAT_RIVAL_IN_MT_MOON
@@ -75,19 +75,16 @@ MountMoon_MapScripts:
 	end
 
 MountMoonSilverMovementBefore:
-	step LEFT
-	step LEFT
-	step LEFT
+	step DOWN
+	step DOWN
 	step_end
 
 MountMoonSilverMovementAfter:
-	step RIGHT
-	step RIGHT
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
-	step DOWN
+	step UP
+	step UP
+	step UP
+	step LEFT
+	step UP
 	step_end
 
 MountMoonMew:
@@ -100,7 +97,7 @@ MountMoonMew:
 	loadwildmon MEW, 85
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
 	startbattle
-	disappear MOUNTMOON_MEW
+	disappear MOUNTMOON1F_MEW
 	setevent EVENT_MOUNT_MOON_MEW
 	reloadmapafterbattle
 	end
@@ -185,20 +182,15 @@ MewText:
 MountMoon_MapEvents:
 	db 0, 0 ; filler
 
-	db 8 ; warp events
-	warp_event  3,  3, ROUTE_3, 1
-	warp_event 15, 15, ROUTE_4, 1
-	warp_event 13,  3, MOUNT_MOON, 7
-	warp_event 15, 11, MOUNT_MOON, 8
-	warp_event 25,  5, MOUNT_MOON_SQUARE, 1
-	warp_event 25, 15, MOUNT_MOON_SQUARE, 2
-	warp_event 25,  3, MOUNT_MOON, 3
-	warp_event 25, 13, MOUNT_MOON, 4
+	db 3 ; warp events
+	warp_event 13, 27, ROUTE_3, 1
+	warp_event  7,  5, MOUNT_MOON_B1F, 1
+	warp_event 15, 11, MOUNT_MOON_B1F, 7
 
 	db 0 ; coord events
 
 	db 0 ; bg events
 
 	db 2 ; object events
-	object_event  7,  3, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL
+	object_event  7,  3, SPRITE_SILVER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_MT_MOON_RIVAL
 	object_event  4, 12, SPRITE_RHYDON, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0,  MountMoonMew, EVENT_MOUNT_MOON_MEW

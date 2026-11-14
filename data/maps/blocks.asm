@@ -931,8 +931,8 @@ RockTunnelB1F_Blocks:
 DiglettsCave_Blocks:
 	INCBIN "maps/DiglettsCave.blk"
 
-MountMoon_Blocks:
-	INCBIN "maps/MountMoon.blk"
+MountMoon1F_Blocks:
+	INCBIN "maps/MountMoon1F.blk"
 
 SeafoamGym_Blocks:
 	INCBIN "maps/SeafoamGym.blk"
@@ -1061,3 +1061,9 @@ SafariZoneNorthRestHouse_Blocks:
 SafariZoneWestRestHouse1_Blocks:
 SafariZoneWestRestHouse2_Blocks:
 	INCBIN "maps/SafariZoneRestHouse.blk"
+	
+MountMoonB1F_Blocks:
+	INCBIN "maps/MountMoonB1F.blk"
+
+MountMoonB2F_Blocks:
+	INCBIN "maps/MountMoonB2F.blk"

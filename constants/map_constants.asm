@@ -131,7 +131,7 @@ ENDM
 	map_const DRAGONS_DEN_B1F,                             20, 18 ; 73
 	map_const TOHJO_FALLS,                                 15,  9 ; 74
 	map_const DIGLETTS_CAVE,                               10, 18 ; 75
-	map_const MOUNT_MOON,                                  15,  9 ; 76
+	map_const MOUNT_MOON_1F,                               11, 15 ; 76
 	map_const UNDERGROUND_PATH,                             3, 14 ; 77
 	map_const ROCK_TUNNEL_1F,                              15, 18 ; 78
 	map_const ROCK_TUNNEL_B1F,                             15, 18 ; 79
@@ -504,5 +504,7 @@ ENDM
 	map_const SAFARI_ZONE_NORTH_REST_HOUSE,                4,  4 ;  7
 	map_const SAFARI_ZONE_WEST_REST_HOUSE_1,               4,  4 ;  8
 	map_const SAFARI_ZONE_WEST_REST_HOUSE_2,               4,  4 ;  9
+	map_const MOUNT_MOON_B1F,                              14, 13 ;  4
+	map_const MOUNT_MOON_B2F,                              14, 12 ;  5
 
 NUM_MAP_GROUPS EQU const_value ; 27

@@ -43,7 +43,7 @@ MapScenes::
 	scene_var ECRUTEAK_POKECENTER_1F,                      wEcruteakPokecenter1FSceneID
 	scene_var MAHOGANY_TOWN,                               wMahoganyTownSceneID
 	scene_var ROUTE_43_GATE,                               wRoute43GateSceneID
-	scene_var MOUNT_MOON,                                  wMountMoonSceneID
+	scene_var MOUNT_MOON_1F,                               wMountMoon1FSceneID
 	scene_var SPROUT_TOWER_3F,                             wSproutTower3FSceneID
 	scene_var BURNED_TOWER_1F,                             wBurnedTower1FSceneID
 	scene_var BURNED_TOWER_B1F,                            wBurnedTowerB1FSceneID

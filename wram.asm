@@ -2307,7 +2307,7 @@ wEcruteakTinTowerEntranceSceneID::                db
 wEcruteakPokecenter1FSceneID::                    db
 wMahoganyTownSceneID::                            db
 wRoute43GateSceneID::                             db
-wMountMoonSceneID::                               db
+wMountMoon1FSceneID::                             db
 wSproutTower3FSceneID::                           db
 wBurnedTower1FSceneID::                           db
 wBurnedTowerB1FSceneID::                          db
