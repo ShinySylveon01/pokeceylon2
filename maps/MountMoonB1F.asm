@@ -12,7 +12,7 @@ MountMoonB1F_MapEvents:
 	warp_event 15,  3, MOUNT_MOON_B2F, 2
 	warp_event  7, 21, MOUNT_MOON_SQUARE, 1
 	warp_event 19, 21, MOUNT_MOON_SQUARE, 2
-	warp_event 19,  3, ROUTE_4, 2
+	warp_event 19,  3, ROUTE_4, 1
 	warp_event  7, 19, MOUNT_MOON_1F, 3
 	warp_event 19, 19, MOUNT_MOON_B1F, 9
 	warp_event 27,  9, MOUNT_MOON_B1F, 8
