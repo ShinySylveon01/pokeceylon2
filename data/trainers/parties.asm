@@ -2844,6 +2844,7 @@ FirebreatherGroup:
 	db "RAY@", TRAINERTYPE_NORMAL
 	db 17, PONYTA
 	db 18, SLUGMA
+	db 17, CHARMANDER
 	db -1 ; end
 
 	; FIREBREATHER (8)
