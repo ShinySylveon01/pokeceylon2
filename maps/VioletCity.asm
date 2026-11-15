@@ -285,8 +285,8 @@ VioletCityFisherText:
 	line "the trainers in"
 	cont "SPROUT TOWER!"
 
-	para "You will not"
-	line "regret it!"
+	para "You won't regret"
+	line "it!"
 	done
 
 VioletCity_MapEvents:

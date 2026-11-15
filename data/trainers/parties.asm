@@ -2684,6 +2684,7 @@ HikerGroup:
 	; HIKER (18)
 	db "DANIEL@", TRAINERTYPE_NORMAL
 	db 18, ONIX
+	db 19, WOOPER
 	db -1 ; end
 
 	; HIKER (19)
